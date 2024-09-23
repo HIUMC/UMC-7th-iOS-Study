@@ -43,6 +43,7 @@ git branch : 현재 branch 확인
           │    └─ .. 이하 동일
          ```
 
+
 ### 💾 중간 중간 commit 하기
 * 파트 별로 작업을 끝냈거나 더 작은 단위로 작업을 끝낼 때 마다 commit을 해 주는 게 좋아요
 * ❗commit convention ❗️
