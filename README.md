@@ -41,7 +41,7 @@ git branch : 현재 branch 확인
           │
           ├─  3주차 (dir)
           │    └─ .. 이하 동일
-         ```
+```
 
 
 ### 💾 중간 중간 commit 하기
