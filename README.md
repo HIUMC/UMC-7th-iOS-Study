@@ -32,7 +32,7 @@ git branch : 현재 branch 확인
      │
      └─ dlguszoo (dir)
           │ 
-          ├─  1주차
+          ├─  1주차 (dir)
           |    └─ README.md // 해당 강의 정리한 내용이 담긴 파일
           |
           ├─  2주차 (dir)
