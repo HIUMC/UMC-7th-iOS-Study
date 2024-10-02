@@ -83,6 +83,7 @@ class LoginView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "이메일 주소"
         label.font = UIFont.systemFont(ofSize: 12)
+        label.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
         
         return label
     }()
@@ -91,11 +92,12 @@ class LoginView: UIView {
         let textField = UITextField()
         
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.placeholder = "예) kream@kream.co.kr"
+        textField.attributedPlaceholder = NSAttributedString(string: "예) kream@kream.co.kr", attributes: [.foregroundColor: UIColor(red: 193/255, green: 193/255, blue: 193/255, alpha: 1)])
         textField.layer.cornerRadius = 15
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor(red: 162/255, green: 162/255, blue: 162/255, alpha: 1).cgColor
         textField.font = UIFont.systemFont(ofSize: 12)
+        textField.textColor = .black
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 0))
         textField.leftViewMode = .always
         textField.autocapitalizationType = .none
@@ -111,6 +113,7 @@ class LoginView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "비밀번호"
         label.font = UIFont.systemFont(ofSize: 12)
+        label.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
         
         return label
     }()
@@ -119,11 +122,12 @@ class LoginView: UIView {
         let textField = UITextField()
         
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.placeholder = "비밀번호를 입력해주세요"
+        textField.attributedPlaceholder = NSAttributedString(string: "비밀번호를 입력해주세요", attributes: [.foregroundColor: UIColor(red: 193/255, green: 193/255, blue: 193/255, alpha: 1)])
         textField.layer.cornerRadius = 15
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor(red: 162/255, green: 162/255, blue: 162/255, alpha: 1).cgColor
         textField.font = UIFont.systemFont(ofSize: 12)
+        textField.textColor = .black
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 0))
         textField.leftViewMode = .always
         textField.textContentType = .password

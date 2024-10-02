@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.view = loginView
+        self.hideKeyboardWhenTappedAround()
     }
     
     private lazy var loginView: LoginView = {
@@ -35,6 +36,15 @@ class LoginViewController: UIViewController {
     
     @objc func onClickAppleLogin() {
         print("onClickAppleLogin")
+    }
+    
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
 
