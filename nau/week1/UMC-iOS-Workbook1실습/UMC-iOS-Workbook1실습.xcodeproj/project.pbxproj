@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AFB1C4162CA8DEDA0064D054 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1C4152CA8DEDA0064D054 /* AppDelegate.swift */; };
-		AFB1C4182CA8DEDA0064D054 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1C4172CA8DEDA0064D054 /* SceneDelegate.swift */; };
-		AFB1C41A2CA8DEDA0064D054 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1C4192CA8DEDA0064D054 /* ViewController.swift */; };
-		AFB1C41F2CA8DEDC0064D054 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB1C41E2CA8DEDC0064D054 /* Assets.xcassets */; };
+		AFB1C4362CA987810064D054 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1C4352CA987810064D054 /* AppDelegate.swift */; };
+		AFB1C4382CA987810064D054 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1C4372CA987810064D054 /* SceneDelegate.swift */; };
+		AFB1C43A2CA987810064D054 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1C4392CA987810064D054 /* ViewController.swift */; };
+		AFB1C43F2CA987840064D054 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB1C43E2CA987840064D054 /* Assets.xcassets */; };
+		AFB1C44F2CA9891B0064D054 /* CountUpDownModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1C44E2CA9891B0064D054 /* CountUpDownModel.swift */; };
+		AFB1C4532CA98A400064D054 /* CountUpDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1C4522CA98A400064D054 /* CountUpDownView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AFB1C4122CA8DEDA0064D054 /* UMC-iOS-Workbook1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS-Workbook1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFB1C4152CA8DEDA0064D054 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFB1C4172CA8DEDA0064D054 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AFB1C4192CA8DEDA0064D054 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AFB1C41E2CA8DEDC0064D054 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AFB1C4232CA8DEDC0064D054 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFB1C4322CA987810064D054 /* UMC-iOS-Workbook1실습.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UMC-iOS-Workbook1실습.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFB1C4352CA987810064D054 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AFB1C4372CA987810064D054 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AFB1C4392CA987810064D054 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFB1C43E2CA987840064D054 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AFB1C4432CA987840064D054 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFB1C44E2CA9891B0064D054 /* CountUpDownModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountUpDownModel.swift; sourceTree = "<group>"; };
+		AFB1C4522CA98A400064D054 /* CountUpDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountUpDownView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AFB1C40F2CA8DEDA0064D054 /* Frameworks */ = {
+		AFB1C42F2CA987810064D054 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,70 +37,96 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AFB1C4092CA8DEDA0064D054 = {
+		AFB1C4292CA987810064D054 = {
 			isa = PBXGroup;
 			children = (
-				AFB1C4142CA8DEDA0064D054 /* UMC-iOS-Workbook1 */,
-				AFB1C4132CA8DEDA0064D054 /* Products */,
+				AFB1C4342CA987810064D054 /* UMC-iOS-Workbook1실습 */,
+				AFB1C4332CA987810064D054 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AFB1C4132CA8DEDA0064D054 /* Products */ = {
+		AFB1C4332CA987810064D054 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AFB1C4122CA8DEDA0064D054 /* UMC-iOS-Workbook1.app */,
+				AFB1C4322CA987810064D054 /* UMC-iOS-Workbook1실습.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AFB1C4142CA8DEDA0064D054 /* UMC-iOS-Workbook1 */ = {
+		AFB1C4342CA987810064D054 /* UMC-iOS-Workbook1실습 */ = {
 			isa = PBXGroup;
 			children = (
-				AFB1C4152CA8DEDA0064D054 /* AppDelegate.swift */,
-				AFB1C4172CA8DEDA0064D054 /* SceneDelegate.swift */,
-				AFB1C4192CA8DEDA0064D054 /* ViewController.swift */,
-				AFB1C41E2CA8DEDC0064D054 /* Assets.xcassets */,
-				AFB1C4232CA8DEDC0064D054 /* Info.plist */,
+				AFB1C4492CA9885B0064D054 /* Views */,
+				AFB1C44A2CA988740064D054 /* ViewControllers */,
+				AFB1C44B2CA988850064D054 /* Models */,
+				AFB1C4352CA987810064D054 /* AppDelegate.swift */,
+				AFB1C4372CA987810064D054 /* SceneDelegate.swift */,
+				AFB1C43E2CA987840064D054 /* Assets.xcassets */,
+				AFB1C4432CA987840064D054 /* Info.plist */,
 			);
-			path = "UMC-iOS-Workbook1";
+			path = "UMC-iOS-Workbook1실습";
+			sourceTree = "<group>";
+		};
+		AFB1C4492CA9885B0064D054 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AFB1C4522CA98A400064D054 /* CountUpDownView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AFB1C44A2CA988740064D054 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AFB1C4392CA987810064D054 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AFB1C44B2CA988850064D054 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AFB1C44E2CA9891B0064D054 /* CountUpDownModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AFB1C4112CA8DEDA0064D054 /* UMC-iOS-Workbook1 */ = {
+		AFB1C4312CA987810064D054 /* UMC-iOS-Workbook1실습 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AFB1C4262CA8DEDC0064D054 /* Build configuration list for PBXNativeTarget "UMC-iOS-Workbook1" */;
+			buildConfigurationList = AFB1C4462CA987840064D054 /* Build configuration list for PBXNativeTarget "UMC-iOS-Workbook1실습" */;
 			buildPhases = (
-				AFB1C40E2CA8DEDA0064D054 /* Sources */,
-				AFB1C40F2CA8DEDA0064D054 /* Frameworks */,
-				AFB1C4102CA8DEDA0064D054 /* Resources */,
+				AFB1C42E2CA987810064D054 /* Sources */,
+				AFB1C42F2CA987810064D054 /* Frameworks */,
+				AFB1C4302CA987810064D054 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "UMC-iOS-Workbook1";
-			productName = "UMC-iOS-Workbook1";
-			productReference = AFB1C4122CA8DEDA0064D054 /* UMC-iOS-Workbook1.app */;
+			name = "UMC-iOS-Workbook1실습";
+			productName = "UMC-iOS-Workbook1실습";
+			productReference = AFB1C4322CA987810064D054 /* UMC-iOS-Workbook1실습.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AFB1C40A2CA8DEDA0064D054 /* Project object */ = {
+		AFB1C42A2CA987810064D054 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					AFB1C4112CA8DEDA0064D054 = {
+					AFB1C4312CA987810064D054 = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
-			buildConfigurationList = AFB1C40D2CA8DEDA0064D054 /* Build configuration list for PBXProject "UMC-iOS-Workbook1" */;
+			buildConfigurationList = AFB1C42D2CA987810064D054 /* Build configuration list for PBXProject "UMC-iOS-Workbook1실습" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -104,42 +134,44 @@
 				en,
 				Base,
 			);
-			mainGroup = AFB1C4092CA8DEDA0064D054;
-			productRefGroup = AFB1C4132CA8DEDA0064D054 /* Products */;
+			mainGroup = AFB1C4292CA987810064D054;
+			productRefGroup = AFB1C4332CA987810064D054 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AFB1C4112CA8DEDA0064D054 /* UMC-iOS-Workbook1 */,
+				AFB1C4312CA987810064D054 /* UMC-iOS-Workbook1실습 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AFB1C4102CA8DEDA0064D054 /* Resources */ = {
+		AFB1C4302CA987810064D054 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFB1C41F2CA8DEDC0064D054 /* Assets.xcassets in Resources */,
+				AFB1C43F2CA987840064D054 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AFB1C40E2CA8DEDA0064D054 /* Sources */ = {
+		AFB1C42E2CA987810064D054 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFB1C41A2CA8DEDA0064D054 /* ViewController.swift in Sources */,
-				AFB1C4162CA8DEDA0064D054 /* AppDelegate.swift in Sources */,
-				AFB1C4182CA8DEDA0064D054 /* SceneDelegate.swift in Sources */,
+				AFB1C43A2CA987810064D054 /* ViewController.swift in Sources */,
+				AFB1C4532CA98A400064D054 /* CountUpDownView.swift in Sources */,
+				AFB1C4362CA987810064D054 /* AppDelegate.swift in Sources */,
+				AFB1C44F2CA9891B0064D054 /* CountUpDownModel.swift in Sources */,
+				AFB1C4382CA987810064D054 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		AFB1C4242CA8DEDC0064D054 /* Debug */ = {
+		AFB1C4442CA987840064D054 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -202,7 +234,7 @@
 			};
 			name = Debug;
 		};
-		AFB1C4252CA8DEDC0064D054 /* Release */ = {
+		AFB1C4452CA987840064D054 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -258,7 +290,7 @@
 			};
 			name = Release;
 		};
-		AFB1C4272CA8DEDC0064D054 /* Debug */ = {
+		AFB1C4472CA987840064D054 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -267,7 +299,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LN496G5VD3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "UMC-iOS-Workbook1/Info.plist";
+				INFOPLIST_FILE = "UMC-iOS-Workbook1실습/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -277,7 +309,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "a.UMC-iOS-Workbook1";
+				PRODUCT_BUNDLE_IDENTIFIER = "a.UMC-iOS-Workbook1------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -285,7 +317,7 @@
 			};
 			name = Debug;
 		};
-		AFB1C4282CA8DEDC0064D054 /* Release */ = {
+		AFB1C4482CA987840064D054 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -294,7 +326,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LN496G5VD3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "UMC-iOS-Workbook1/Info.plist";
+				INFOPLIST_FILE = "UMC-iOS-Workbook1실습/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -304,7 +336,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "a.UMC-iOS-Workbook1";
+				PRODUCT_BUNDLE_IDENTIFIER = "a.UMC-iOS-Workbook1------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -315,25 +347,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AFB1C40D2CA8DEDA0064D054 /* Build configuration list for PBXProject "UMC-iOS-Workbook1" */ = {
+		AFB1C42D2CA987810064D054 /* Build configuration list for PBXProject "UMC-iOS-Workbook1실습" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AFB1C4242CA8DEDC0064D054 /* Debug */,
-				AFB1C4252CA8DEDC0064D054 /* Release */,
+				AFB1C4442CA987840064D054 /* Debug */,
+				AFB1C4452CA987840064D054 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AFB1C4262CA8DEDC0064D054 /* Build configuration list for PBXNativeTarget "UMC-iOS-Workbook1" */ = {
+		AFB1C4462CA987840064D054 /* Build configuration list for PBXNativeTarget "UMC-iOS-Workbook1실습" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AFB1C4272CA8DEDC0064D054 /* Debug */,
-				AFB1C4282CA8DEDC0064D054 /* Release */,
+				AFB1C4472CA987840064D054 /* Debug */,
+				AFB1C4482CA987840064D054 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AFB1C40A2CA8DEDA0064D054 /* Project object */;
+	rootObject = AFB1C42A2CA987810064D054 /* Project object */;
 }
