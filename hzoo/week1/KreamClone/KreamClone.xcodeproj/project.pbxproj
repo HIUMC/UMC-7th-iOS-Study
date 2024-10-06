@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		1FC522D82CAD3F5100EC0635 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FC522B92CAD3F4F00EC0635 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FC522C02CAD3F4F00EC0635;
+			remoteInfo = KreamClone;
+		};
+		1FC522E22CAD3F5100EC0635 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FC522B92CAD3F4F00EC0635 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FC522C02CAD3F4F00EC0635;
+			remoteInfo = KreamClone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1FC522C12CAD3F4F00EC0635 /* KreamClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KreamClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FC522D72CAD3F5100EC0635 /* KreamCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KreamCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FC522E12CAD3F5100EC0635 /* KreamCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KreamCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1FC522E92CAD3F5100EC0635 /* Exceptions for "KreamClone" folder in "KreamClone" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 1FC522C02CAD3F4F00EC0635 /* KreamClone */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		1FC522C32CAD3F4F00EC0635 /* KreamClone */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1FC522E92CAD3F5100EC0635 /* Exceptions for "KreamClone" folder in "KreamClone" target */,
+			);
+			path = KreamClone;
+			sourceTree = "<group>";
+		};
+		1FC522DA2CAD3F5100EC0635 /* KreamCloneTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = KreamCloneTests;
+			sourceTree = "<group>";
+		};
+		1FC522E42CAD3F5100EC0635 /* KreamCloneUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = KreamCloneUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1FC522BE2CAD3F4F00EC0635 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FC522D42CAD3F5100EC0635 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FC522DE2CAD3F5100EC0635 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FC522B82CAD3F4F00EC0635 = {
+			isa = PBXGroup;
+			children = (
+				1FC522C32CAD3F4F00EC0635 /* KreamClone */,
+				1FC522DA2CAD3F5100EC0635 /* KreamCloneTests */,
+				1FC522E42CAD3F5100EC0635 /* KreamCloneUITests */,
+				1FC522C22CAD3F4F00EC0635 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1FC522C22CAD3F4F00EC0635 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FC522C12CAD3F4F00EC0635 /* KreamClone.app */,
+				1FC522D72CAD3F5100EC0635 /* KreamCloneTests.xctest */,
+				1FC522E12CAD3F5100EC0635 /* KreamCloneUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1FC522C02CAD3F4F00EC0635 /* KreamClone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FC522EA2CAD3F5100EC0635 /* Build configuration list for PBXNativeTarget "KreamClone" */;
+			buildPhases = (
+				1FC522BD2CAD3F4F00EC0635 /* Sources */,
+				1FC522BE2CAD3F4F00EC0635 /* Frameworks */,
+				1FC522BF2CAD3F4F00EC0635 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				1FC522C32CAD3F4F00EC0635 /* KreamClone */,
+			);
+			name = KreamClone;
+			packageProductDependencies = (
+			);
+			productName = KreamClone;
+			productReference = 1FC522C12CAD3F4F00EC0635 /* KreamClone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1FC522D62CAD3F5100EC0635 /* KreamCloneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FC522EF2CAD3F5100EC0635 /* Build configuration list for PBXNativeTarget "KreamCloneTests" */;
+			buildPhases = (
+				1FC522D32CAD3F5100EC0635 /* Sources */,
+				1FC522D42CAD3F5100EC0635 /* Frameworks */,
+				1FC522D52CAD3F5100EC0635 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FC522D92CAD3F5100EC0635 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1FC522DA2CAD3F5100EC0635 /* KreamCloneTests */,
+			);
+			name = KreamCloneTests;
+			packageProductDependencies = (
+			);
+			productName = KreamCloneTests;
+			productReference = 1FC522D72CAD3F5100EC0635 /* KreamCloneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1FC522E02CAD3F5100EC0635 /* KreamCloneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FC522F22CAD3F5100EC0635 /* Build configuration list for PBXNativeTarget "KreamCloneUITests" */;
+			buildPhases = (
+				1FC522DD2CAD3F5100EC0635 /* Sources */,
+				1FC522DE2CAD3F5100EC0635 /* Frameworks */,
+				1FC522DF2CAD3F5100EC0635 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FC522E32CAD3F5100EC0635 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1FC522E42CAD3F5100EC0635 /* KreamCloneUITests */,
+			);
+			name = KreamCloneUITests;
+			packageProductDependencies = (
+			);
+			productName = KreamCloneUITests;
+			productReference = 1FC522E12CAD3F5100EC0635 /* KreamCloneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1FC522B92CAD3F4F00EC0635 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					1FC522C02CAD3F4F00EC0635 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					1FC522D62CAD3F5100EC0635 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 1FC522C02CAD3F4F00EC0635;
+					};
+					1FC522E02CAD3F5100EC0635 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 1FC522C02CAD3F4F00EC0635;
+					};
+				};
+			};
+			buildConfigurationList = 1FC522BC2CAD3F4F00EC0635 /* Build configuration list for PBXProject "KreamClone" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1FC522B82CAD3F4F00EC0635;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1FC522C22CAD3F4F00EC0635 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1FC522C02CAD3F4F00EC0635 /* KreamClone */,
+				1FC522D62CAD3F5100EC0635 /* KreamCloneTests */,
+				1FC522E02CAD3F5100EC0635 /* KreamCloneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FC522BF2CAD3F4F00EC0635 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FC522D52CAD3F5100EC0635 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FC522DF2CAD3F5100EC0635 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FC522BD2CAD3F4F00EC0635 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FC522D32CAD3F5100EC0635 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FC522DD2CAD3F5100EC0635 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1FC522D92CAD3F5100EC0635 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FC522C02CAD3F4F00EC0635 /* KreamClone */;
+			targetProxy = 1FC522D82CAD3F5100EC0635 /* PBXContainerItemProxy */;
+		};
+		1FC522E32CAD3F5100EC0635 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FC522C02CAD3F4F00EC0635 /* KreamClone */;
+			targetProxy = 1FC522E22CAD3F5100EC0635 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1FC522EB2CAD3F5100EC0635 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UKY6HK6U6Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KreamClone/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.KreamClone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1FC522EC2CAD3F5100EC0635 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UKY6HK6U6Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KreamClone/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.KreamClone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1FC522ED2CAD3F5100EC0635 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1FC522EE2CAD3F5100EC0635 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1FC522F02CAD3F5100EC0635 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UKY6HK6U6Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.KreamCloneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KreamClone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KreamClone";
+			};
+			name = Debug;
+		};
+		1FC522F12CAD3F5100EC0635 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UKY6HK6U6Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.KreamCloneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KreamClone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KreamClone";
+			};
+			name = Release;
+		};
+		1FC522F32CAD3F5100EC0635 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UKY6HK6U6Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.KreamCloneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KreamClone;
+			};
+			name = Debug;
+		};
+		1FC522F42CAD3F5100EC0635 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UKY6HK6U6Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.KreamCloneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KreamClone;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1FC522BC2CAD3F4F00EC0635 /* Build configuration list for PBXProject "KreamClone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FC522ED2CAD3F5100EC0635 /* Debug */,
+				1FC522EE2CAD3F5100EC0635 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FC522EA2CAD3F5100EC0635 /* Build configuration list for PBXNativeTarget "KreamClone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FC522EB2CAD3F5100EC0635 /* Debug */,
+				1FC522EC2CAD3F5100EC0635 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FC522EF2CAD3F5100EC0635 /* Build configuration list for PBXNativeTarget "KreamCloneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FC522F02CAD3F5100EC0635 /* Debug */,
+				1FC522F12CAD3F5100EC0635 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FC522F22CAD3F5100EC0635 /* Build configuration list for PBXNativeTarget "KreamCloneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FC522F32CAD3F5100EC0635 /* Debug */,
+				1FC522F42CAD3F5100EC0635 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1FC522B92CAD3F4F00EC0635 /* Project object */;
+}
