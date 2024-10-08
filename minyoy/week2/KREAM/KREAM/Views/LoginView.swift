@@ -142,6 +142,8 @@ class LoginView: UIView {
         textField.leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 16.0, height: 0.0))
         textField.leftViewMode = .always
         
+        textField.isSecureTextEntry = true
+        
         textField.translatesAutoresizingMaskIntoConstraints = false
         
         return textField
@@ -167,20 +169,8 @@ class LoginView: UIView {
         btn.configuration = configuration
         btn.translatesAutoresizingMaskIntoConstraints = false
         
-        btn.addTarget(self, action: #selector(buttonDidTap), for: .touchUpInside)
-        
         return btn
     }()
-    
-    @objc
-    private func buttonDidTap() {
-        let viewController = UIViewController()
-        
-        viewController.view.backgroundColor = .blue
-        viewController.modalPresentationStyle = .fullScreen
-        
-        present(viewController, animated: true)
-    }
     
     private lazy var socialLoginTitleContainer: AttributeContainer = {
         var container = AttributeContainer()
