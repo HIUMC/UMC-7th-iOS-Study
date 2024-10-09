@@ -32,11 +32,9 @@ class BaseViewController: UITabBarController {
         tabBarAppearance.backgroundColor = .white
         tabBarAppearance.configureWithOpaqueBackground()
         tabBarAppearance.stackedLayoutAppearance.normal.iconColor = .black
-        tabBarAppearance.stackedLayoutAppearance.selected.iconColor = .black
         self.tabBar.scrollEdgeAppearance = tabBarAppearance
         
         self.tabBar.tintColor = .black
-        self.tabBar.unselectedItemTintColor = .black
         
         homeViewController.tabBarItem = UITabBarItem(title: "HOME", image: UIImage(named: "icon_home"), tag: 0)
         styleViewController.tabBarItem = UITabBarItem(title: "STYLE", image: UIImage(named: "icon_style"), tag: 1)
