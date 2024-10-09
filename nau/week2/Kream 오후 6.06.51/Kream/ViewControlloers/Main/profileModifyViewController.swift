@@ -8,7 +8,13 @@
 import UIKit
 
 class profileModifyViewController: UIViewController {
-    let backBtnbar = UIButton()
+    public lazy var backBtn = UIButton().then {
+        var config = UIButton.Configuration.plain()
+        
+        config.background.image = UIImage(systemName: "arrow.backward")?.withTintColor(UIColor.black).withRenderingMode(.alwaysOriginal)
+        $0.configuration = config
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = profileModifyView1
@@ -17,9 +23,12 @@ class profileModifyViewController: UIViewController {
         
         profileModifyView1.changeBtn2.addTarget(self, action: #selector(changeBtn2DidTap), for: .touchUpInside)
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: profileModifyView1.backBtn)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backBtn)
+        backBtn.addTarget(self, action: #selector(backBtnDidTap), for: .touchUpInside)
         
-        profileModifyView1.backBtn.addTarget(self, action: #selector(backBtnDidTap), for: .touchUpInside)
+        //self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: profileModifyView1.backBtn)
+        
+        //profileModifyView1.backBtn.addTarget(self, action: #selector(backBtnDidTap), for: .touchUpInside)
     }
     
     private lazy var profileModifyView1: profileModifyView = {
@@ -48,9 +57,13 @@ class profileModifyViewController: UIViewController {
         
         profileModifyView1.changeBtn2.configuration = config
     }
-
+    
     @objc func backBtnDidTap(){
         self.navigationController?.popViewController(animated: true)
     }
+    
+    /*@objc func backBtnDidTap(){
+        self.navigationController?.popViewController(animated: true)
+    }*/
 
 }

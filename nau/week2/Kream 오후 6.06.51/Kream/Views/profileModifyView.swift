@@ -21,11 +21,11 @@ class profileModifyView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public lazy var backBtn = UIButton().then {
+    /*public lazy var backBtn = UIButton().then {
         $0.setImage(UIImage(systemName: "arrow.backward"), for: .normal)
         $0.tintColor = UIColor.black
         $0.contentEdgeInsets = UIEdgeInsets(top: 0, left: 27, bottom: 0, right: 0)
-    }//back버튼
+    }*///back버튼
     
     public lazy var profileManageTitle = UILabel().then {
         $0.text = "프로필 관리"
@@ -116,7 +116,7 @@ class profileModifyView: UIView {
     }
     
     private func addComponents(){
-        self.addSubview(backBtn)
+        //self.addSubview(backBtn)
         self.addSubview(profileManageTitle)
         self.addSubview(profileImage)
         self.addSubview(profileInformation)
