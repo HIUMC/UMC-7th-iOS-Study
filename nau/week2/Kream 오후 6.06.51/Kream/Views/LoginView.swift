@@ -23,8 +23,6 @@ class LoginView: UIView {
         self.addSubview(loginImageView)
         self.addSubview(idLable)
         self.addSubview(pwdLable)
-        self.addSubview(idInputFrame)
-        self.addSubview(pwdInputFrame)
         self.addSubview(idInput)
         self.addSubview(pwdInput)
         self.addSubview(loginButton)
@@ -39,24 +37,20 @@ class LoginView: UIView {
             idLable.topAnchor.constraint(equalTo: loginImageView.bottomAnchor, constant: 87),
             idLable.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 45),
             
-            idInputFrame.topAnchor.constraint(equalTo: idLable.bottomAnchor, constant: 8),
-            idInputFrame.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            idInputFrame.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 45),
-            
-            pwdLable.topAnchor.constraint(equalTo: idInputFrame.bottomAnchor, constant: 17),
+            pwdLable.topAnchor.constraint(equalTo: idInput.bottomAnchor, constant: 17),
             pwdLable.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 45),
             
-            pwdInputFrame.topAnchor.constraint(equalTo: pwdLable.bottomAnchor, constant: 8),
-            pwdInputFrame.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            pwdInputFrame.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 45),
+            idInput.topAnchor.constraint(equalTo: idLable.bottomAnchor, constant: 8),
+            idInput.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 45),
+            idInput.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            idInput.heightAnchor.constraint(equalToConstant: 34),
             
-            idInput.topAnchor.constraint(equalTo: idLable.topAnchor, constant: 32),
-            idInput.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 61),
+            pwdInput.topAnchor.constraint(equalTo: pwdLable.bottomAnchor, constant: 8),
+            pwdInput.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 45),
+            pwdInput.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            pwdInput.heightAnchor.constraint(equalToConstant: 34),
             
-            pwdInput.topAnchor.constraint(equalTo: pwdLable.topAnchor, constant: 32),
-            pwdInput.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 61),
-            
-            loginButton.topAnchor.constraint(equalTo: pwdInputFrame.bottomAnchor, constant: 17),
+            loginButton.topAnchor.constraint(equalTo: pwdInput.bottomAnchor, constant: 17),
             loginButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 45),
             loginButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             loginButton.heightAnchor.constraint(equalToConstant: 38),
@@ -112,40 +106,37 @@ class LoginView: UIView {
         let text = UITextField()
         
         text.font = UIFont.systemFont(ofSize: 12, weight: .regular)
-        text.attributedPlaceholder = NSAttributedString(string: "예) kream@kream.co.kr", attributes: [.foregroundColor: UIColor.lightGray, .font: UIFont.systemFont(ofSize: 12, weight: .regular)])//텍스트필드에 다른텍스트 없을 때
+        text.attributedPlaceholder = NSAttributedString(string: "예) kream@kream.co.kr", attributes: [.foregroundColor: UIColor(hue: 0, saturation: 0, brightness: 0.75, alpha: 1.0).cgColor, .font: UIFont.systemFont(ofSize: 12, weight: .regular)])//텍스트필드에 다른텍스트 없을 때
+        text.leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 16.0, height: 0.0))
+        text.leftViewMode = .always
+        
+        text.layer.borderColor = UIColor(hue: 0/360, saturation: 0/100, brightness: 63/100, alpha: 1.0).cgColor
+        text.layer.borderWidth = 1
+        text.layer.cornerRadius = 15
         
         text.translatesAutoresizingMaskIntoConstraints = false
         
         return text
     }()//아이디 쓰는 칸
     
-    public lazy var idInputFrame: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "Rectangle 3"))
-        
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return imageView
-    }()//id 프레임
     
     public lazy var pwdInput: UITextField = {
         let text = UITextField()
         
         text.font = UIFont.systemFont(ofSize: 12, weight: .regular)
-        text.attributedPlaceholder = NSAttributedString(string: "비밀번호를 입력해주세요", attributes: [.foregroundColor: UIColor.lightGray, .font: UIFont.systemFont(ofSize: 12, weight: .regular)])
+        text.attributedPlaceholder = NSAttributedString(string: "비밀번호를 입력해주세요", attributes: [.foregroundColor: UIColor(hue: 0, saturation: 0, brightness: 0.75, alpha: 1.0).cgColor, .font: UIFont.systemFont(ofSize: 12, weight: .regular)])
+        
+        text.leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 16.0, height: 0.0))
+        text.leftViewMode = .always
+        
+        text.layer.borderColor = UIColor(hue: 0/360, saturation: 0/100, brightness: 63/100, alpha: 1.0).cgColor
+        text.layer.borderWidth = 1
+        text.layer.cornerRadius = 15
             
         text.translatesAutoresizingMaskIntoConstraints = false
         
         return text
     }()//비번 쓰는 칸
-    
-    
-    public lazy var pwdInputFrame: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "Rectangle 3"))
-        
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return imageView
-    }()//비번 프레임
     
     private lazy var loginTitle: AttributeContainer = {
         var container = AttributeContainer()
