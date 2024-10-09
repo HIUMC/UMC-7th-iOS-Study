@@ -34,25 +34,27 @@ class profileModifyViewController: UIViewController {
     private lazy var profileModifyView1 = profileModifyView().then() {_ in }
     
     @objc func changeBtn1DidTap(){
-        profileModifyView1.userIdInput.text = ""
-        
-        var config = UIButton.Configuration.plain()
-        
-        config.attributedTitle = AttributedString("확인", attributes: profileModifyView1.changeBtnTitle)
-        config.titleAlignment = .center
-        
-        profileModifyView1.changeBtn1.configuration = config
-    }
+        profileModifyView1.do(){
+            $0.userIdInput.text = ""
+            var config = UIButton.Configuration.plain()
+            
+            config.attributedTitle = AttributedString("확인", attributes: $0.changeBtnTitle)
+            config.titleAlignment = .center
+            
+            $0.changeBtn1.configuration = config
+        }}
     
     @objc func changeBtn2DidTap(){
-        profileModifyView1.userPwdInput.text = ""
-        
-        var config = UIButton.Configuration.plain()
-        
-        config.attributedTitle = AttributedString("확인", attributes: profileModifyView1.changeBtnTitle)
-        config.titleAlignment = .center
-        
-        profileModifyView1.changeBtn2.configuration = config
+        profileModifyView1.do(){
+            $0.userPwdInput.text = ""
+            
+            var config = UIButton.Configuration.plain()
+            
+            config.attributedTitle = AttributedString("확인", attributes: $0.changeBtnTitle)
+            config.titleAlignment = .center
+            
+            $0.changeBtn2.configuration = config
+        }
     }
     
     @objc func backBtnDidTap(){
