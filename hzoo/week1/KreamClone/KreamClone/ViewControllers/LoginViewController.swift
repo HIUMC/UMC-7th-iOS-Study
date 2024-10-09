@@ -16,9 +16,17 @@ class LoginViewController: UIViewController {
     
     private lazy var loginView: LoginView = {
         let v = LoginView()
+        v.loginButton.addTarget(self, action: #selector(loginBtnTapped), for: .touchUpInside)
         return v
     }()
+    
+    @objc
+    private func loginBtnTapped() {
+        let vc = BaseViewController()
 
-
+        vc.modalPresentationStyle = .fullScreen
+        
+        present(vc, animated: true)
+    }
 }
 

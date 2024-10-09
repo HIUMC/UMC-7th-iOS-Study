@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import SnapKit
 
-class LoginView: UIView {
+class LoginView: UIView, UITextFieldDelegate {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -50,6 +51,10 @@ class LoginView: UIView {
         t.layer.borderColor = UIColor(hue: 0, saturation: 0, brightness: 0.63, alpha: 1.0).cgColor
         t.leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 16.0, height: 0.0))
         t.leftViewMode = .always
+        t.returnKeyType = .done
+        t.keyboardType = UIKeyboardType.emailAddress
+        t.textContentType = .emailAddress
+        t.clearButtonMode = .always
         
         t.translatesAutoresizingMaskIntoConstraints = false
         return t
@@ -86,6 +91,10 @@ class LoginView: UIView {
         t.layer.borderColor = UIColor(hue: 0, saturation: 0, brightness: 0.63, alpha: 1.0).cgColor
         t.leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 16.0, height: 0.0))
         t.leftViewMode = .always
+        t.returnKeyType = .done
+        t.textContentType = .password
+        t.isSecureTextEntry = true
+        t.clearButtonMode = .always
         
         t.translatesAutoresizingMaskIntoConstraints = false
         return t
@@ -102,7 +111,7 @@ class LoginView: UIView {
     }()
     
     public lazy var loginButton: UIButton = {
-        let b = UIButton()
+        let b = UIButton(type: .system)
         b.backgroundColor = UIColor(hue: 0, saturation: 0, brightness: 0.85, alpha: 1.0)
         b.setTitleColor(.white, for: .normal)
         b.setTitle("로그인", for: .normal)
@@ -186,7 +195,22 @@ class LoginView: UIView {
         s.translatesAutoresizingMaskIntoConstraints = false
         return s
     }()
-
+    
+    // 배경 클릭시 키보드 내림  ==> view 에 터치가 들어오면 에디팅모드를 끝냄.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.endEditing(true)  //firstresponder가 전부 사라짐
+    }
+    
+    // done 버튼 누를 때 다음 텍스트 필드로 이동
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == self.emailTextField {
+            self.pwdTextField.becomeFirstResponder()
+        } else if textField == self.pwdTextField {
+            self.pwdStackView.resignFirstResponder()
+        }
+        return true
+    }
     
     private func addComponenets() {
         addSubview(logoImage)

@@ -12,18 +12,43 @@ class ProfileEditViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = .white
+        self.view = profileManageView
+        
+        let titleLabel = UILabel()
+        titleLabel.text = "프로필 관리"
+        titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        titleLabel.textColor = .black
+        navigationItem.titleView = titleLabel
+    
+        let backbutton = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"), style: .done, target: self, action: #selector(goToBack))
+        self.navigationItem.leftBarButtonItem = backbutton
+        self.navigationController?.navigationBar.tintColor = .black
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc
+    private func goToBack() {
+        self.navigationController?.popViewController(animated: true)
     }
-    */
-
+    
+    private lazy var profileManageView: ProfileManageView = {
+        let v = ProfileManageView()
+        v.emailCheckBtn.addTarget(self, action: #selector(emailChange), for: .touchUpInside)
+        v.pwdCheckBtn.addTarget(self, action: #selector(pwdChange), for: .touchUpInside)
+        return v
+    }()
+    
+    @objc
+    private func emailChange() {
+        profileManageView.emailCheckBtn.setTitle("확인", for: .normal)
+        profileManageView.emailTextField.text = ""
+        profileManageView.emailTextField.resignFirstResponder()
+    }
+    
+    @objc
+    private func pwdChange() {
+        profileManageView.pwdCheckBtn.setTitle("확인", for: .normal)
+        profileManageView.pwdTextField.text = ""
+        profileManageView.pwdTextField.resignFirstResponder()
+    }
 }
