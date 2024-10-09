@@ -31,10 +31,7 @@ class profileModifyViewController: UIViewController {
         //profileModifyView1.backBtn.addTarget(self, action: #selector(backBtnDidTap), for: .touchUpInside)
     }
     
-    private lazy var profileModifyView1: profileModifyView = {
-        let view = profileModifyView()
-        return view
-    }()
+    private lazy var profileModifyView1 = profileModifyView().then() {_ in }
     
     @objc func changeBtn1DidTap(){
         profileModifyView1.userIdInput.text = ""

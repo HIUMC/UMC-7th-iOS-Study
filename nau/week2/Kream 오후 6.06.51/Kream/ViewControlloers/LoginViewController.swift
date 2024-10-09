@@ -20,10 +20,7 @@ class LoginViewController: UIViewController {
         LoginView1.loginAppleButton.addTarget(self, action: #selector(loginButtonDidTap), for: .touchUpInside)
     }
 
-    private lazy var LoginView1: LoginView = {
-        let view = LoginView()
-        return view
-    }()
+    private lazy var LoginView1 = LoginView().then(){_ in}
     
     @objc
     private func loginButtonDidTap() {

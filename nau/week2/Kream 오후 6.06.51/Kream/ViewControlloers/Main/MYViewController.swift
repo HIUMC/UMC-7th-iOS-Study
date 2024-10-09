@@ -17,10 +17,7 @@ class MYViewController: UIViewController {
     
     }
     
-    private lazy var MYView1: MYView = {
-        let view = MYView()
-        return view
-    }()
+    private lazy var MYView1 = MYView().then(){_ in }
     
     @objc
     private func profileManageBtnDidTap(){
