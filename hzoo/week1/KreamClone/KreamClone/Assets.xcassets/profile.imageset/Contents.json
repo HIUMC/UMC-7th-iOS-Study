@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "크림 로고.png",
+      "filename" : "a93d324c1b6b79556f71d86baf8a409b.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "크림 로고@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "크림 로고@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
