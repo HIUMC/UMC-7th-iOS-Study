@@ -14,22 +14,9 @@
 		3CCAFEB42CBC49D700D8DB3E /* week3(2).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "week3(2).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		3CCAFEC62CBC49D900D8DB3E /* Exceptions for "week3(2)" folder in "week3(2)" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 3CCAFEB32CBC49D700D8DB3E /* week3(2) */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		3CCAFEB62CBC49D700D8DB3E /* week3(2) */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				3CCAFEC62CBC49D900D8DB3E /* Exceptions for "week3(2)" folder in "week3(2)" target */,
-			);
 			path = "week3(2)";
 			sourceTree = "<group>";
 		};
