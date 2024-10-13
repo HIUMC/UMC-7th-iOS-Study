@@ -12,12 +12,12 @@ class MYViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = MYView1
-        
-        MYView1.profileManageButton.addTarget(self, action: #selector(profileManageBtnDidTap), for: .touchUpInside)
-    
+        navigationController?.isNavigationBarHidden = true
     }
     
-    private lazy var MYView1 = MYView().then(){_ in }
+    private lazy var MYView1 = MYView().then(){
+        $0.profileManageButton.addTarget(self, action: #selector(profileManageBtnDidTap), for: .touchUpInside)
+    }
     
     @objc
     private func profileManageBtnDidTap(){

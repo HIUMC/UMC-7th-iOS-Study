@@ -21,11 +21,10 @@ class profileModifyView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    /*public lazy var backBtn = UIButton().then {
+    public lazy var backBtn = UIButton().then {
         $0.setImage(UIImage(systemName: "arrow.backward"), for: .normal)
         $0.tintColor = UIColor.black
-        $0.contentEdgeInsets = UIEdgeInsets(top: 0, left: 27, bottom: 0, right: 0)
-    }*///back버튼
+    }//back버튼
     
     public lazy var profileManageTitle = UILabel().then {
         $0.text = "프로필 관리"
@@ -98,9 +97,9 @@ class profileModifyView: UIView {
         $0.layer.cornerRadius = 6
         $0.layer.borderColor = UIColor.black.cgColor
         
-        var config = UIButton.Configuration.plain()
-        config.attributedTitle = AttributedString("변경", attributes: changeBtnTitle)
-        $0.configuration = config
+        $0.setTitle("변경", for: .normal)
+        $0.setTitleColor(UIColor.black, for: .normal)
+        $0.titleLabel?.font = .systemFont(ofSize: 14, weight: .regular)
     }
     
     public lazy var changeBtn2 = UIButton().then {
@@ -108,15 +107,13 @@ class profileModifyView: UIView {
         $0.layer.cornerRadius = 6
         $0.layer.borderColor = UIColor.black.cgColor
         
-        var config = UIButton.Configuration.plain()
-        
-        config.attributedTitle = AttributedString("변경", attributes: changeBtnTitle)
-        
-        $0.configuration = config
+        $0.setTitle("변경", for: .normal)
+        $0.setTitleColor(UIColor.black, for: .normal)
+        $0.titleLabel?.font = .systemFont(ofSize: 14, weight: .regular)
     }
     
     private func addComponents(){
-        //self.addSubview(backBtn)
+        self.addSubview(backBtn)
         self.addSubview(profileManageTitle)
         self.addSubview(profileImage)
         self.addSubview(profileInformation)
@@ -127,10 +124,16 @@ class profileModifyView: UIView {
         self.addSubview(userPwdInput)
         self.addSubview(changeBtn2)
         
+        backBtn.snp.makeConstraints{
+            $0.top.equalToSuperview().inset(67)
+            $0.left.equalToSuperview().inset(27)
+        }
+        
         profileManageTitle.snp.makeConstraints{
             $0.top.equalToSuperview().inset(66)
             $0.left.equalToSuperview().inset(164)
         }
+        
         profileImage.snp.makeConstraints{
             $0.top.equalTo(profileManageTitle.snp.bottom).offset(52)
             $0.centerX.equalToSuperview()
@@ -152,11 +155,13 @@ class profileModifyView: UIView {
         changeBtn1.snp.makeConstraints{
             $0.top.equalTo(userId.snp.bottom).offset(4)
             $0.right.equalToSuperview().inset(17)
+            $0.width.equalTo(58)
         }
         
         changeBtn2.snp.makeConstraints{
             $0.top.equalTo(userPwd.snp.bottom).offset(4)
             $0.right.equalToSuperview().inset(17)
+            $0.width.equalTo(58)
         }
         
         userPwd.snp.makeConstraints{

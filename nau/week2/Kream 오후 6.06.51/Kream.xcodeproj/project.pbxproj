@@ -108,7 +108,6 @@
 			children = (
 				AFB1C4A12CA9B3B80064D054 /* Models */,
 				AFB1C4A02CA9B3B30064D054 /* Views */,
-				AFB1C49F2CA9B3A40064D054 /* ViewControlloers */,
 				AFB1C48B2CA9B37A0064D054 /* AppDelegate.swift */,
 				AFB1C48D2CA9B37A0064D054 /* SceneDelegate.swift */,
 				AFB1C4942CA9B37B0064D054 /* Assets.xcassets */,
@@ -133,6 +132,7 @@
 				AFB1C4A42CA9B4060064D054 /* LoginView.swift */,
 				AFC9C8752CB1C57000B1BC80 /* MYView.swift */,
 				AFC9C8802CB2E09C00B1BC80 /* profileModifyView.swift */,
+				AFB1C49F2CA9B3A40064D054 /* ViewControlloers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
