@@ -78,7 +78,7 @@ class ProfileManageView: UIView {
     //유저 비밀번호 텍스트 필드
     public lazy var userpasswordtextfield = UITextField().then {
         $0.attributedPlaceholder = NSAttributedString(string: "******************", attributes: [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14, weight: .medium)])
-        $0.isSecureTextEntry = true
+
         
         $0.layer.borderColor = UIColor(red: 0.84, green: 0.84, blue: 0.84, alpha: 1.00).cgColor
         $0.layer.cornerRadius = 10

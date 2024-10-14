@@ -44,7 +44,7 @@ class ProfileManageViewController: UIViewController {
         manageview.userpasswordtextfield.font = .systemFont(ofSize: 12, weight: .medium)
         manageview.userpasswordtextfield.isSecureTextEntry = true
         manageview.passwordchangebutton.setTitle("확인", for: .normal)
-       }
+    }
 
 
 }
