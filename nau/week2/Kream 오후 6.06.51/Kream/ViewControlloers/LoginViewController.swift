@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Then
 
 class LoginViewController: UIViewController {
 
@@ -20,10 +21,23 @@ class LoginViewController: UIViewController {
         LoginView1.loginAppleButton.addTarget(self, action: #selector(loginButtonDidTap), for: .touchUpInside)
     }
 
-    private lazy var LoginView1 = LoginView().then(){_ in}
+    private lazy var LoginView1 = LoginView().then {_ in}
+    var loginModel = LoginModel()
     
     @objc
     private func loginButtonDidTap() {
+        LoginView1.do(){_ in 
+            guard let id = LoginView1.idInput.text , !id.isEmpty else {
+                return
+            }
+            LoginModel().savedId(id)
+            
+            guard let pwd = LoginView1.pwdInput.text , !pwd.isEmpty else {
+                return
+            }
+            LoginModel().savedPwd(pwd)
+        }
+        
         let mainVC = MainViewController()
         mainVC.modalPresentationStyle = .fullScreen
         present(mainVC, animated: true)

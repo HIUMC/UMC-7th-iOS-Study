@@ -26,6 +26,7 @@ class MainViewController: UITabBarController {
         
         self.tabBar.tintColor = UIColor.black
         self.tabBar.unselectedItemTintColor = UIColor.gray
+        self.tabBar.backgroundColor = UIColor.white
         self.tabBar.standardAppearance = style
         
         HOMEVC.tabBarItem = UITabBarItem(title: "HOME", image: UIImage(named: "icon_home_fill"), tag: 0)
