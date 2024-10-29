@@ -1,5 +1,5 @@
 //
-//  SavedViewController.swift
+//  StyleViewController.swift
 //  KREAM
 //
 //  Created by 이태림 on 10/8/24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SavedViewController: UIViewController {
+class StyleViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
