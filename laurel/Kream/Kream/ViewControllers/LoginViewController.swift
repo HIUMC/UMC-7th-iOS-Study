@@ -11,10 +11,20 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // LoginView를 뷰 컨트롤러의 뷰로 설정
-        let loginView = LoginView(frame: self.view.bounds)
-        self.view = loginView 
+        // LoginView 설정
+        let loginView = LoginView()
+        loginView.onLoginButtonTapped = { [weak self] in
+            self?.navigateToMainTabBar()
+        }
+        self.view = loginView
+    }
+    
+    private func navigateToMainTabBar() {
+        let tabBarController = MyTabBarController()
+        tabBarController.modalPresentationStyle = .fullScreen
+        self.present(tabBarController, animated: true, completion: nil)
     }
 }
+
+
 

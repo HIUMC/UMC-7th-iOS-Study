@@ -6,18 +6,21 @@
 //
 
 import UIKit
+import SnapKit
 
 class LoginView: UIView {
+    
+    // MyPageViewController로 이동하는 액션 클로저
+    var onLoginButtonTapped: (() -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .white
     
-        //크림 로고
+        // 크림 로고
         let imageView: UIImageView = {
             let imageView = UIImageView()
             imageView.contentMode = .scaleAspectFit
-            imageView.translatesAutoresizingMaskIntoConstraints = false
             return imageView
         }()
         
@@ -26,14 +29,14 @@ class LoginView: UIView {
         }
         addSubview(imageView)
         
-        //이메일 주소
+        // 이메일 주소
         let idLabel: UILabel = {
             let label = UILabel()
             label.text = "이메일 주소"
             label.font = UIFont.systemFont(ofSize: 11)
-            label.translatesAutoresizingMaskIntoConstraints = false
             return label
         }()
+        addSubview(idLabel)
         
         // 이메일 입력 칸
         let idTextField: UITextField = {
@@ -46,156 +49,137 @@ class LoginView: UIView {
             textField.font = UIFont.systemFont(ofSize: 11)
             return textField
         }()
+        addSubview(idTextField)
         
         // 비밀번호
         let passwordLabel: UILabel = {
             let label = UILabel()
             label.text = "비밀번호"
             label.font = UIFont.systemFont(ofSize: 11)
-            label.translatesAutoresizingMaskIntoConstraints = false
             return label
         }()
+        addSubview(passwordLabel)
         
         // 비밀번호 입력 칸
         let passwordTextField: UITextField = {
             let textField = UITextField()
             textField.placeholder = "      비밀번호를 입력해주세요"
             textField.isSecureTextEntry = true
-            textField.clipsToBounds = true
+            textField.layer.cornerRadius = 15
             textField.layer.borderWidth = 1.0
             textField.layer.borderColor = UIColor.lightGray.cgColor
-            textField.layer.cornerRadius = 15
             textField.font = UIFont.systemFont(ofSize: 11)
-
             return textField
         }()
+        addSubview(passwordTextField)
         
         // 로그인 버튼
         let loginButton: UIButton = {
             let button = UIButton(type: .system)
             button.setTitle("로그인", for: .normal)
             button.backgroundColor = .lightGray
-            button.setTitleColor(.white, for: .normal) // 버튼 텍스트 색상 설정
-            button.layer.cornerRadius = 10 // 버튼 모서리 둥글게
-            button.translatesAutoresizingMaskIntoConstraints = false
+            button.backgroundColor = UIColor(red: 217/255, green: 217/255, blue: 217/255, alpha: 1.0)
+            button.setTitleColor(.white, for: .normal)
+            button.layer.cornerRadius = 10
+            button.addTarget(self, action: #selector(handleLoginButtonTapped), for: .touchUpInside)
             return button
         }()
+        addSubview(loginButton)
         
         // 카카오 로그인 버튼
         let kakaoLoginButton: UIButton = {
             let button = UIButton(type: .system)
-            button.setTitle("카카오로 로그인", for: .normal)
-            if let kakaoImage = UIImage(named: "kakaologo")?.withRenderingMode(.alwaysOriginal) {                   button.setImage(kakaoImage, for: .normal)
-               }
+            button.setTitle(" 카카오로 로그인", for: .normal)
+            if let kakaoImage = UIImage(named: "kakaologo")?.withRenderingMode(.alwaysOriginal) {
+                button.setImage(kakaoImage, for: .normal)
+            }
             button.backgroundColor = .white
             button.setTitleColor(.black, for: .normal)
             button.layer.borderWidth = 1.0
             button.layer.borderColor = UIColor.lightGray.cgColor
             button.layer.cornerRadius = 10
-            button.translatesAutoresizingMaskIntoConstraints = false
             
-            button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -150, bottom: 0, right: 0)
-     
             return button
         }()
+        addSubview(kakaoLoginButton)
         
-        
-        
-        //apple로 로그인
-        
+        // Apple 로그인 버튼
         let appleLoginButton: UIButton = {
             let button = UIButton(type: .system)
-            button.setTitle("Apple로 로그인", for: .normal)
-            if let appleImage = UIImage(named: "applelogo")?.withRenderingMode(.alwaysOriginal) {                   button.setImage(appleImage, for: .normal)
-               }
+            button.setTitle(" Apple로 로그인", for: .normal)
+            if let appleImage = UIImage(named: "applelogo")?.withRenderingMode(.alwaysOriginal) {
+                button.setImage(appleImage, for: .normal)
+            }
             button.backgroundColor = .white
             button.setTitleColor(.black, for: .normal)
             button.layer.borderWidth = 1.0
             button.layer.borderColor = UIColor.lightGray.cgColor
             button.layer.cornerRadius = 10
-            button.translatesAutoresizingMaskIntoConstraints = false
-            button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -150, bottom: 0, right: 0)
             return button
         }()
-        
-        
-        // 요소 추가
-        addSubview(idLabel)
-        addSubview(idTextField)
-        addSubview(passwordLabel)
-        addSubview(passwordTextField)
-        addSubview(loginButton)
-        addSubview(kakaoLoginButton)
         addSubview(appleLoginButton)
         
+        // SnapKit으로 레이아웃 설정
+        imageView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(self.safeAreaLayoutGuide).offset(126)
+            make.width.equalTo(287)
+            make.height.equalTo(75)
+        }
         
-        // Auto Layout 설정
-        idLabel.translatesAutoresizingMaskIntoConstraints = false
-        idTextField.translatesAutoresizingMaskIntoConstraints = false
-        passwordLabel.translatesAutoresizingMaskIntoConstraints = false
-        passwordTextField.translatesAutoresizingMaskIntoConstraints = false
-        loginButton.translatesAutoresizingMaskIntoConstraints = false
+        idLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.leading.equalTo(idTextField)
+            make.top.equalTo(imageView.snp.bottom).offset(40)
+        }
         
-        // 레이아웃 설정
-        NSLayoutConstraint.activate([
-            // 이미지
-            imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            imageView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 126),
-            imageView.widthAnchor.constraint(equalToConstant: 287),
-            imageView.heightAnchor.constraint(equalToConstant: 75),
-            
-            // 이메일 입력 라벨
-            idLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            idLabel.leadingAnchor.constraint(equalTo: idTextField.leadingAnchor),
-            idLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 40),
-            
-            // 아이디 입력 필드
-            idTextField.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            idTextField.topAnchor.constraint(equalTo: idLabel.bottomAnchor, constant: 5),
-            idTextField.widthAnchor.constraint(equalToConstant: 300),
-            idTextField.heightAnchor.constraint(equalToConstant: 35),
-            
-            // 비밀번호 입력 라벨
-            passwordLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            passwordLabel.leadingAnchor.constraint(equalTo: idTextField.leadingAnchor),
-            passwordLabel.topAnchor.constraint(equalTo: idTextField.bottomAnchor, constant: 15),
-            passwordLabel.topAnchor.constraint(equalTo: idTextField.bottomAnchor, constant: 30),
-            
-            // 비밀번호 입력 필드
-            passwordTextField.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            passwordTextField.topAnchor.constraint(equalTo: passwordLabel.bottomAnchor, constant: 10),
-            passwordTextField.widthAnchor.constraint(equalToConstant: 300),
-            passwordTextField.heightAnchor.constraint(equalToConstant: 35),
-            
-            // 로그인 버튼
-            loginButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 30),
-            loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 15),
-
-            loginButton.widthAnchor.constraint(equalToConstant: 300),
-            loginButton.heightAnchor.constraint(equalToConstant: 40),
-            
-            //카카오 로그인
-            kakaoLoginButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-               kakaoLoginButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 80),
-               kakaoLoginButton.widthAnchor.constraint(equalToConstant: 300),
-               kakaoLoginButton.heightAnchor.constraint(equalToConstant: 40) ,
-            
-            //apple 로그인
-            appleLoginButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            appleLoginButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 140),
-            appleLoginButton.widthAnchor.constraint(equalToConstant: 300),
-            appleLoginButton.heightAnchor.constraint(equalToConstant: 40)
-            
-            
-        ])
+        idTextField.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(idLabel.snp.bottom).offset(5)
+            make.width.equalTo(300)
+            make.height.equalTo(35)
+        }
+        
+        passwordLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.leading.equalTo(idTextField)
+            make.top.equalTo(idTextField.snp.bottom).offset(15)
+        }
+        
+        passwordTextField.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(passwordLabel.snp.bottom).offset(10)
+            make.width.equalTo(300)
+            make.height.equalTo(35)
+        }
+        
+        loginButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(passwordTextField.snp.bottom).offset(30)
+            make.width.equalTo(300)
+            make.height.equalTo(40)
+        }
+        
+        kakaoLoginButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(loginButton.snp.bottom).offset(90)
+            make.width.equalTo(300)
+            make.height.equalTo(40)
+        }
+        
+        appleLoginButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(kakaoLoginButton.snp.bottom).offset(20)
+            make.width.equalTo(300)
+            make.height.equalTo(40)
+        }
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    @objc private func handleLoginButtonTapped() {
+        onLoginButtonTapped?()
+    }
 }
-
-
-
-
