@@ -90,7 +90,7 @@ class SavedTableViewCell: UITableViewCell {
         savedImageView.snp.makeConstraints { make in
             make.top.leading.equalToSuperview().offset(10)
             make.width.height.equalTo(72)
-            make.bottom.lessThanOrEqualToSuperview().offset(-20)
+            make.bottom.lessThanOrEqualToSuperview().offset(-10)
         }
         
         // 텍스트 스택뷰 제약 조건 설정
