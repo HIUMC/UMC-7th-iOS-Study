@@ -17,19 +17,19 @@ class MyTabBarController: UITabBarController {
         tabBar.tintColor = .black // 선택된 상태의 색상
         tabBar.unselectedItemTintColor = .gray // 선택되지 않은 상태의 색상
         
-        // 탭 바 위에 선 추가
-        let lineView = UIView()
-        lineView.backgroundColor = .lightGray
-        tabBar.addSubview(lineView)
+//        // 탭 바 위에 선 추가
+//        let lineView = UIView()
+//        lineView.backgroundColor = .lightGray
+//        tabBar.addSubview(lineView)
         
-        // SnapKit으로 선 위치 설정
-        lineView.snp.makeConstraints { make in
-            make.height.equalTo(1)
-            make.leading.equalTo(tabBar.snp.leading)
-            make.trailing.equalTo(tabBar.snp.trailing)
-            make.top.equalTo(tabBar.snp.top).offset(-10)
-        }
-        
+//        // SnapKit으로 선 위치 설정
+//        lineView.snp.makeConstraints { make in
+//            make.height.equalTo(1)
+//            make.leading.equalTo(tabBar.snp.leading)
+//            make.trailing.equalTo(tabBar.snp.trailing)
+//            make.top.equalTo(tabBar.snp.top).offset(-10)
+//        }
+//        
         // 탭 바에 추가할 뷰 컨트롤러 설정
         let homeVC = HomeViewController()
         homeVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)

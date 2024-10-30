@@ -5,6 +5,7 @@
 //  Created by 어진 on 10/31/24.
 //
 
+
 //
 //  ProfileEdit.swift
 //  Kream
@@ -51,6 +52,9 @@ class ProfileEditView: UIView {
         emailConfirmButton.layer.borderColor = UIColor.black.cgColor
         emailConfirmButton.layer.cornerRadius = 8
         emailConfirmButton.setTitleColor(.black, for: .normal)
+        
+        // 이메일 버튼 클릭 시 텍스트를 변경하는 액션 추가
+        emailConfirmButton.addTarget(self, action: #selector(handleEmailButtonTapped(_:)), for: .touchUpInside)
         
         emailInputStack.addArrangedSubview(emailTextField)
         emailInputStack.addArrangedSubview(emailConfirmButton)
@@ -118,7 +122,14 @@ class ProfileEditView: UIView {
         setupView()
     }
     
-    // 버튼 클릭 액션 함수
+    // 이메일 버튼 클릭 액션 함수
+    @objc private func handleEmailButtonTapped(_ sender: UIButton) {
+        if sender.title(for: .normal) == "변경" {
+            sender.setTitle("확인", for: .normal)
+        }
+    }
+    
+    // 비밀번호 버튼 클릭 액션 함수
     @objc private func handlePasswordButtonTapped(_ sender: UIButton) {
         if sender.title(for: .normal) == "변경" {
             sender.setTitle("확인", for: .normal)
