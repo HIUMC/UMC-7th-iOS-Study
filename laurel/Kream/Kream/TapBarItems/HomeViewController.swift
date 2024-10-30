@@ -47,21 +47,23 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         segmentControl.setBackgroundImage(UIImage(), for: .selected, barMetrics: .default)
         segmentControl.setBackgroundImage(UIImage(), for: .highlighted, barMetrics: .default)
         segmentControl.setDividerImage(UIImage(), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
-    
+        
         segmentControl.addTarget(self, action: #selector(segmentChanged(_:)), for: .valueChanged)
         return segmentControl
     }()
     
     private let underlineView = UIView()
-
+    
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 10
+        layout.scrollDirection = .vertical
+       
+        layout.minimumLineSpacing = 40
         layout.minimumInteritemSpacing = 10
         return UICollectionView(frame: .zero, collectionViewLayout: layout)
     }()
     
+    private let homeItems = DummyHomeData.HomeItems
     
     private lazy var homeImageView: UIImageView = {
         let imageView = UIImageView()
@@ -71,16 +73,13 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         imageView.alpha = 1.0
         return imageView
     }()
-
-    
-    private let homeItems = DummyHomeData.HomeItems
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchBarLayout()
         setupSegmentControlLayout()
         setupHomeImageView()
-
+        
         setupCollectionView()
         setupUnderlineLayout()
     }
@@ -128,7 +127,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             make.height.equalTo(30)
         }
     }
-
+    
     private func setupUnderlineLayout() {
         underlineView.backgroundColor = .black
         view.addSubview(underlineView)
@@ -139,7 +138,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     @objc private func notificationButtonTapped() {
         // 알림 버튼이 눌렸을 때의 동작을 여기에 구현
     }
-
+    
     @objc private func segmentChanged(_ sender: UISegmentedControl) {
         updateUnderlinePosition()
     }
@@ -159,6 +158,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             self.view.layoutIfNeeded()
         }
     }
+
     
     private func setupCollectionView() {
         view.addSubview(collectionView)
@@ -167,9 +167,10 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView.register(HomeCollectionViewCell.self, forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
         
         collectionView.snp.makeConstraints { make in
-            make.top.equalTo(homeImageView.snp.bottom).offset(20) 
-            make.leading.trailing.equalToSuperview().inset(10)
-            make.height.equalTo(120)
+            make.top.equalTo(homeImageView.snp.bottom).offset(20) // homeImageView 아래에 배치
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.bottom.equalToSuperview().offset(-20)
+
         }
     }
     
@@ -193,6 +194,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     // MARK: - UICollectionViewDelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 61, height: 61) // 셀 크기 설정
+        let totalSpacing = 40.0 // 좌우 여백 20 + 셀 사이 간격
+        let width = (collectionView.frame.width - totalSpacing) / 5
+        return CGSize(width: width, height: width) // 정사각형 셀로 설정
     }
 }

@@ -9,18 +9,18 @@ import UIKit
 import SnapKit
 
 class HomeCollectionViewCell: UICollectionViewCell {
-    
     static let identifier = "HomeCollectionViewCell"
     
-    private let imageView: UIImageView = {
+    private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = 8
         imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 30 // 반지름을 30으로 설정하여 동그랗게 만듭니다.
+        imageView.layer.masksToBounds = true
         return imageView
     }()
     
-    private let nameLabel: UILabel = {
+    private lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
         label.textColor = .black
@@ -42,14 +42,14 @@ class HomeCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(nameLabel)
         
         imageView.snp.makeConstraints { make in
-            make.top.leading.trailing.equalToSuperview()
-            make.height.equalTo(contentView.snp.width) // 정사각형으로 설정
+            make.top.equalToSuperview()
+            make.centerX.equalToSuperview()
+            make.width.height.equalTo(60) // 동그란 이미지 크기 설정
         }
         
         nameLabel.snp.makeConstraints { make in
-            make.top.equalTo(imageView.snp.bottom).offset(5)
+            make.top.equalTo(imageView.snp.bottom).offset(10)
             make.leading.trailing.equalToSuperview()
-            make.bottom.equalToSuperview().offset(-5)
         }
     }
     
@@ -58,4 +58,3 @@ class HomeCollectionViewCell: UICollectionViewCell {
         nameLabel.text = model.HomeName
     }
 }
-

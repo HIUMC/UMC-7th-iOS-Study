@@ -88,9 +88,9 @@ class SavedViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         // 테이블 뷰 제약 설정
         tableView.snp.makeConstraints { make in
-            make.top.equalTo(itemCountLabel.snp.bottom).offset(20)
+            make.top.equalTo(itemCountLabel.snp.bottom).offset(30)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(CGFloat(savedItems.count) * 80) // 항목에 따라 높이 설정
+            make.height.equalTo(CGFloat(savedItems.count) * 80)
             make.bottom.equalToSuperview()
         }
     }

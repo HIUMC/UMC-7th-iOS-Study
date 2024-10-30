@@ -23,6 +23,34 @@ final class DummyHomeData {
         HomeModel(
             HomeImage: "1.png",
             HomeName: "크림 드로우"
+        ),
+        HomeModel(
+            HomeImage: "1.png",
+            HomeName: "크림 드로우"
+        ),
+        HomeModel(
+            HomeImage: "1.png",
+            HomeName: "크림 드로우"
+        ),
+        HomeModel(
+            HomeImage: "1.png",
+            HomeName: "크림 드로우"
+        ),
+        HomeModel(
+            HomeImage: "1.png",
+            HomeName: "크림 드로우"
+        ),
+        HomeModel(
+            HomeImage: "1.png",
+            HomeName: "크림 드로우"
+        ),
+        HomeModel(
+            HomeImage: "1.png",
+            HomeName: "크림 드로우"
+        ),
+        HomeModel(
+            HomeImage: "1.png",
+            HomeName: "크림 드로우"
         )
     ]
 }
