@@ -130,10 +130,10 @@ class ManageProfileView: UIView {
         
         return label
     }()
-    private lazy var ivProfile: UIImageView = {
+    public lazy var ivProfile: UIImageView = {
         let imageView = UIImageView()
         
-        imageView.image = UIImage(named: "profile.png")
+//        imageView.image = UIImage(named: "profile.png")
         imageView.clipsToBounds = true
         
         return imageView

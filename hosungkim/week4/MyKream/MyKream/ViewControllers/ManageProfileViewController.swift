@@ -17,7 +17,7 @@ class ManageProfileViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
     }
     
-    private lazy var manageProfileView: ManageProfileView = {
+    public lazy var manageProfileView: ManageProfileView = {
         let view = ManageProfileView()
         view.btnBack.addTarget(self, action: #selector(onClickBack), for: .touchUpInside)
         view.btnUpdateEmail.addTarget(self, action: #selector(onClickUpdateEmail), for: .touchUpInside)

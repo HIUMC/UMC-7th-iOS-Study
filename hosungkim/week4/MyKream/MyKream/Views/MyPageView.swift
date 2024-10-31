@@ -159,7 +159,7 @@ class MyPageView: UIView {
         
         return view
     }()
-    private lazy var ivProfile: UIImageView = {
+    public lazy var ivProfile: UIImageView = {
         let imageView = UIImageView()
         
         imageView.image = UIImage(named: "profile.png")

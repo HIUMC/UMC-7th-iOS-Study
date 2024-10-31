@@ -88,6 +88,7 @@ class SavedTableViewCell: UITableViewCell {
         let imageView = UIImageView()
         
         imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFill
         
         return imageView
     }()

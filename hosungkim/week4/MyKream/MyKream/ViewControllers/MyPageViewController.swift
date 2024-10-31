@@ -30,6 +30,7 @@ class MyPageViewController: UIViewController {
     
     @objc func onClickManageProfile() {
         let viewController = ManageProfileViewController()
+        viewController.manageProfileView.ivProfile.image = myPageView.ivProfile.image
         navigationController?.pushViewController(viewController, animated: true)
     }
 }

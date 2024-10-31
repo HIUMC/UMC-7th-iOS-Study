@@ -9,7 +9,7 @@ import UIKit
 
 class BaseViewController: UITabBarController {
     
-    private let homeViewController = HomeViewController()
+    private let homeViewController = UINavigationController(rootViewController: HomeViewController())
     private let styleViewController = StyleViewController()
     private let shopViewController = ShopViewController()
     private let savedViewController = SavedViewController()

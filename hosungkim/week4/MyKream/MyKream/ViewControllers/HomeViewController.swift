@@ -11,24 +11,34 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.isNavigationBarHidden = true
         self.view = homeView
         print("HomeViewController")
         // Do any additional setup after loading the view.
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        homeView.updateSelectedSegmentView(index: 0)
     }
     
     private lazy var homeView: HomeView = {
         let view = HomeView()
         view.segmentControl.addTarget(self, action: #selector(segmentControlValueChanged(segment:)), for: .valueChanged)
         view.cvMenu.dataSource = self
+        view.tfSearch.delegate = self
         return view
     }()
     
     @objc private func segmentControlValueChanged(segment: UISegmentedControl) {
+        if segment.selectedSegmentIndex == 0 {
+            homeView.cvMenu.isHidden = false
+            homeView.ivAdvertisement.isHidden = false
+        } else {
+            homeView.cvMenu.isHidden = true
+            homeView.ivAdvertisement.isHidden = true
+        }
         UIView.animate(withDuration: 0.1, animations: {
-            self.homeView.selectedSegmentView.snp.updateConstraints({
-                $0.leading.equalTo(segment.snp.leading).offset(Int(segment.bounds.width)/4/segment.numberOfSegments + Int(segment.bounds.width) * segment.selectedSegmentIndex / segment.numberOfSegments)
-            })
+            self.homeView.updateSelectedSegmentView(index: segment.selectedSegmentIndex)
             self.homeView.layoutIfNeeded()
         })
     }
@@ -51,6 +61,12 @@ extension HomeViewController: UICollectionViewDataSource {
         
         return cell
     }
-    
-    
+}
+
+extension HomeViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        let viewController = SearchViewController()
+        
+        navigationController?.pushViewController(viewController, animated: false)
+    }
 }

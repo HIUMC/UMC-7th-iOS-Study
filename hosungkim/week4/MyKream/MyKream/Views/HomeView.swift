@@ -10,7 +10,7 @@ import SnapKit
 
 class HomeView: UIView {
     
-    
+    private var segmentWidth: [CGFloat] = []
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,6 +20,29 @@ class HomeView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.layoutIfNeeded()
+        
+        for subview in segmentControl.subviews {
+            guard let imageView = subview as? UIImageView else { return }
+            if !imageView.isUserInteractionEnabled {
+                segmentWidth.append(imageView.frame.width)
+            }
+        }
+    }
+    
+    func updateSelectedSegmentView(index: Int) {
+        print(segmentWidth.prefix(index).reduce(0, +))
+        print(segmentWidth[index])
+        selectedSegmentView.snp.remakeConstraints({
+            $0.top.equalTo(segmentControl.snp.bottom).offset(8)
+            $0.leading.equalTo(segmentControl.snp.leading).offset(segmentWidth.prefix(index).reduce(0, +) + segmentWidth[index]*0.1)
+            $0.width.equalTo(segmentWidth[index]*0.8)
+            $0.height.equalTo(2)
+        })
     }
     
     private func addComponents() {
@@ -48,8 +71,9 @@ class HomeView: UIView {
         })
         selectedSegmentView.snp.makeConstraints({
             $0.top.equalTo(segmentControl.snp.bottom).offset(8)
-            $0.leading.equalTo(segmentControl.snp.leading).offset(Int(segmentControl.bounds.width)/4/segmentControl.numberOfSegments + Int(segmentControl.bounds.width) * segmentControl.selectedSegmentIndex / segmentControl.numberOfSegments)
-            $0.width.equalTo(segmentControl.snp.width).dividedBy(segmentControl.numberOfSegments*2)
+            $0.leading.equalTo(segmentControl.snp.leading).offset(Int(segmentControl.bounds.width)/10/segmentControl.numberOfSegments)
+            
+            $0.width.equalTo(segmentControl.snp.width).multipliedBy(4.0/(5.0*CGFloat(segmentControl.numberOfSegments)))
             $0.height.equalTo(2)
         })
         ivAdvertisement.snp.makeConstraints({
@@ -66,7 +90,7 @@ class HomeView: UIView {
     }
     
     
-    private lazy var tfSearch: UITextField = {
+    public lazy var tfSearch: UITextField = {
         let textField = UITextField()
         
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -92,11 +116,11 @@ class HomeView: UIView {
     public lazy var segmentControl: UISegmentedControl = {
         let segmentControl = UISegmentedControl(items: ["추천", "랭킹", "발매정보", "럭셔리", "남성", "여성"])
         segmentControl.selectedSegmentIndex = 0
-        segmentControl.setBackgroundImage(UIImage(), for: .normal, barMetrics: .default)
+        let image = UIImage()
+        segmentControl.setBackgroundImage(image, for: .normal, barMetrics: .default)
         segmentControl.setBackgroundImage(UIImage(), for: .selected, barMetrics: .default)
         segmentControl.setBackgroundImage(UIImage(), for: .highlighted, barMetrics: .default)
         segmentControl.setDividerImage(UIImage(), forLeftSegmentState: .selected, rightSegmentState: .normal, barMetrics: .default)
-        
         segmentControl.setTitleTextAttributes(
             [
                 .foregroundColor: UIColor.black,
@@ -111,6 +135,7 @@ class HomeView: UIView {
             ],
             for: .selected
         )
+        segmentControl.apportionsSegmentWidthsByContent = true
         
         return segmentControl
     }()
@@ -119,7 +144,7 @@ class HomeView: UIView {
         view.backgroundColor = .black
         return view
     }()
-    private lazy var ivAdvertisement: UIImageView = {
+    public lazy var ivAdvertisement: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "image_ad_none.png")
         return imageView
