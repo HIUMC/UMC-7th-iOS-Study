@@ -24,12 +24,12 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     let imageview = UIImageView().then {
         $0.contentMode = .scaleAspectFill
-        $0.layer.cornerRadius = $0.frame.height / 2
+        $0.layer.cornerRadius = $0.bounds.height / 2
         $0.clipsToBounds = true
     }
     
     let titleLabel = UILabel().then {
-        $0.font = .systemFont(ofSize: 11.5, weight: .medium)
+        $0.font = .systemFont(ofSize: 11.5, weight: .light)
         $0.textColor = .black
         $0.text = "색다른 추천"
     }
@@ -42,14 +42,15 @@ class HomeCollectionViewCell: UICollectionViewCell {
     private func setConstaints() {
         
         imageview.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(20)
-            $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(61)
+            $0.top.equalToSuperview()
+            $0.centerX.equalToSuperview()
+            $0.width.height.equalTo(61)
         }
         
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(imageview.snp.bottom).offset(6)
             $0.centerX.equalToSuperview()
+            $0.bottom.equalToSuperview()
         }
     }
 }

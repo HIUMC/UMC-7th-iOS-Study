@@ -10,7 +10,7 @@ import SnapKit
 import Then
 
 class TeenipingView: UIView {
-    let segmentedControl = UISegmentedControl(items: ["티니핑", "not 티니핑"]).then {
+    public lazy var segmentedControl = UISegmentedControl(items: ["티니핑", "not 티니핑"]).then {
         
         $0.selectedSegmentIndex = 0
         $0.setTitleTextAttributes(

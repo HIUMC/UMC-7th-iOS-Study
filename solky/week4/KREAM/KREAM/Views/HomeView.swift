@@ -128,7 +128,7 @@ class HomeView: UIView {
             $0.top.equalTo(dontlateimage.snp.bottom).offset(20)
             $0.leading.equalToSuperview().offset(16)
             $0.trailing.equalToSuperview().offset(-17)
-            $0.bottom.equalToSuperview().offset(-138)
+            $0.height.equalTo(182)
         }
     }
     
