@@ -73,6 +73,7 @@ class HOMEView: UIView {
     
     let mainImage = UIImageView().then{
         $0.image = UIImage(named: "image_ad_none")
+        $0.contentMode = .scaleAspectFit
     }
     
     lazy var divideLine = UIView().then{
@@ -121,6 +122,8 @@ class HOMEView: UIView {
         
         mainImage.snp.makeConstraints{
             $0.top.equalTo(line.snp.bottom)
+            $0.centerX.equalToSuperview()
+            $0.left.equalToSuperview()
         }
         
         HOMECollectionView.snp.makeConstraints{

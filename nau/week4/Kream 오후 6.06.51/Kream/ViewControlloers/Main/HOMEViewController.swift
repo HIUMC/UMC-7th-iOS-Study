@@ -36,7 +36,7 @@ class HOMEViewController: UIViewController {
     @objc // 모르겠다
     private func changeSegmentedControlLinePosition(_ segment: UISegmentedControl){
         let segmentIndex = CGFloat(homeView.segmentedControl.selectedSegmentIndex)
-        let segmentWidth = (homeView.segmentedControl.selectedSegmentIndex == 2) ? 56.0 : 56.0
+        let segmentWidth = 56.0
         let leadingDistance = segmentIndex * segmentWidth
         
         homeView.line.snp.updateConstraints{
