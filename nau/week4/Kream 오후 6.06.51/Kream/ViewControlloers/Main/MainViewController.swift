@@ -29,11 +29,13 @@ class MainViewController: UITabBarController {
         self.tabBar.backgroundColor = UIColor.white
         self.tabBar.standardAppearance = style
         
-        HOMEVC.tabBarItem = UITabBarItem(title: "HOME", image: UIImage(named: "icon_home_fill"), tag: 0)
+        HOMEVC.tabBarItem = UITabBarItem(title: "HOME", image: UIImage(named: "icon_home_fill"), selectedImage: UIImage(named: "Vector-5"))
         STYLEVC.tabBarItem = UITabBarItem(title: "STYLE", image: UIImage(named: "Frame 1882"), tag: 1)
         SHOPVC.tabBarItem = UITabBarItem(title: "SHOP", image: UIImage(named: "icon_shop_none"), tag: 2)
-        SAVEDVC.tabBarItem = UITabBarItem(title: "SAVED", image: UIImage(named: "_icon_saved_none"), tag: 3)
-        MYVC.tabBarItem = UITabBarItem(title: "MY", image: UIImage(named: "icon_my_none.png")?.withRenderingMode(.alwaysOriginal), tag: 4)
+        SAVEDVC.tabBarItem = UITabBarItem(title: "SAVED", image: UIImage(named: "_icon_saved_none"), selectedImage: UIImage(named: "_icon_saved_none-2"))
+        MYVC.tabBarItem = UITabBarItem(title: "MY", image: UIImage(named: "icon_my_none-2"),selectedImage: UIImage(named: "icon_my_none.png")?.withRenderingMode(.alwaysOriginal))
+        
+        
         
         self.viewControllers = [HOMEVC, STYLEVC, SHOPVC, SAVEDVC, MYVC]
     }
