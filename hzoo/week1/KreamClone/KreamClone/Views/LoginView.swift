@@ -54,7 +54,7 @@ class LoginView: UIView, UITextFieldDelegate {
         t.returnKeyType = .done
         t.keyboardType = UIKeyboardType.emailAddress
         t.textContentType = .emailAddress
-        t.clearButtonMode = .always
+        t.clearButtonMode = .whileEditing
         
         t.translatesAutoresizingMaskIntoConstraints = false
         return t
@@ -94,7 +94,7 @@ class LoginView: UIView, UITextFieldDelegate {
         t.returnKeyType = .done
         t.textContentType = .password
         t.isSecureTextEntry = true
-        t.clearButtonMode = .always
+        t.clearButtonMode = .whileEditing
         
         t.translatesAutoresizingMaskIntoConstraints = false
         return t

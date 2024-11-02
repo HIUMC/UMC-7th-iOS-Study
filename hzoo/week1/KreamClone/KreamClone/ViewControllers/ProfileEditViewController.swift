@@ -9,6 +9,8 @@ import UIKit
 
 class ProfileEditViewController: UIViewController {
 
+    private let loginModel = LoginModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,24 +33,51 @@ class ProfileEditViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    private lazy var profileManageView: ProfileManageView = {
+    public lazy var profileManageView: ProfileManageView = {
         let v = ProfileManageView()
         v.emailCheckBtn.addTarget(self, action: #selector(emailChange), for: .touchUpInside)
         v.pwdCheckBtn.addTarget(self, action: #selector(pwdChange), for: .touchUpInside)
+        v.emailTextField.text = loginModel.loadEmailText()
+        v.emailTextField.isUserInteractionEnabled = false
+        v.pwdTextField.text = loginModel.loadPwText()
+        v.pwdTextField.isUserInteractionEnabled = false
         return v
     }()
     
     @objc
     private func emailChange() {
-        profileManageView.emailCheckBtn.setTitle("확인", for: .normal)
-        profileManageView.emailTextField.text = ""
-        profileManageView.emailTextField.resignFirstResponder()
+        if profileManageView.emailCheckBtn.titleLabel?.text == "변경" {
+            profileManageView.emailTextField.isUserInteractionEnabled = true
+            profileManageView.emailCheckBtn.setTitle("확인", for: .normal)
+            profileManageView.emailTextField.text = ""
+            profileManageView.emailTextField.resignFirstResponder()
+        }
+        else if profileManageView.emailCheckBtn.titleLabel?.text == "확인" {
+            guard let email = profileManageView.emailTextField.text, !email.isEmpty else {
+                return
+            }
+            loginModel.saveEmailText(email)
+            profileManageView.emailTextField.text = loginModel.loadEmailText()
+            profileManageView.emailTextField.isUserInteractionEnabled = false
+            profileManageView.emailCheckBtn.setTitle("변경", for: .normal)
+        }
     }
     
     @objc
     private func pwdChange() {
-        profileManageView.pwdCheckBtn.setTitle("확인", for: .normal)
-        profileManageView.pwdTextField.text = ""
-        profileManageView.pwdTextField.resignFirstResponder()
+        if profileManageView.pwdCheckBtn.titleLabel?.text == "변경" {
+            profileManageView.pwdTextField.isUserInteractionEnabled = true
+            profileManageView.pwdCheckBtn.setTitle("확인", for: .normal)
+            profileManageView.pwdTextField.text = ""
+            profileManageView.pwdTextField.resignFirstResponder()
+        }
+        else if profileManageView.pwdCheckBtn.titleLabel?.text == "확인" {
+            guard let pw = profileManageView.pwdTextField.text, !pw.isEmpty else {
+                return
+            }
+            loginModel.savePwText(pw)
+            profileManageView.pwdTextField.text = loginModel.loadPwText()
+            profileManageView.pwdTextField.isUserInteractionEnabled = false
+            profileManageView.pwdCheckBtn.setTitle("변경", for: .normal)        }
     }
 }
