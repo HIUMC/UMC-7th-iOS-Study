@@ -8,7 +8,7 @@
 import UIKit
 
 class MyPageViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = mypageView
@@ -23,6 +23,7 @@ class MyPageViewController: UIViewController {
     @objc
     private func profileMgBtnTapped() {
         let vc = ProfileEditViewController()
+        vc.profileManageView.profileImg.image = mypageView.profileImg.image
         navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -21,7 +21,7 @@ class ProfileManageView: UIView, UITextFieldDelegate {
     
     public lazy var profileImg: UIImageView = {
         let i = UIImageView()
-        i.image = UIImage(named: "profile")
+        //i.image = UIImage(named: "profile")
         i.layer.cornerRadius = 45
         i.layer.masksToBounds = true
         i.contentMode = .scaleAspectFill
@@ -58,7 +58,7 @@ class ProfileManageView: UIView, UITextFieldDelegate {
         t.returnKeyType = .done
         t.textContentType = .emailAddress
         t.keyboardType = UIKeyboardType.emailAddress
-        t.clearButtonMode = .always
+        t.clearButtonMode = .whileEditing
         return t
     }()
     
@@ -103,7 +103,7 @@ class ProfileManageView: UIView, UITextFieldDelegate {
         t.returnKeyType = .done
         t.textContentType = .password
         t.isSecureTextEntry = true
-        t.clearButtonMode = .always
+        t.clearButtonMode = .whileEditing
         return t
     }()
     

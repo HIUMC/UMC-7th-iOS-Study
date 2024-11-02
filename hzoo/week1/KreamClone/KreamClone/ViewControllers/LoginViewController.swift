@@ -8,6 +8,8 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    private let loginModel = LoginModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,19 @@ class LoginViewController: UIViewController {
     
     @objc
     private func loginBtnTapped() {
+        
+        guard let email = loginView.emailTextField.text, !email.isEmpty else {
+            return
+        }
+        
+        guard let pw = loginView.pwdTextField.text, !pw.isEmpty else {
+            return
+        }
+
+        // 모델을 통해 email, pw 저장합니다.
+        loginModel.saveEmailText(email)
+        loginModel.savePwText(pw)
+        
         let vc = BaseViewController()
 
         vc.modalPresentationStyle = .fullScreen
