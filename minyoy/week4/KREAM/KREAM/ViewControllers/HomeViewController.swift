@@ -11,6 +11,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = homeView
+        self.navigationController?.isNavigationBarHidden = true
         setupAction()
         setupDelegate()
     }
