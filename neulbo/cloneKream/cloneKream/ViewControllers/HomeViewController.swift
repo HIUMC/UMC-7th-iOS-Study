@@ -76,8 +76,8 @@ class HomeViewController: UIViewController, UISearchControllerDelegate {
             var finalInset = 13
             
             for i in 0..<indexNow {
-                guard var previousTitle = segment.titleForSegment(at: i) else { return }
-                var widthAtPrevious = previousTitle.size(withAttributes: [.font: UIFont.systemFont(ofSize: 16, weight: .bold)]).width
+                guard let previousTitle = segment.titleForSegment(at: i) else { return }
+                let widthAtPrevious = previousTitle.size(withAttributes: [.font: UIFont.systemFont(ofSize: 16, weight: .bold)]).width
                 finalInset += Int(widthAtPrevious)
                 finalInset += 32
                 
@@ -116,7 +116,6 @@ extension HomeViewController: UICollectionViewDataSource {
         } else {
             return 0
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -147,9 +146,9 @@ extension HomeViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
-        
-        
     }
+    
+    
     
     
 }

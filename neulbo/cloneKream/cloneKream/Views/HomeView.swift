@@ -93,6 +93,7 @@ class HomeView: UIView {
         $0.isScrollEnabled = true
         $0.register(JustDroppedCollectionViewCell.self, forCellWithReuseIdentifier: JustDroppedCollectionViewCell.identifier)
         $0.showsHorizontalScrollIndicator = false
+        $0.contentInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
     }
     
     private let justDroppedStack = UIStackView().then {
@@ -144,6 +145,7 @@ class HomeView: UIView {
         $0.isScrollEnabled = true
         $0.register(ChallengeCollectionViewCell.self, forCellWithReuseIdentifier: ChallengeCollectionViewCell.identifier)
         $0.showsHorizontalScrollIndicator = false
+        $0.contentInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
     }
     
     
@@ -219,8 +221,7 @@ class HomeView: UIView {
         
         justDroppedCollectionView.snp.makeConstraints {
             $0.top.equalTo(justDroppedStack.snp.bottom).offset(15)
-            $0.leading.equalToSuperview().inset(15)
-            $0.trailing.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(237)
         }
         
@@ -237,8 +238,7 @@ class HomeView: UIView {
         
         challengeCollectionView.snp.makeConstraints {
             $0.top.equalTo(challengeStack.snp.bottom).offset(15)
-            $0.leading.equalToSuperview().inset(15)
-            $0.trailing.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(165) // estimatedItemSize를 설정해줬음에도 불구하고 필요
             $0.bottom.equalToSuperview().inset(20)
         }
