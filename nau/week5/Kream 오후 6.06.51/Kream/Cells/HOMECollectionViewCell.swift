@@ -114,9 +114,9 @@ class HOMECollectionViewCell2 : UICollectionViewCell {
     
     let image = UIImageView().then {
         $0.contentMode = .scaleAspectFill
-        if $0.self.image == .home11 {
+        if $0.image == .home11 {
             $0.backgroundColor = UIColor(hue: 0.5, saturation: 0.02, brightness: 0.94, alpha: 1.0)
-        }else if $0.self.image == .home12 {
+        }else if $0.image == .home12 {
             $0.backgroundColor = UIColor(hue: 0.0139, saturation: 0.04, brightness: 0.96, alpha: 1.0)
         }else {
             $0.backgroundColor = UIColor(hue: 0, saturation: 0, brightness: 0.96, alpha: 1.0)

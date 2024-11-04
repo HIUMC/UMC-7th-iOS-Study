@@ -172,7 +172,6 @@ class HOMEView: UIView {
             $0.width.equalTo(contentView.snp.width)
             $0.height.equalTo(contentView.snp.height)
         }
-        
     }
     
     private func setupContentViews() {
