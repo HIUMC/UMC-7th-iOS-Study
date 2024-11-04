@@ -19,20 +19,28 @@ class HomeViewController: UIViewController {
         let hv =  HomeView()
         hv.segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged(segment: )), for: .valueChanged)
         hv.segmentedControl.addTarget(self, action: #selector(updateUnderlinePosition(segment: )), for: .valueChanged)
+        
         hv.menuCollectionView.delegate = self
         hv.menuCollectionView.dataSource = self
+        
+        hv.droppedCollectionView.delegate = self
+        hv.droppedCollectionView.dataSource = self
+        
+        hv.challengeCollectionView.delegate = self
+        hv.challengeCollectionView.dataSource = self
+        
         return hv
     }()
     
     @objc
     private func segmentedControlValueChanged(segment: UISegmentedControl) {
         if segment.selectedSegmentIndex == 0 {
-            homeView.adImg.isHidden = false
-            homeView.menuCollectionView.isHidden = false
+            homeView.scrollView.isHidden = false
+            homeView.contentView.isHidden = false
         }
         else {
-            homeView.adImg.isHidden = true
-            homeView.menuCollectionView.isHidden = true
+            homeView.scrollView.isHidden = true
+            homeView.contentView.isHidden = true
         }
     }
     
@@ -77,21 +85,49 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        MenuModel.list().count
+        if collectionView.tag == 0 {
+            return MenuModel.list().count
+        }
+        else if collectionView.tag == 1 {
+            return DroppedModel.list().count
+        }
+        else if collectionView.tag == 2 {
+            return ChallengeModel.list().count
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: HomeMenuCollectionViewCell.identifier,
-            for: indexPath
-        ) as? HomeMenuCollectionViewCell else {
-            return UICollectionViewCell()
+        if collectionView.tag == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeMenuCollectionViewCell.identifier, for: indexPath) as! HomeMenuCollectionViewCell
+            let list = MenuModel.list()
+            
+            cell.image.image = list[indexPath.row].image
+            cell.name.text = list[indexPath.row].name
+            
+            return cell
         }
-        let list = MenuModel.list()
-        
-        cell.image.image = list[indexPath.row].image
-        cell.name.text = list[indexPath.row].name
-        
-        return cell
+        else if collectionView.tag == 1 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DroppedCollectionViewCell.identifier, for: indexPath) as! DroppedCollectionViewCell
+            let list = DroppedModel.list()
+            
+            cell.trade.text = "거래 " + list[indexPath.row].trade
+            cell.image.image = list[indexPath.row].image
+            cell.brand.text = list[indexPath.row].brand
+            cell.name.text = list[indexPath.row].name
+            cell.price.text = list[indexPath.row].price + "원"
+                    
+            return cell
+        }
+        else if collectionView.tag == 2 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChallengeCollectionViewCell.identifier, for: indexPath) as! ChallengeCollectionViewCell
+            let list = ChallengeModel.list()
+            
+            cell.image.image = list[indexPath.row].image
+            cell.id.text = "@" + list[indexPath.row].id
+            
+            return cell
+        }
+        return UICollectionViewCell()
     }
 }
