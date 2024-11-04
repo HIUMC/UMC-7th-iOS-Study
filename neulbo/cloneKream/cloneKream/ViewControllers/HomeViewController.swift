@@ -35,7 +35,7 @@ class HomeViewController: UIViewController, UISearchControllerDelegate {
         let alarmBarButton = UIBarButtonItem(image: .searchBarIcon, style: .plain, target: self, action: #selector(alarmButtonTapped))
         self.navigationItem.rightBarButtonItem  = alarmBarButton
         
-        //searchController.delegate = self
+        searchController.delegate = self
     }
     
     @objc private func alarmButtonTapped() {
