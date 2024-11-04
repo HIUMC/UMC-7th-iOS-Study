@@ -10,7 +10,7 @@ import Then
 import SnapKit
 
 class HOMEView: UIView {
-
+    
     override init(frame: CGRect){
         super.init(frame: frame)
         self.backgroundColor = .white
@@ -48,7 +48,7 @@ class HOMEView: UIView {
         $0.setDividerImage(UIImage(), forLeftSegmentState: .selected, rightSegmentState: .normal, barMetrics: .default)
         $0.apportionsSegmentWidthsByContent = true //아이템 폭이 내용에 맞춰 자동 조절
         $0.selectedSegmentIndex = 0 //앱 실행됐을때 선택할 인덱t=스
-            
+        
         $0.setTitleTextAttributes(
             [
                 NSAttributedString.Key.foregroundColor: UIColor.black,
@@ -149,11 +149,11 @@ class HOMEView: UIView {
         }
         
         scrollView.addSubview(contentView)
-
+        
         contentView.snp.makeConstraints{
             $0.edges.equalTo(scrollView)
             $0.width.equalTo(scrollView.snp.width) // 가로 스크롤을 방지하고 스크롤뷰와 같은 너비로 설정
-            $0.height.equalTo(5000)
+            $0.height.equalTo(1300)
         }
         
         contentView.addSubview(topView)
@@ -170,7 +170,7 @@ class HOMEView: UIView {
             $0.top.equalTo(topView.snp.bottom)
             $0.horizontalEdges.equalTo(contentView)
             $0.width.equalTo(contentView.snp.width)
-            $0.height.equalTo(2000)
+            $0.height.equalTo(contentView.snp.height)
         }
         
     }
@@ -184,7 +184,7 @@ class HOMEView: UIView {
         ].forEach{
             topView.addSubview($0)
         }
-            
+        
         [   mainImage,
             HOMECollectionView,
             divideLine,
@@ -198,7 +198,7 @@ class HOMEView: UIView {
         ].forEach{
             bottomView.addSubview($0)
         }
-            
+        
         bellBtn.snp.makeConstraints{
             $0.top.equalTo(scrollView.snp.top).inset(16.25)
             $0.right.equalTo(safeAreaLayoutGuide).inset(16)
@@ -219,64 +219,69 @@ class HOMEView: UIView {
         }
         
         line.snp.makeConstraints{
+            segmentedControl.layoutIfNeeded()
+            
             $0.top.equalTo(segmentedControl.snp.bottom).offset(8)
             $0.height.equalTo(2)
-            $0.leading.equalTo(segmentedControl.snp.leading).offset(8)
-            $0.width.equalTo(28)
+            
+            if let selectedSegmentFrame = segmentedControl.subviews.first?.frame { $0.leading.equalTo(segmentedControl).offset(selectedSegmentFrame.minX + 7.9)
+                $0.width.equalTo(selectedSegmentFrame.width * 0.75)
+            }
         }
-        
+            
+            
         mainImage.snp.makeConstraints{
             $0.top.equalTo(line.snp.bottom)
             $0.centerX.equalToSuperview()
             $0.left.equalToSuperview()
         }
-        
+            
         HOMECollectionView.snp.makeConstraints{
             $0.top.equalTo(mainImage.snp.bottom).offset(20)
             $0.left.equalTo(contentView).inset(16)
             $0.centerX.equalToSuperview()
             $0.height.equalTo(182)
         }
-        
+            
         divideLine.snp.makeConstraints{
             $0.top.equalTo(HOMECollectionView.snp.bottom).offset(30)
             $0.horizontalEdges.equalTo(safeAreaLayoutGuide)
             $0.height.equalTo(1)
         }
-        
+            
         dropTitle.snp.makeConstraints{
             $0.top.equalTo(divideLine.snp.bottom).offset(20)
             $0.left.equalTo(safeAreaLayoutGuide).inset(16)
         }
-        
+            
         dropSmallTitle.snp.makeConstraints{
             $0.top.equalTo(dropTitle.snp.bottom).offset(4)
             $0.left.equalTo(safeAreaLayoutGuide).inset(16)
         }
-        
+            
         HOMECollectionView2.snp.makeConstraints{
             $0.top.equalTo(dropSmallTitle.snp.bottom).offset(14)
             $0.left.equalTo(safeAreaLayoutGuide).inset(16)
             $0.right.equalTo(safeAreaLayoutGuide)//가로길이 너무 크면 스크롤안됨
             $0.height.equalTo(237)
         }
-        
+            
         divideLine2.snp.makeConstraints{
             $0.top.equalTo(HOMECollectionView2.snp.bottom).offset(30)
             $0.horizontalEdges.equalTo(safeAreaLayoutGuide)
             $0.height.equalTo(1)
         }
-        
+            
         dropTitle2.snp.makeConstraints{
             $0.top.equalTo(divideLine2.snp.bottom).offset(20)
             $0.left.equalTo(safeAreaLayoutGuide).inset(16)
         }
-        
+            
         dropSmallTitle2.snp.makeConstraints{
             $0.top.equalTo(dropTitle2.snp.bottom).offset(4)
             $0.left.equalTo(safeAreaLayoutGuide).inset(16)
         }
-        
+            
         HOMECollectionView3.snp.makeConstraints{
             $0.top.equalTo(dropSmallTitle2.snp.bottom).offset(14)
             $0.left.equalTo(safeAreaLayoutGuide).inset(16)

@@ -40,27 +40,21 @@ class HOMEViewController: UIViewController {
     
     @objc // 모르겠다
     private func changeSegmentedControlLinePosition(_ segment: UISegmentedControl){
-        guard let segmentIndex = homeView.segmentedControl.titleForSegment(at: homeView.segmentedControl.selectedSegmentIndex) else { return }
-        let segmentWidth = (homeView.segmentedControl.frame.width / CGFloat(homeView.segmentedControl.numberOfSegments))
-        let segmentFrame = CGRect(
-            x: segmentWidth * CGFloat(homeView.segmentedControl.selectedSegmentIndex),
-            y: homeView.segmentedControl.frame.height,
-            width: segmentWidth,
-            height: 2
+        let selectedIndex = homeView.segmentedControl.selectedSegmentIndex
         
-        
-        homeView.line.snp.updateConstraints{
-            $0.leading.equalTo(homeView.segmentedControl).inset(leadingDistance+9)
-            if homeView.segmentedControl.selectedSegmentIndex == 2{
-                $0.width.equalTo(56)
-            }else if (homeView.segmentedControl.selectedSegmentIndex == 3){
-                $0.width.equalTo(42)
-            }else {
-                $0.width.equalTo(28)
-            }
+        // 선택된 세그먼트의 프레임을 가져옴
+        guard let selectedSegmentFrame = homeView.segmentedControl.subviews[selectedIndex].frame as CGRect? else {
+            return
         }
-            
-        homeView.layoutIfNeeded()
+        
+        UIKit.UIView.animate(withDuration: 0.3) {
+            // 언더바의 위치와 크기를 업데이트
+            self.homeView.line.snp.updateConstraints {
+                $0.leading.equalTo(self.homeView.segmentedControl).offset(selectedSegmentFrame.minX + 7.9)
+                $0.width.equalTo(selectedSegmentFrame.width * 0.75)
+            }
+            self.homeView.layoutIfNeeded()
+        }
     }
     
     private func setupAction() {
