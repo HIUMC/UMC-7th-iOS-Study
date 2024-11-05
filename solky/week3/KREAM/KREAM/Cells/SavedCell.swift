@@ -94,7 +94,7 @@ class SavedCell: UITableViewCell {
         }
         
         savedExplain.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(32)
+            $0.top.equalTo(savedTitle.snp.bottom).offset(0)
             $0.bottom.equalToSuperview().inset(34)
             $0.leading.equalTo(savedImageView.snp.trailing).offset(13)
         }
