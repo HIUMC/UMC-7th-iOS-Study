@@ -115,11 +115,11 @@ class HomeView: UIView {
         return image
     }()
     
-    private lazy var separateview1 = UIView().then {
+    public lazy var separateview1 = UIView().then {
         $0.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.00)
     }
     
-    private lazy var dropLabel = UILabel().then {
+    public lazy var dropLabel = UILabel().then {
         $0.text = "Just Dropped"
         $0.font = .systemFont(ofSize: 16, weight: .bold)
         $0.textAlignment = .left
@@ -127,18 +127,18 @@ class HomeView: UIView {
         $0.numberOfLines = 0
     }
     
-    private lazy var releasedLabel = UILabel().then {
+    public lazy var releasedLabel = UILabel().then {
         $0.text = "발매 상품"
         $0.font = .systemFont(ofSize: 13, weight: .medium)
         $0.textAlignment = .left
         $0.textColor = UIColor(red: 0.53, green: 0.53, blue: 0.53, alpha: 1.00)
     }
     
-    private lazy var separateview2 = UIView().then {
+    public lazy var separateview2 = UIView().then {
         $0.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.00)
     }
     
-    private lazy var mustitLabel = UILabel().then {
+    public lazy var mustitLabel = UILabel().then {
         $0.text = "본격 한파대비! 연말 필수템 모음"
         $0.font = .systemFont(ofSize: 16, weight: .bold)
         $0.textAlignment = .left
@@ -146,7 +146,7 @@ class HomeView: UIView {
         $0.numberOfLines = 0
     }
     
-    private lazy var happyLabel = UILabel().then {
+    public lazy var happyLabel = UILabel().then {
         $0.text = "#해피홀리룩챌린지"
         $0.font = .systemFont(ofSize: 13, weight: .medium)
         $0.textAlignment = .left

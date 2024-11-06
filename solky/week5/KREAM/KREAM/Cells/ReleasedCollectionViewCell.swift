@@ -32,7 +32,6 @@ class ReleasedCollectionViewCell: UICollectionViewCell {
         $0.font = .systemFont(ofSize: 10, weight: .light)
         $0.textColor = .black
         $0.text = "거래 12.8만"
-        $0.numberOfLines = 0
     }
     
     private lazy var savedScrapButton = UIButton().then {
@@ -43,15 +42,13 @@ class ReleasedCollectionViewCell: UICollectionViewCell {
         $0.font = .systemFont(ofSize: 12, weight: .bold)
         $0.textColor = .black
         $0.text = "MLB"
-        $0.numberOfLines = 0
     }
     
     let productLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 12, weight: .light)
         $0.textColor = .black
         $0.text = "청키라이너 뉴욕양키스"
-        $0.numberOfLines = 0
-        $0.lineBreakMode = .byWordWrapping
+        $0.numberOfLines = 2
     }
     
     let priceLabel = UILabel().then {
@@ -87,7 +84,6 @@ class ReleasedCollectionViewCell: UICollectionViewCell {
         
         volumeLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(8)
-            $0.leading.equalToSuperview().offset(80)
             $0.trailing.equalToSuperview().offset(-8)
             $0.height.equalTo(12)
         }
@@ -109,17 +105,16 @@ class ReleasedCollectionViewCell: UICollectionViewCell {
         productLabel.snp.makeConstraints {
             $0.top.equalTo(brandLabel.snp.bottom).offset(3)
             $0.leading.equalToSuperview().offset(4)
-            $0.height.equalTo(28)
+            $0.width.equalTo(124)
         }
         
         priceLabel.snp.makeConstraints {
-            $0.top.equalTo(productLabel.snp.bottom).offset(26)
+            $0.bottom.equalTo(rightbuyLabel.snp.top).offset(-2)
             $0.leading.equalToSuperview().offset(4)
             $0.height.equalTo(16)
         }
         
         rightbuyLabel.snp.makeConstraints {
-            $0.top.equalTo(priceLabel.snp.bottom).offset(2)
             $0.leading.equalToSuperview().offset(4)
             $0.height.equalTo(12)
             $0.bottom.equalToSuperview()
