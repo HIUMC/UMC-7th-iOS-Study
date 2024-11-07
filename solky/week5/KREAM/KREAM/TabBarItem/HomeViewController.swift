@@ -128,7 +128,7 @@ extension HomeViewController: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            let list = HomeModel.dummy()
+            _ = HomeModel.dummy()
             
             cell.imageview.image = HomeModel.dummy()[indexPath.row].image
             cell.titleLabel.text = HomeModel.dummy()[indexPath.row].name

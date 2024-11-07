@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "f845a3a967992652b95e739c468ce356.png",
+      "filename" : "jumper.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "f845a3a967992652b95e739c468ce356 1.png",
+      "filename" : "jumper@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "f845a3a967992652b95e739c468ce356 2.png",
+      "filename" : "jumper@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

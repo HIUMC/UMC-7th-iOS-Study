@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SnapKit
+import Then
 
 class MustItemCollectionViewCell: UICollectionViewCell {
     static let identifier = "MustItemCollectionViewCell"
@@ -42,8 +44,8 @@ class MustItemCollectionViewCell: UICollectionViewCell {
     private func setConstaints() {
         
         beautifulview.snp.makeConstraints {
-            $0.top.leading.trailing.equalToSuperview()
-            $0.bottom.equalToSuperview()
+            $0.width.equalTo(124)
+            $0.height.equalTo(165)
         }
         
         nameLabel.snp.makeConstraints {

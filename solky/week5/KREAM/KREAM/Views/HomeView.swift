@@ -219,7 +219,7 @@ class HomeView: UIView {
             $0.top.equalTo(dontlateimage.snp.bottom).offset(20)
             $0.leading.equalToSuperview().offset(16)
             $0.trailing.equalToSuperview().offset(-17)
-            $0.height.equalTo(200)
+            $0.height.equalTo(182)
         }
         
         separateview1.snp.makeConstraints {
@@ -243,8 +243,8 @@ class HomeView: UIView {
         ReleasedCollectionView.snp.makeConstraints {
             $0.top.equalTo(releasedLabel.snp.bottom).offset(14)
             $0.leading.equalToSuperview().offset(16)
-            $0.width.equalTo(442)
-            $0.height.equalTo(260)
+            $0.trailing.equalToSuperview()
+            $0.height.equalTo(237)
         }
         
         separateview2.snp.makeConstraints {
@@ -269,7 +269,6 @@ class HomeView: UIView {
             $0.top.equalTo(happyLabel.snp.bottom).offset(14)
             $0.leading.equalToSuperview().offset(16)
             $0.trailing.equalToSuperview()
-            $0.width.equalTo(400)
             $0.height.equalTo(165)
         }
     }

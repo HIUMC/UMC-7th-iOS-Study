@@ -29,7 +29,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     }
     
     let titleLabel = UILabel().then {
-        $0.font = .systemFont(ofSize: 11.5, weight: .medium)
+        $0.font = .systemFont(ofSize: 11.5, weight: .light)
         $0.textColor = .black
         $0.text = "색다른 추천"
     }
@@ -42,8 +42,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     private func setConstaints() {
         
         imageview.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(20)
-            $0.leading.trailing.equalToSuperview()
+            $0.top.leading.trailing.equalToSuperview()
             $0.height.equalTo(61)
         }
         
