@@ -1,8 +1,8 @@
 //
-//  HomeViewController.swift
+//  SearchResultViewController.swift
 //  cloneKream
 //
-//  Created by 김서현 on 10/2/24.
+//  Created by 김서현 on 11/4/24.
 //
 
 import UIKit
@@ -152,3 +152,4 @@ extension HomeViewController: UICollectionViewDataSource {
     
     
 }
+

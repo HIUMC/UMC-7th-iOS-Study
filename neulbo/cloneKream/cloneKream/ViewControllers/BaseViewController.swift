@@ -23,7 +23,7 @@ class BaseViewController: UITabBarController {
         self.setValue(customTabBar, forKey: "tabBar")
         
         
-        homeVC.tabBarItem = UITabBarItem(title: "HOME", image: UIImage(named: "home"), tag: 0)
+        homeVC.tabBarItem = UITabBarItem(title: "HOME", image: UIImage(named: "home")?.withRenderingMode(.alwaysOriginal), tag: 0)
         styleVC.tabBarItem = UITabBarItem(title: "STYLE", image: UIImage(named: "style"), tag: 0)
         homeVC.tabBarItem = UITabBarItem(title: "HOME", image: UIImage(named: "home"), tag: 1)
         shopVC.tabBarItem = UITabBarItem(title: "SHOP", image: UIImage(named: "shop"), tag: 2)

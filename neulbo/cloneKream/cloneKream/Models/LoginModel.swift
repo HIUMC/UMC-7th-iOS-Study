@@ -8,7 +8,6 @@
 import Foundation
 
 
-
 class LoginModel {
     static let shared = LoginModel()
     
@@ -24,4 +23,5 @@ class LoginModel {
     public func loadUserInfo() -> String? {
         return userDefaults.string(forKey: userId)
     }
+    
 }
