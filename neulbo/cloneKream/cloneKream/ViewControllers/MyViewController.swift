@@ -46,7 +46,7 @@ class MyViewController: UIViewController {
     
     private func goToNextViewController() {
         let nextViewController = ManageProfileViewController()
-        
+        nextViewController.manageProfileView.profileImageName = self.myProfileView.profileImage.image
         navigationController?.pushViewController(nextViewController, animated: true)
         
     }

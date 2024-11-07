@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 class MyProfileView: UIView {
-    private let profileImage: UIImageView = {
+    let profileImage: UIImageView = {
         let imageView = UIImageView()
         if let image = UIImage(named: "userProfile") {
             imageView.image = image

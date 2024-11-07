@@ -244,7 +244,11 @@ class LoginView: UIView {
     var buttonAction: (() -> Void)?
     
     @objc private func buttonTapped() {
+        LoginModel.shared.userId = emailTextField.text ?? "example@gmail.com"
+        LoginModel.shared.saveUserInfo(pwdTextField.text ?? "*********")
+        
         buttonAction?() // 함수로서 클로저 실행
+        
     }
     
     func addAction() {

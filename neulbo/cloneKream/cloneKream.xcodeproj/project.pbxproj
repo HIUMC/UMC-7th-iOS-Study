@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		922D83D82CD219D900A861F4 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D83D72CD219D900A861F4 /* SavedView.swift */; };
+		922D83DA2CD219FC00A861F4 /* SavedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D83D92CD219FC00A861F4 /* SavedTableViewCell.swift */; };
+		922D83DC2CD21A2400A861F4 /* SavedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D83DB2CD21A2400A861F4 /* SavedModel.swift */; };
+		922D83DF2CD22ADA00A861F4 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 922D83DE2CD22ADA00A861F4 /* Then */; };
+		922D83E12CD2BD8F00A861F4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D83E02CD2BD8F00A861F4 /* HomeView.swift */; };
+		922D83E32CD2C10200A861F4 /* HomeMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D83E22CD2C10200A861F4 /* HomeMenuCollectionViewCell.swift */; };
+		922D83E52CD2C23600A861F4 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D83E42CD2C23600A861F4 /* HomeModel.swift */; };
+		922D83E72CD369E200A861F4 /* UnderBarCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D83E62CD369E200A861F4 /* UnderBarCustom.swift */; };
+		922D84322CD7C3D900A861F4 /* JustDroppedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D84312CD7C3D900A861F4 /* JustDroppedCollectionViewCell.swift */; };
+		922D84342CD7DC0F00A861F4 /* ChallengeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D84332CD7DC0F00A861F4 /* ChallengeCollectionViewCell.swift */; };
+		922D84382CD8B84B00A861F4 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D84372CD8B84B00A861F4 /* SearchResultViewController.swift */; };
 		923E393C2CAD3AF7007E2CD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923E393B2CAD3AF7007E2CD5 /* AppDelegate.swift */; };
 		923E393E2CAD3AF7007E2CD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923E393D2CAD3AF7007E2CD5 /* SceneDelegate.swift */; };
 		923E39402CAD3AF7007E2CD5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923E393F2CAD3AF7007E2CD5 /* LoginViewController.swift */; };
@@ -48,6 +59,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		922D83D72CD219D900A861F4 /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
+		922D83D92CD219FC00A861F4 /* SavedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTableViewCell.swift; sourceTree = "<group>"; };
+		922D83DB2CD21A2400A861F4 /* SavedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedModel.swift; sourceTree = "<group>"; };
+		922D83E02CD2BD8F00A861F4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		922D83E22CD2C10200A861F4 /* HomeMenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		922D83E42CD2C23600A861F4 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		922D83E62CD369E200A861F4 /* UnderBarCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderBarCustom.swift; sourceTree = "<group>"; };
+		922D84312CD7C3D900A861F4 /* JustDroppedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustDroppedCollectionViewCell.swift; sourceTree = "<group>"; };
+		922D84332CD7DC0F00A861F4 /* ChallengeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeCollectionViewCell.swift; sourceTree = "<group>"; };
+		922D84372CD8B84B00A861F4 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		923E39382CAD3AF7007E2CD5 /* cloneKream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cloneKream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		923E393B2CAD3AF7007E2CD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		923E393D2CAD3AF7007E2CD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +101,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				923E39742CAD3F0C007E2CD5 /* SnapKit in Frameworks */,
+				922D83DF2CD22ADA00A861F4 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +122,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		922D83D62CD2198F00A861F4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				922D83D92CD219FC00A861F4 /* SavedTableViewCell.swift */,
+				922D83E22CD2C10200A861F4 /* HomeMenuCollectionViewCell.swift */,
+				922D84312CD7C3D900A861F4 /* JustDroppedCollectionViewCell.swift */,
+				922D84332CD7DC0F00A861F4 /* ChallengeCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		923E392F2CAD3AF7007E2CD5 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +159,7 @@
 				923E39712CAD3C47007E2CD5 /* ViewControllers */,
 				923E396E2CAD3C12007E2CD5 /* Views */,
 				923E396B2CAD3BF7007E2CD5 /* Models */,
+				922D83D62CD2198F00A861F4 /* Cells */,
 				923E393B2CAD3AF7007E2CD5 /* AppDelegate.swift */,
 				923E393D2CAD3AF7007E2CD5 /* SceneDelegate.swift */,
 				923E39442CAD3AF9007E2CD5 /* Assets.xcassets */,
@@ -156,6 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				923E396C2CAD3C08007E2CD5 /* LoginModel.swift */,
+				922D83DB2CD21A2400A861F4 /* SavedModel.swift */,
+				922D83E42CD2C23600A861F4 /* HomeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -167,6 +203,9 @@
 				923E39812CAD7ADB007E2CD5 /* MyProfileView.swift */,
 				923E39832CAE87EB007E2CD5 /* ManageProfileView.swift */,
 				923E39872CAE95A0007E2CD5 /* UITextFieldExtension.swift */,
+				922D83D72CD219D900A861F4 /* SavedView.swift */,
+				922D83E02CD2BD8F00A861F4 /* HomeView.swift */,
+				922D83E62CD369E200A861F4 /* UnderBarCustom.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,6 +221,7 @@
 				923E397D2CAD6ACE007E2CD5 /* SavedViewController.swift */,
 				923E397F2CAD6AD8007E2CD5 /* MyViewController.swift */,
 				923E39852CAE87FE007E2CD5 /* ManageProfileViewController.swift */,
+				922D84372CD8B84B00A861F4 /* SearchResultViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -204,6 +244,7 @@
 			name = cloneKream;
 			packageProductDependencies = (
 				923E39732CAD3F0C007E2CD5 /* SnapKit */,
+				922D83DE2CD22ADA00A861F4 /* Then */,
 			);
 			productName = cloneKream;
 			productReference = 923E39382CAD3AF7007E2CD5 /* cloneKream.app */;
@@ -279,6 +320,7 @@
 			mainGroup = 923E392F2CAD3AF7007E2CD5;
 			packageReferences = (
 				923E39722CAD3F0C007E2CD5 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				922D83DD2CD22ADA00A861F4 /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = 923E39392CAD3AF7007E2CD5 /* Products */;
 			projectDirPath = "";
@@ -327,16 +369,26 @@
 				923E397C2CAD6AC1007E2CD5 /* ShopViewController.swift in Sources */,
 				923E393C2CAD3AF7007E2CD5 /* AppDelegate.swift in Sources */,
 				923E39702CAD3C37007E2CD5 /* LoginView.swift in Sources */,
+				922D83DA2CD219FC00A861F4 /* SavedTableViewCell.swift in Sources */,
 				923E39842CAE87EB007E2CD5 /* ManageProfileView.swift in Sources */,
+				922D84382CD8B84B00A861F4 /* SearchResultViewController.swift in Sources */,
 				923E397A2CAD6AB6007E2CD5 /* StyleViewController.swift in Sources */,
+				922D83E32CD2C10200A861F4 /* HomeMenuCollectionViewCell.swift in Sources */,
 				923E39862CAE87FE007E2CD5 /* ManageProfileViewController.swift in Sources */,
+				922D83DC2CD21A2400A861F4 /* SavedModel.swift in Sources */,
+				922D83E72CD369E200A861F4 /* UnderBarCustom.swift in Sources */,
 				923E39822CAD7ADB007E2CD5 /* MyProfileView.swift in Sources */,
+				922D83D82CD219D900A861F4 /* SavedView.swift in Sources */,
 				923E39802CAD6AD8007E2CD5 /* MyViewController.swift in Sources */,
 				923E39882CAE95A0007E2CD5 /* UITextFieldExtension.swift in Sources */,
 				923E393E2CAD3AF7007E2CD5 /* SceneDelegate.swift in Sources */,
+				922D83E52CD2C23600A861F4 /* HomeModel.swift in Sources */,
+				922D84342CD7DC0F00A861F4 /* ChallengeCollectionViewCell.swift in Sources */,
 				923E39782CAD6AA4007E2CD5 /* HomeViewController.swift in Sources */,
 				923E397E2CAD6ACE007E2CD5 /* SavedViewController.swift in Sources */,
 				923E39762CAD698B007E2CD5 /* BaseViewController.swift in Sources */,
+				922D84322CD7C3D900A861F4 /* JustDroppedCollectionViewCell.swift in Sources */,
+				922D83E12CD2BD8F00A861F4 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,6 +727,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		922D83DD2CD22ADA00A861F4 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		923E39722CAD3F0C007E2CD5 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -686,6 +746,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		922D83DE2CD22ADA00A861F4 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 922D83DD2CD22ADA00A861F4 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
 		923E39732CAD3F0C007E2CD5 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 923E39722CAD3F0C007E2CD5 /* XCRemoteSwiftPackageReference "SnapKit" */;

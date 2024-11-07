@@ -8,11 +8,19 @@
 import UIKit
 import SnapKit
 
-class ManageProfileView: UIView {
 
-    private let profileImage: UIImageView = {
+class ManageProfileView: UIView {
+    
+    public var profileImageName: UIImage? {
+        didSet {
+            // 프로퍼티가 변경될 때마다 이미지 업데이트
+            profileImage.image = profileImageName
+        }
+    }
+
+    private lazy var profileImage: UIImageView = {
         let imageView = UIImageView()
-        if let image = UIImage(named: "userProfile") {
+        if let image = profileImageName {
             imageView.image = image
         }
         imageView.layer.cornerRadius = 45
@@ -41,9 +49,10 @@ class ManageProfileView: UIView {
         textField.layer.borderColor = UIColor(red: 213/255, green: 213/255, blue: 213/255, alpha: 1).cgColor
         textField.layer.borderWidth = 1
         textField.addLeftPadding()
+
         
         textField.attributedPlaceholder = NSAttributedString(
-            string: "example@gmail.com",
+            string: LoginModel.shared.userId,
             attributes: [
                 .font: UIFont.systemFont(ofSize: 12), // 폰트 크기 설정
                 .foregroundColor: UIColor.black
@@ -96,9 +105,14 @@ class ManageProfileView: UIView {
         textField.layer.borderColor = UIColor(red: 213/255, green: 213/255, blue: 213/255, alpha: 1).cgColor
         textField.layer.borderWidth = 1
         textField.addLeftPadding()
+        var password = "****************"
+        
+        if let pwd = LoginModel.shared.loadUserInfo() {
+            password = pwd
+        }
         
         textField.attributedPlaceholder = NSAttributedString(
-            string: "****************",
+            string: password,
             attributes: [
                 .font: UIFont.systemFont(ofSize: 12), // 폰트 크기 설정
                 .foregroundColor: UIColor.black
@@ -135,8 +149,6 @@ class ManageProfileView: UIView {
         stackView.alignment = .leading
         return stackView
     }()
-    
-
     
     
     
@@ -237,7 +249,11 @@ class ManageProfileView: UIView {
     func saveTextField() {
         
         emailChangeButton.setTitle("변경", for: .normal)
+        emailTextField.layer.borderColor = UIColor.black.cgColor
+        LoginModel.shared.userId = emailTextField.text ?? "example@gmail.com"
         pwdChangeButton.setTitle("변경", for: .normal)
+        pwdTextField.layer.borderColor = UIColor.black.cgColor
+        LoginModel.shared.saveUserInfo(pwdTextField.text ?? "***********")
     }
 
 

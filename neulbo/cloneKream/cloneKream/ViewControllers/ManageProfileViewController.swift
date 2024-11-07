@@ -9,7 +9,7 @@ import UIKit
 
 class ManageProfileViewController: UIViewController {
     
-    private let manageProfileView = ManageProfileView()
+    public let manageProfileView = ManageProfileView()
     
 
     override func viewDidLoad() {
@@ -49,6 +49,8 @@ class ManageProfileViewController: UIViewController {
         }
         
     }
+    
+
 
 
 
