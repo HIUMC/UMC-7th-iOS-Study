@@ -13,7 +13,7 @@ struct MustItemModel {
 }
 
 extension MustItemModel {
-    static func dummy3() -> [MustItemModel] {
+    static func mustitemdummy() -> [MustItemModel] {
         return [
             MustItemModel(image: "karina.png", name: "@katarinabluu"),
             MustItemModel(image: "winter.png", name: "@imwinter"),

@@ -13,7 +13,6 @@ class LoginViewController: UIViewController {
     
     private lazy var logView: LoginView = {
         let view = LoginView()
-        view.backgroundColor = .white
         return view
     }()
     

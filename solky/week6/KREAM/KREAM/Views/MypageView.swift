@@ -15,7 +15,8 @@ class MypageView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.addComponents()
+        setViews()
+        setConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -99,8 +100,8 @@ class MypageView: UIView {
             $0.backgroundColor = UIColor(red: 0.84, green: 0.84, blue: 0.84, alpha: 1.00)
         }
     
-    
-    private func addComponents() {
+    private func setViews() {
+        
         self.addSubview(settingImage)
         self.addSubview(cameraImage)
         self.addSubview(profileImage)
@@ -110,6 +111,13 @@ class MypageView: UIView {
         self.addSubview(profilemanageButton)
         self.addSubview(profileshareButton)
         self.addSubview(separateView)
+        
+        settingImage.image = UIImage(named: "setting")
+        cameraImage.image = UIImage(named: "camera")
+        profileImage.image = UIImage(named: "profile")
+    }
+    
+    private func setConstraints() {
         
         settingImage.snp.makeConstraints {
             $0.top.equalToSuperview().offset(75)
@@ -159,9 +167,5 @@ class MypageView: UIView {
             $0.trailing.equalToSuperview()
             $0.bottom.equalTo(separateView.snp.top).inset(24)
         }
-        
-        settingImage.image = UIImage(named: "setting")
-        cameraImage.image = UIImage(named: "camera")
-        profileImage.image = UIImage(named: "profile")
     }
 }

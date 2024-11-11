@@ -198,13 +198,13 @@ class PurchaseView: UIView {
         quickdeliverybutton.snp.makeConstraints {
             $0.bottom.equalToSuperview().offset(-39)
             $0.leading.equalToSuperview().offset(16)
-            $0.width.equalTo(168)
+            $0.width.equalTo(171)
             $0.height.equalTo(52)
         }
         
         normaldeliverybutton.snp.makeConstraints {
             $0.bottom.equalToSuperview().offset(-39)
-            $0.leading.equalTo(quickdeliverybutton.snp.trailing).offset(6)
+            $0.leading.equalTo(quickdeliverybutton.snp.trailing).offset(10)
             $0.trailing.equalToSuperview().offset(-16)
             $0.height.equalTo(52)
         }
@@ -213,7 +213,7 @@ class PurchaseView: UIView {
             $0.top.equalTo(sizeimage.snp.bottom).offset(35)
             $0.centerX.equalToSuperview()
             $0.width.equalTo(344)
-            $0.height.equalTo(102)
+            $0.height.equalTo(104)
         }
         
         separateview.snp.makeConstraints {

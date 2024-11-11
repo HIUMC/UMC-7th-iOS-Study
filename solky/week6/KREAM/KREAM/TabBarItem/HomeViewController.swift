@@ -111,10 +111,10 @@ extension HomeViewController: UICollectionViewDataSource {
             return HomeModel.dummy().count
         }
         else if collectionView.tag == 2 {
-            return ReleasedModel.dummy2().count // 새로운 모델 사용
+            return ReleasedModel.releaseddummy().count // 새로운 모델 사용
         }
         else if collectionView.tag == 3 {
-            return MustItemModel.dummy3().count
+            return MustItemModel.mustitemdummy().count
         }
         return 0
     }
@@ -139,7 +139,7 @@ extension HomeViewController: UICollectionViewDataSource {
                 return UICollectionViewCell()
             }
             
-            let list = ReleasedModel.dummy2()
+            let list = ReleasedModel.releaseddummy()
             
             cell.releasedconfigure(model: list[indexPath.row])
             
@@ -150,7 +150,7 @@ extension HomeViewController: UICollectionViewDataSource {
                 return UICollectionViewCell()
             }
             
-            let list = MustItemModel.dummy3()
+            let list = MustItemModel.mustitemdummy()
             
             cell.mustitemconfigure(model: list[indexPath.row])
             
@@ -166,7 +166,7 @@ extension HomeViewController: UICollectionViewDelegate {
         if collectionView.tag == 2 {
             let detailViewController = DetailViewController()
             detailViewController.hidesBottomBarWhenPushed = true
-            detailViewController.receivedreleasedData = ReleasedModel.dummy2()[indexPath.row]
+            detailViewController.receivedreleasedData = ReleasedModel.releaseddummy()[indexPath.row]
             navigationController?.pushViewController(detailViewController, animated: true)
         }
     }

@@ -9,7 +9,6 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    private let mainviewcontroller = MainViewController()
     public var receivedreleasedData: ReleasedModel?
     
     private lazy var detailview = DetailView().then {
@@ -19,7 +18,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = detailview
-        mainviewcontroller.isTabBarHidden = true
+
         
         let backButton = UIBarButtonItem(image: UIImage(named: "leftback"), style: .plain, target: self, action: #selector(back))
         backButton.tintColor = UIColor(red: 0.52, green: 0.52, blue: 0.52, alpha: 1.00)

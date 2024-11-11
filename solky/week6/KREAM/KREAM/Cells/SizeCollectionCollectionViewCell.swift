@@ -4,13 +4,16 @@ import SnapKit
 import Then
 
 class SizeCollectionViewCell: UICollectionViewCell {
+    
     static let identifier = "SizeCollectionViewCell"
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         setViews()
         setConstaints()
         sizebutton.addTarget(self, action: #selector(cellselected), for: .touchUpInside)
+        
     }
     
     required init?(coder: NSCoder) {
@@ -22,6 +25,7 @@ class SizeCollectionViewCell: UICollectionViewCell {
         $0.layer.cornerRadius = 10
         $0.layer.borderWidth = 1
         $0.layer.borderColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.00).cgColor
+        $0.isUserInteractionEnabled = false
     }
     
     let sizeLabel = UILabel().then {
@@ -67,14 +71,23 @@ class SizeCollectionViewCell: UICollectionViewCell {
         self.priceLabel.text = model.price
     }
 
-    
-    
-    @objc public func cellselected() {
+    public func update(isSelected: Bool) {
         if isSelected {
             sizebutton.layer.borderColor = UIColor(red: 0.00, green: 0.00, blue: 0.00, alpha: 1.00).cgColor
             sizeLabel.font = .systemFont(ofSize: 14, weight: .semibold)
             priceLabel.font = .systemFont(ofSize: 12, weight: .semibold)
         }
+        else {
+                sizebutton.layer.borderColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.00).cgColor
+                sizeLabel.font = .systemFont(ofSize: 14, weight: .regular)
+                priceLabel.font = .systemFont(ofSize: 12, weight: .regular)
+        }
     }
     
+    
+    @objc public func cellselected() {
+        let CurrentSelected = sizeLabel.font == .systemFont(ofSize: 14, weight: .semibold)
+        update(isSelected: !CurrentSelected)
+    }
 }
+    

@@ -11,7 +11,6 @@ class MypageViewController: UIViewController {
     
     private lazy var myview: MypageView = {
             let view = MypageView()
-            view.backgroundColor = UIColor(red: 1.00, green: 1.00, blue: 1.00, alpha: 1.00)
             return view
     }()
     

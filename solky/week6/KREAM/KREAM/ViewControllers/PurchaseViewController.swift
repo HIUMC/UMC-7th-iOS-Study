@@ -10,6 +10,8 @@ import UIKit
 class PurchaseViewController: UIViewController {
     
     public var receivedimage: UIImage?
+    private var selectedIndexPath: IndexPath?
+    
     private lazy var purchaseview = PurchaseView().then {
         $0.backgroundColor = .white
     }
@@ -30,6 +32,8 @@ class PurchaseViewController: UIViewController {
     private func sizeDelegate() {
         purchaseview.SizeCollectionView.dataSource = self
         purchaseview.SizeCollectionView.delegate = self
+        purchaseview.SizeCollectionView.allowsMultipleSelection = false
+
     }
     
     @objc private func DidTappedclosebutton() {
@@ -54,9 +58,22 @@ extension PurchaseViewController: UICollectionViewDataSource, UICollectionViewDe
         
         cell.sizeconfigure(model: list[indexPath.row])
         
+        cell.update(isSelected: indexPath == selectedIndexPath)
+        
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            
+            if let previousIndexPath = selectedIndexPath, let previousCell = collectionView.cellForItem(at: previousIndexPath) as? SizeCollectionViewCell {
+                previousCell.update(isSelected: false)
+            }
+            
+            selectedIndexPath = indexPath
+            if let currentCell = collectionView.cellForItem(at: indexPath) as? SizeCollectionViewCell {
+                currentCell.update(isSelected: true)
+            }
+        }
     
 }
 

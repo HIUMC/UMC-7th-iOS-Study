@@ -6,13 +6,16 @@
 //
 
 import UIKit
+import SnapKit
+import Then
 
 class LoginView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .white
-        self.addComponents()
+        setViews()
+        setConstraints()
         
     }
     
@@ -24,74 +27,47 @@ class LoginView: UIView {
     public lazy var imageView: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit // 이미지 비율 유지
-        
-        image.translatesAutoresizingMaskIntoConstraints = false
-        
+
         return image
     }()
     
     // 이메일 주소 입력
-    public lazy var idLabel: UILabel = {
-        let label = UILabel()
-        label.text = "이메일 주소"
-        label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
-        label.textColor = .black
-        
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    public lazy var idLabel = UILabel().then {
+        $0.text = "이메일 주소"
+        $0.font = UIFont.systemFont(ofSize: 12, weight: .medium)
+        $0.textColor = .black
+    }
     
     // 이메일 입력 텍스트 필드
-    public lazy var idTextField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "예) kream@kream.co.kr"
-        textField.font = UIFont.systemFont(ofSize: 12, weight: .medium)
-        textField.borderStyle = .roundedRect
-        textField.autocapitalizationType = .none
-        textField.keyboardType = .emailAddress
-        
-        textField.translatesAutoresizingMaskIntoConstraints = false
-           
-        return textField
-    }()
+    public lazy var idTextField = UITextField().then {
+        $0.placeholder = "예) kream@kream.co.kr"
+        $0.font = UIFont.systemFont(ofSize: 12, weight: .medium)
+        $0.borderStyle = .roundedRect
+        $0.autocapitalizationType = .none
+        $0.keyboardType = .emailAddress
+    }
     
     // 비밀번호 라벨
-    public lazy var pwdLabel: UILabel = {
-        let label = UILabel()
-        label.text = "비밀번호"
-        label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
-        label.textColor = .black
-        
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }()
+    public lazy var pwdLabel = UILabel().then {
+        $0.text = "비밀번호"
+        $0.font = UIFont.systemFont(ofSize: 12, weight: .medium)
+        $0.textColor = .black
+    }
         
     // 비밀번호 입력 텍스트 필드
-    public lazy var pwdTextField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "비밀번호를 입력해주세요"
-        textField.font = UIFont.systemFont(ofSize: 12, weight: .medium)
-        textField.borderStyle = .roundedRect
-        textField.isSecureTextEntry = true
-        
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        
-        return textField
-    }()
+    public lazy var pwdTextField = UITextField().then {
+        $0.placeholder = "비밀번호를 입력해주세요"
+        $0.font = UIFont.systemFont(ofSize: 12, weight: .medium)
+        $0.borderStyle = .roundedRect
+        $0.isSecureTextEntry = true
+    }
     
     // 로그인 버튼
-    public lazy var loginButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("로그인", for: .normal)
-        button.backgroundColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.00)
-        button.layer.cornerRadius = 8
-        
-        button.translatesAutoresizingMaskIntoConstraints = false
-        
-        return button
-    }()
+    public lazy var loginButton = UIButton().then {
+        $0.setTitle("로그인", for: .normal)
+        $0.backgroundColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.00)
+        $0.layer.cornerRadius = 8
+    }
     
     // 버튼 내부 텍스트 폰트 지정 컨테이너
     private lazy var titleContainer: AttributeContainer = {
@@ -103,9 +79,7 @@ class LoginView: UIView {
     }()
     
     //카카오 로그인 버튼
-    public lazy var kakaologinButton: UIButton = {
-        let button = UIButton(type: .system)
-        
+    public lazy var kakaologinButton = UIButton().then {
         var configuration = UIButton.Configuration.plain()
         
         let IconConfig = UIImage.SymbolConfiguration(pointSize: 10)
@@ -116,20 +90,15 @@ class LoginView: UIView {
         configuration.attributedTitle = AttributedString("카카오로 로그인", attributes: titleContainer)
         configuration.titleAlignment = .center
         
-        button.configuration = configuration
-        
-        button.contentHorizontalAlignment = .leading
-        button.layer.cornerRadius = 8
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.lightGray.cgColor
-        button.translatesAutoresizingMaskIntoConstraints = false
-        
-        return button
-    }()
+        $0.configuration = configuration
+        $0.contentHorizontalAlignment = .leading
+        $0.layer.cornerRadius = 8
+        $0.layer.borderWidth = 1
+        $0.layer.borderColor = UIColor.lightGray.cgColor
+    }
     
     //애플 로그인 버튼
-    public lazy var appleloginButton: UIButton = {
-        let button = UIButton(type: .system)
+    public lazy var appleloginButton = UIButton().then {
         
         var configuration = UIButton.Configuration.plain()
         
@@ -141,18 +110,14 @@ class LoginView: UIView {
         configuration.attributedTitle = AttributedString("Apple로 로그인", attributes: titleContainer)
         configuration.titleAlignment = .center
         
-        button.configuration = configuration
-        
-        button.contentHorizontalAlignment = .leading
-        button.layer.cornerRadius = 8
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.lightGray.cgColor
-        button.translatesAutoresizingMaskIntoConstraints = false
-        
-        return button
-    }()
+        $0.configuration = configuration
+        $0.contentHorizontalAlignment = .leading
+        $0.layer.cornerRadius = 8
+        $0.layer.borderWidth = 1
+        $0.layer.borderColor = UIColor.lightGray.cgColor
+    }
     
-    private func addComponents() {
+    private func setViews() {
         self.addSubview(imageView)
         self.addSubview(idLabel)
         self.addSubview(idTextField)
@@ -162,49 +127,65 @@ class LoginView: UIView {
         self.addSubview(kakaologinButton)
         self.addSubview(appleloginButton)
         
-        NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 126),
-            imageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 53),
-            imageView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -53),
-            imageView.widthAnchor.constraint(equalToConstant: 287),
-            imageView.heightAnchor.constraint(equalToConstant: 75),
-            
-            idLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 87),
-            idLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 45),
-            idLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -45),
-            
-            idTextField.topAnchor.constraint(equalTo: idLabel.bottomAnchor, constant: 8),
-            idTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 45),
-            idTextField.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -45),
-            idTextField.heightAnchor.constraint(equalToConstant: 34),
-            
-            pwdLabel.topAnchor.constraint(equalTo: idTextField.bottomAnchor, constant: 17),
-            pwdLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 45),
-            pwdLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -45),
-            
-            pwdTextField.topAnchor.constraint(equalTo: pwdLabel.bottomAnchor, constant: 8),
-            pwdTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 45),
-            pwdTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -45),
-            pwdTextField.heightAnchor.constraint(equalToConstant: 34),
-            
-            loginButton.topAnchor.constraint(equalTo: pwdTextField.bottomAnchor, constant: 17),
-            loginButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 45),
-            loginButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -45),
-            loginButton.heightAnchor.constraint(equalToConstant: 38),
-            
-            kakaologinButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 87),
-            kakaologinButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 47.5),
-            kakaologinButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -47.5),
-            kakaologinButton.heightAnchor.constraint(equalToConstant: 40),
-            
-            appleloginButton.topAnchor.constraint(equalTo: kakaologinButton.bottomAnchor, constant: 22),
-            appleloginButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 47.5),
-            appleloginButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -47.5),
-            appleloginButton.heightAnchor.constraint(equalToConstant: 40)
-        ])
-        
-        
         imageView.image = UIImage(named: "kream")
+    }
+    
+    private func setConstraints() {
+       
+        imageView.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(126)
+            $0.leading.equalToSuperview().offset(53)
+            $0.trailing.equalToSuperview().offset(-53)
+            $0.width.equalTo(287)
+            $0.height.equalTo(75)
+        }
+            
+        idLabel.snp.makeConstraints {
+            $0.top.equalTo(imageView.snp.bottom).offset(87)
+            $0.leading.equalToSuperview().offset(45)
+            $0.trailing.equalToSuperview().offset(-45)
+        }
+    
+        idTextField.snp.makeConstraints {
+            $0.top.equalTo(idLabel.snp.bottom).offset(8)
+            $0.leading.equalToSuperview().offset(45)
+            $0.trailing.equalToSuperview().offset(-45)
+            $0.height.equalTo(34)
+        }
+        
+        pwdLabel.snp.makeConstraints {
+            $0.top.equalTo(idTextField.snp.bottom).offset(17)
+            $0.leading.equalToSuperview().offset(45)
+            $0.trailing.equalToSuperview().offset(-45)
+        }
+        
+        pwdTextField.snp.makeConstraints {
+            $0.top.equalTo(pwdLabel.snp.bottom).offset(8)
+            $0.leading.equalToSuperview().offset(45)
+            $0.trailing.equalToSuperview().offset(-45)
+            $0.height.equalTo(34)
+        }
+        
+        loginButton.snp.makeConstraints {
+            $0.top.equalTo(pwdTextField.snp.bottom).offset(17)
+            $0.leading.equalToSuperview().offset(45)
+            $0.trailing.equalToSuperview().offset(-45)
+            $0.height.equalTo(38)
+        }
+        
+        kakaologinButton.snp.makeConstraints {
+            $0.top.equalTo(loginButton.snp.bottom).offset(87)
+            $0.leading.equalToSuperview().offset(47.5)
+            $0.trailing.equalToSuperview().offset(-47.5)
+            $0.height.equalTo(40)
+        }
+            
+        appleloginButton.snp.makeConstraints {
+            $0.top.equalTo(kakaologinButton.snp.bottom).offset(22)
+            $0.leading.equalToSuperview().offset(47.5)
+            $0.trailing.equalToSuperview().offset(-47.5)
+            $0.height.equalTo(40)
+        }
     }
     
 }

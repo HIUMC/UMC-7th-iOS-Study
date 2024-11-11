@@ -18,7 +18,7 @@ struct ReleasedModel {
 }
 
 extension ReleasedModel {
-    static func dummy2() -> [ReleasedModel] {
+    static func releaseddummy() -> [ReleasedModel] {
         return [
             ReleasedModel(image: "shoes.png", volumename: "거래 12.8만", savedimage: "_icon_saved_none.png", brandname: "MLB", productname: "청키라이너 뉴욕양키스", pricename: "139,000원", rightbuyname: "즉시 구매가"),
             ReleasedModel(image: "yellowshoes.png", volumename: "거래 15.6만", savedimage: "_icon_saved_filled.png", brandname: "Jordan", productname: "Jordan 1 Retro High OG Yellow Ochre", pricename: "228,000원", rightbuyname: "즉시 구매가"),
