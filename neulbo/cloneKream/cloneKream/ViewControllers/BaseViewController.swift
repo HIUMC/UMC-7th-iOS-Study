@@ -46,8 +46,6 @@ class BaseViewController: UITabBarController {
 }
 
 
-import UIKit
-
 class CustomTabBar: UITabBar {
 
     // 원하는 높이를 설정 (80으로 설정)

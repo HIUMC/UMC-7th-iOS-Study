@@ -10,11 +10,15 @@ import UIKit
 class HomeViewController: UIViewController, UISearchControllerDelegate {
     
     private let rootView = HomeView()
+    private var underbarAnimator: UnderbarAnimator?
+    private var segmentedControlManager: SegmentedControlManager?
     
     private lazy var searchController = UISearchController(searchResultsController: SearchResultViewController()).then {
         $0.searchBar.placeholder = "브랜드, 상품, 프로필 태그 등"
         $0.searchBar.setImage(UIImage(), for: .search, state: .normal)
+        $0.hidesNavigationBarDuringPresentation = false
     }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +26,11 @@ class HomeViewController: UIViewController, UISearchControllerDelegate {
         view = rootView
         
         setUpDelegate()
-        setupAction()
         
         rootView.menuCollectionView.tag = 0
         rootView.justDroppedCollectionView.tag = 1
         rootView.challengeCollectionView.tag = 2
+        
         
         self.navigationItem.titleView = searchController.searchBar
         searchController.hidesNavigationBarDuringPresentation = false
@@ -36,13 +40,17 @@ class HomeViewController: UIViewController, UISearchControllerDelegate {
         self.navigationItem.rightBarButtonItem  = alarmBarButton
         
         searchController.delegate = self
+        
+        // UnderbarAnimator와 SegmentedControlManager 초기화
+        underbarAnimator = UnderbarAnimator(underBarView: rootView.underBar, segmentedControl: rootView.segmentedControl)
+        segmentedControlManager = SegmentedControlManager(segmentedControl: rootView.segmentedControl, underbarAnimator: underbarAnimator ?? UnderbarAnimator(underBarView: rootView.underBar, segmentedControl: rootView.segmentedControl))
     }
     
     @objc private func alarmButtonTapped() {
         
     }
     
-    private func setupAction() {
+    /*private func setupAction() {
         rootView.segmentedControl.addTarget(
             self,
             action: #selector(segmentedControlValueChanged(segment:)),
@@ -90,7 +98,7 @@ class HomeViewController: UIViewController, UISearchControllerDelegate {
                 }
                 self.view.layoutIfNeeded()
             }
-        }
+        }*/
     
 
     private func setUpDelegate() {
@@ -149,7 +157,6 @@ extension HomeViewController: UICollectionViewDataSource {
     }
     
     
-    
-    
 }
+
 

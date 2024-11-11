@@ -10,7 +10,6 @@
 		922D83D82CD219D900A861F4 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D83D72CD219D900A861F4 /* SavedView.swift */; };
 		922D83DA2CD219FC00A861F4 /* SavedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D83D92CD219FC00A861F4 /* SavedTableViewCell.swift */; };
 		922D83DC2CD21A2400A861F4 /* SavedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D83DB2CD21A2400A861F4 /* SavedModel.swift */; };
-		922D83DF2CD22ADA00A861F4 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 922D83DE2CD22ADA00A861F4 /* Then */; };
 		922D83E12CD2BD8F00A861F4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D83E02CD2BD8F00A861F4 /* HomeView.swift */; };
 		922D83E32CD2C10200A861F4 /* HomeMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D83E22CD2C10200A861F4 /* HomeMenuCollectionViewCell.swift */; };
 		922D83E52CD2C23600A861F4 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D83E42CD2C23600A861F4 /* HomeModel.swift */; };
@@ -28,7 +27,6 @@
 		923E395F2CAD3AFA007E2CD5 /* cloneKreamUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923E395E2CAD3AFA007E2CD5 /* cloneKreamUITestsLaunchTests.swift */; };
 		923E396D2CAD3C08007E2CD5 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923E396C2CAD3C08007E2CD5 /* LoginModel.swift */; };
 		923E39702CAD3C37007E2CD5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923E396F2CAD3C37007E2CD5 /* LoginView.swift */; };
-		923E39742CAD3F0C007E2CD5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 923E39732CAD3F0C007E2CD5 /* SnapKit */; };
 		923E39762CAD698B007E2CD5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923E39752CAD698B007E2CD5 /* BaseViewController.swift */; };
 		923E39782CAD6AA4007E2CD5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923E39772CAD6AA4007E2CD5 /* HomeViewController.swift */; };
 		923E397A2CAD6AB6007E2CD5 /* StyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923E39792CAD6AB6007E2CD5 /* StyleViewController.swift */; };
@@ -39,6 +37,15 @@
 		923E39842CAE87EB007E2CD5 /* ManageProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923E39832CAE87EB007E2CD5 /* ManageProfileView.swift */; };
 		923E39862CAE87FE007E2CD5 /* ManageProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923E39852CAE87FE007E2CD5 /* ManageProfileViewController.swift */; };
 		923E39882CAE95A0007E2CD5 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923E39872CAE95A0007E2CD5 /* UITextFieldExtension.swift */; };
+		925A3F5E2CE11757003164C4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 925A3F5D2CE11757003164C4 /* SnapKit */; };
+		925A3F622CE1176A003164C4 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 925A3F612CE1176A003164C4 /* Then */; };
+		925A3F642CE1233B003164C4 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925A3F632CE1233B003164C4 /* BuyViewController.swift */; };
+		925A3F662CE12378003164C4 /* BuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925A3F652CE12378003164C4 /* BuyView.swift */; };
+		925A3F682CE1264A003164C4 /* ProductSizeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925A3F672CE1264A003164C4 /* ProductSizeCollectionViewCell.swift */; };
+		92D3BBF82CE0FF9E00665795 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D3BBF72CE0FF9E00665795 /* ProductViewController.swift */; };
+		92D3BBFA2CE0FFB100665795 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D3BBF92CE0FFB100665795 /* ProductView.swift */; };
+		92D3BBFC2CE1023300665795 /* OtherColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D3BBFB2CE1023300665795 /* OtherColorCollectionViewCell.swift */; };
+		92D3BBFE2CE1138900665795 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D3BBFD2CE1138900665795 /* ProductModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +100,13 @@
 		923E39832CAE87EB007E2CD5 /* ManageProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManageProfileView.swift; path = cloneKream/Views/ManageProfileView.swift; sourceTree = SOURCE_ROOT; };
 		923E39852CAE87FE007E2CD5 /* ManageProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageProfileViewController.swift; sourceTree = "<group>"; };
 		923E39872CAE95A0007E2CD5 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		925A3F632CE1233B003164C4 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
+		925A3F652CE12378003164C4 /* BuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyView.swift; sourceTree = "<group>"; };
+		925A3F672CE1264A003164C4 /* ProductSizeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSizeCollectionViewCell.swift; sourceTree = "<group>"; };
+		92D3BBF72CE0FF9E00665795 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		92D3BBF92CE0FFB100665795 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		92D3BBFB2CE1023300665795 /* OtherColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherColorCollectionViewCell.swift; sourceTree = "<group>"; };
+		92D3BBFD2CE1138900665795 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +114,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				923E39742CAD3F0C007E2CD5 /* SnapKit in Frameworks */,
-				922D83DF2CD22ADA00A861F4 /* Then in Frameworks */,
+				925A3F5E2CE11757003164C4 /* SnapKit in Frameworks */,
+				925A3F622CE1176A003164C4 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +143,8 @@
 				922D83E22CD2C10200A861F4 /* HomeMenuCollectionViewCell.swift */,
 				922D84312CD7C3D900A861F4 /* JustDroppedCollectionViewCell.swift */,
 				922D84332CD7DC0F00A861F4 /* ChallengeCollectionViewCell.swift */,
+				92D3BBFB2CE1023300665795 /* OtherColorCollectionViewCell.swift */,
+				925A3F672CE1264A003164C4 /* ProductSizeCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -192,6 +208,7 @@
 				923E396C2CAD3C08007E2CD5 /* LoginModel.swift */,
 				922D83DB2CD21A2400A861F4 /* SavedModel.swift */,
 				922D83E42CD2C23600A861F4 /* HomeModel.swift */,
+				92D3BBFD2CE1138900665795 /* ProductModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,6 +223,8 @@
 				922D83D72CD219D900A861F4 /* SavedView.swift */,
 				922D83E02CD2BD8F00A861F4 /* HomeView.swift */,
 				922D83E62CD369E200A861F4 /* UnderBarCustom.swift */,
+				92D3BBF92CE0FFB100665795 /* ProductView.swift */,
+				925A3F652CE12378003164C4 /* BuyView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,6 +241,8 @@
 				923E397F2CAD6AD8007E2CD5 /* MyViewController.swift */,
 				923E39852CAE87FE007E2CD5 /* ManageProfileViewController.swift */,
 				922D84372CD8B84B00A861F4 /* SearchResultViewController.swift */,
+				92D3BBF72CE0FF9E00665795 /* ProductViewController.swift */,
+				925A3F632CE1233B003164C4 /* BuyViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -243,8 +264,8 @@
 			);
 			name = cloneKream;
 			packageProductDependencies = (
-				923E39732CAD3F0C007E2CD5 /* SnapKit */,
-				922D83DE2CD22ADA00A861F4 /* Then */,
+				925A3F5D2CE11757003164C4 /* SnapKit */,
+				925A3F612CE1176A003164C4 /* Then */,
 			);
 			productName = cloneKream;
 			productReference = 923E39382CAD3AF7007E2CD5 /* cloneKream.app */;
@@ -319,8 +340,8 @@
 			);
 			mainGroup = 923E392F2CAD3AF7007E2CD5;
 			packageReferences = (
-				923E39722CAD3F0C007E2CD5 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				922D83DD2CD22ADA00A861F4 /* XCRemoteSwiftPackageReference "Then" */,
+				925A3F5C2CE11757003164C4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				925A3F602CE1176A003164C4 /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = 923E39392CAD3AF7007E2CD5 /* Products */;
 			projectDirPath = "";
@@ -364,21 +385,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92D3BBF82CE0FF9E00665795 /* ProductViewController.swift in Sources */,
 				923E39402CAD3AF7007E2CD5 /* LoginViewController.swift in Sources */,
+				925A3F662CE12378003164C4 /* BuyView.swift in Sources */,
 				923E396D2CAD3C08007E2CD5 /* LoginModel.swift in Sources */,
 				923E397C2CAD6AC1007E2CD5 /* ShopViewController.swift in Sources */,
 				923E393C2CAD3AF7007E2CD5 /* AppDelegate.swift in Sources */,
 				923E39702CAD3C37007E2CD5 /* LoginView.swift in Sources */,
+				92D3BBFE2CE1138900665795 /* ProductModel.swift in Sources */,
 				922D83DA2CD219FC00A861F4 /* SavedTableViewCell.swift in Sources */,
+				925A3F682CE1264A003164C4 /* ProductSizeCollectionViewCell.swift in Sources */,
 				923E39842CAE87EB007E2CD5 /* ManageProfileView.swift in Sources */,
 				922D84382CD8B84B00A861F4 /* SearchResultViewController.swift in Sources */,
 				923E397A2CAD6AB6007E2CD5 /* StyleViewController.swift in Sources */,
+				925A3F642CE1233B003164C4 /* BuyViewController.swift in Sources */,
+				92D3BBFA2CE0FFB100665795 /* ProductView.swift in Sources */,
 				922D83E32CD2C10200A861F4 /* HomeMenuCollectionViewCell.swift in Sources */,
 				923E39862CAE87FE007E2CD5 /* ManageProfileViewController.swift in Sources */,
 				922D83DC2CD21A2400A861F4 /* SavedModel.swift in Sources */,
 				922D83E72CD369E200A861F4 /* UnderBarCustom.swift in Sources */,
 				923E39822CAD7ADB007E2CD5 /* MyProfileView.swift in Sources */,
 				922D83D82CD219D900A861F4 /* SavedView.swift in Sources */,
+				92D3BBFC2CE1023300665795 /* OtherColorCollectionViewCell.swift in Sources */,
 				923E39802CAD6AD8007E2CD5 /* MyViewController.swift in Sources */,
 				923E39882CAE95A0007E2CD5 /* UITextFieldExtension.swift in Sources */,
 				923E393E2CAD3AF7007E2CD5 /* SceneDelegate.swift in Sources */,
@@ -727,15 +755,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		922D83DD2CD22ADA00A861F4 /* XCRemoteSwiftPackageReference "Then" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/devxoul/Then.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
-		923E39722CAD3F0C007E2CD5 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		925A3F5C2CE11757003164C4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
@@ -743,18 +763,26 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		925A3F602CE1176A003164C4 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		922D83DE2CD22ADA00A861F4 /* Then */ = {
+		925A3F5D2CE11757003164C4 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 922D83DD2CD22ADA00A861F4 /* XCRemoteSwiftPackageReference "Then" */;
-			productName = Then;
-		};
-		923E39732CAD3F0C007E2CD5 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 923E39722CAD3F0C007E2CD5 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 925A3F5C2CE11757003164C4 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		925A3F612CE1176A003164C4 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 925A3F602CE1176A003164C4 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
