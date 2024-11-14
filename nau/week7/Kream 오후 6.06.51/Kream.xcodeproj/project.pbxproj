@@ -62,6 +62,8 @@
 		AFC9CB272CDFE39500B1BC80 /* purchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9CB262CDFE39500B1BC80 /* purchaseViewController.swift */; };
 		AFC9CB292CDFE47500B1BC80 /* purchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9CB282CDFE47500B1BC80 /* purchaseView.swift */; };
 		AFC9CB2D2CE4ECA300B1BC80 /* class.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9CB2C2CE4ECA300B1BC80 /* class.swift */; };
+		AFC9CB2F2CE5A9B000B1BC80 /* purchaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9CB2E2CE5A9B000B1BC80 /* purchaseModel.swift */; };
+		AFC9CB312CE5AAEF00B1BC80 /* purchaseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC9CB302CE5AAEF00B1BC80 /* purchaseViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +122,8 @@
 		AFC9CB262CDFE39500B1BC80 /* purchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = purchaseViewController.swift; sourceTree = "<group>"; };
 		AFC9CB282CDFE47500B1BC80 /* purchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = purchaseView.swift; sourceTree = "<group>"; };
 		AFC9CB2C2CE4ECA300B1BC80 /* class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = class.swift; sourceTree = "<group>"; };
+		AFC9CB2E2CE5A9B000B1BC80 /* purchaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = purchaseModel.swift; sourceTree = "<group>"; };
+		AFC9CB302CE5AAEF00B1BC80 /* purchaseViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = purchaseViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,9 +187,9 @@
 				AFB1C4A42CA9B4060064D054 /* LoginView.swift */,
 				AFC9C8752CB1C57000B1BC80 /* MYView.swift */,
 				AFC9C8802CB2E09C00B1BC80 /* profileModifyView.swift */,
-				AFC9CA402CC7DBA500B1BC80 /* SavedView.swift */,
 				AFC9CA922CD3328000B1BC80 /* HOMEView.swift */,
 				AFC9CB0B2CD6BD9200B1BC80 /* searchView.swift */,
+				AFC9CA402CC7DBA500B1BC80 /* SavedView.swift */,
 				AFC9CB182CDF58E700B1BC80 /* ProductDetailedView.swift */,
 				AFC9CB282CDFE47500B1BC80 /* purchaseView.swift */,
 			);
@@ -199,6 +203,7 @@
 				AFC9CA3C2CBD38F700B1BC80 /* ProductModel.swift */,
 				AFC9CAA12CD3447E00B1BC80 /* HOMEModel.swift */,
 				AFC9CB222CDFA9BE00B1BC80 /* ProductDetailedModel.swift */,
+				AFC9CB2E2CE5A9B000B1BC80 /* purchaseModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 				AFC9CA3A2CBD379300B1BC80 /* ProductCell.swift */,
 				AFC9CA9D2CD33C7300B1BC80 /* HOMECollectionViewCell.swift */,
 				AFC9CB202CDFA7DF00B1BC80 /* ProductDetailedViewCell.swift */,
+				AFC9CB302CE5AAEF00B1BC80 /* purchaseViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -404,12 +410,14 @@
 				AFC9CB2D2CE4ECA300B1BC80 /* class.swift in Sources */,
 				AFC9CAA22CD3447E00B1BC80 /* HOMEModel.swift in Sources */,
 				AFB1C4A32CA9B3ED0064D054 /* LoginModel.swift in Sources */,
+				AFC9CB312CE5AAEF00B1BC80 /* purchaseViewCell.swift in Sources */,
 				AFC9CA932CD3328000B1BC80 /* HOMEView.swift in Sources */,
 				AFC9CB212CDFA7DF00B1BC80 /* ProductDetailedViewCell.swift in Sources */,
 				AFB1C48C2CA9B37A0064D054 /* AppDelegate.swift in Sources */,
 				AFC9C85D2CB1A73300B1BC80 /* STYLEViewController.swift in Sources */,
 				AFC9CB1B2CDF58FC00B1BC80 /* ProductDetailedViewController.swift in Sources */,
 				AFC9C85F2CB1A75300B1BC80 /* SHOPViewController.swift in Sources */,
+				AFC9CB2F2CE5A9B000B1BC80 /* purchaseModel.swift in Sources */,
 				AFC9CB272CDFE39500B1BC80 /* purchaseViewController.swift in Sources */,
 				AFC9CA9E2CD33C7300B1BC80 /* HOMECollectionViewCell.swift in Sources */,
 				AFC9C8882CB2E66A00B1BC80 /* profileModifyViewController.swift in Sources */,

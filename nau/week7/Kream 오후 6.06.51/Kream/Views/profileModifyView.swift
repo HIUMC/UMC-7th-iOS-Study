@@ -8,55 +8,28 @@
 import UIKit
 import Then
 import SnapKit
-
-class BasicButton : UIButton, BtnConfig {
-    func config(title: String?, image: UIImage?) {
-        self.setTitle(title, for: .normal)
-        self.setImage(image, for: .normal)
-    }
-}
-
-class CustomButton2 : UIButton, BtnConfig {
-    func config(title: String?, image: UIImage?) {
-        self.setTitle(title, for: .normal)
-        self.setImage(image, for: .normal)
-    }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.layer.borderWidth = 1
-        self.layer.cornerRadius = 6
-        self.layer.borderColor = UIColor.black.cgColor
-        self.setTitleColor(UIColor.black, for: .normal)
-        self.titleLabel?.font = .systemFont(ofSize: 14, weight: .regular)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
-
-class CustomLabel : UILabel, LabelConfig {
-    func config(text: String?, size: CGFloat, weight: UIFont.Weight, color: UIColor) {
+class CustomTextField: UITextField, TextFieldConfig {
+    func configLabel(text: String?, size: CGFloat = 14, weight: UIFont.Weight = .regular, color: UIColor = .black) {
         self.text = text
         self.font = UIFont.systemFont(ofSize: size, weight: weight)
         self.textColor = color
     }
-}
     
-class CustomTextField: UITextField, TextFieldConfig {
-    func config(placeholder: String?) {
+    func configLayer(layerBorderWidth: CGFloat? = 1, layerCornerRadius: CGFloat? = 15, layerColor: UIColor = UIColor(hexCode: "D5D5D5")) {
+        self.layer.borderWidth = layerBorderWidth!
+        self.layer.cornerRadius = layerCornerRadius!
+        self.layer.borderColor = layerColor.cgColor
+    }
+    
+    func configTextField(placeholder: String?) {
         self.placeholder = placeholder
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         self.leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 16.0, height: 0.0))
         self.leftViewMode = .always
-        self.layer.borderColor = UIColor(hue: 0/360, saturation: 0/100, brightness: 83/100, alpha: 1.0).cgColor
-        self.layer.borderWidth = 1
-        self.layer.cornerRadius = 15
         self.translatesAutoresizingMaskIntoConstraints = false
         self.isUserInteractionEnabled = false
     }
@@ -83,45 +56,43 @@ class profileModifyView: UIView {
         $0.tintColor = .black
     }
     
-    public lazy var profileManageTitle = CustomLabel().then {
-        $0.config(text: "프로필 관리", size: 16, weight: .medium, color: .black)
-    }
+    public lazy var profileManageTitle = Label(title: "프로필 관리", size: 16, weight: .medium)
     
     //마이뷰 프로필사진 가져오기
     public lazy var profileImage = MYView().profileImage
     
-    public lazy var profileInformation = CustomLabel().then {
-        $0.config(text: "프로필 정보", size: 18, weight: .semibold, color: .black)
-    }
-    public lazy var userId = CustomLabel().then {
-        $0.config(text: "유저 이메일", size: 14, weight: .regular, color: .black)
-    }
-    public lazy var userPwd = CustomLabel().then {
-        $0.config(text: "유저 비밀번호", size: 14, weight: .regular, color: .black)
-    }
+    public lazy var profileInformation = Label(title: "프로필 정보", size: 18, weight: .semibold)
+        
+    public lazy var userId = Label(title: "유저 이메일", size: 14, weight: .regular)
+    
+    public lazy var userPwd = Label(title: "유저 비밀번호", size: 14, weight: .regular)
     
     public lazy var userIdInput = CustomTextField().then {
         if let id = LoginModel().loadId() {
-            $0.text = id
+            $0.configLabel(text: id)
         }
-        $0.config(placeholder: "새로운 이메일을 입력해주세요!")
+        $0.configLayer()
+        $0.configTextField(placeholder: "새로운 이메일을 입력해주세요!")
         
     }
 
     public lazy var userPwdInput = CustomTextField().then {
         //"******************"
         if let pwd = LoginModel().loadPwd() {
-            $0.text = pwd
+            $0.configLabel(text: pwd)
         }
-        $0.config(placeholder: "새로운 비밀번호를 입력해주세요!")
+        $0.configLayer()
+        $0.configTextField(placeholder: "새로운 비밀번호를 입력해주세요!")
     }
     
     public lazy var changeBtn1 = CustomButton2().then {
-        $0.config(title: "변경", image: nil)
+        $0.configLabel(text: "변경", size: 14, weight: .regular, color: .black)
+        $0.configLayer(layerBorderWidth: 1, layerCornerRadius: 6, layerColor: .black)
     }
     
     public lazy var changeBtn2 = CustomButton2().then {
-        $0.config(title: "변경", image: nil)
+        $0.configLabel(text: "변경", size: 14, weight: .regular, color: .black)
+        $0.configLayer(layerBorderWidth: 1, layerCornerRadius: 6, layerColor: .black)
     }
     
     private func addComponents(){

@@ -9,65 +9,6 @@ import UIKit
 import SnapKit
 import Then
 
-protocol BtnConfig {
-    func config(title: String?, image: UIImage?)
-}
-
-protocol LabelConfig {
-    func config(text: String?, size: CGFloat, weight: UIFont.Weight, color: UIColor)
-}
-
-protocol TextFieldConfig {
-    func config(placeholder: String?)
-}
-
-class ProfileImageView: UIImageView {
-    init(imageName: String) {
-        super.init(frame: .zero)
-        self.image = UIImage(named: imageName)
-        self.frame = CGRect(x: 0, y: 0, width: 90, height: 90)
-        self.layer.cornerRadius = self.frame.height/2
-        self.clipsToBounds = true
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
-
-class Label: UILabel {
-    init(title: String, size: CGFloat, weight: UIFont.Weight, color: UIColor){
-        super.init(frame: .zero)
-        self.text = title
-        self.font = UIFont.systemFont(ofSize: size, weight: weight)
-        self.textColor = color
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
-
-class CustomButton1: UIButton {
-    init(title: String) {
-        super.init(frame: .zero)
-        self.layer.borderWidth = 0.8
-        self.layer.cornerRadius = 8
-        self.layer.borderColor = UIColor(hue: 0/360, saturation: 0/100, brightness: 83/100, alpha: 1.0).cgColor
-        
-        var config = UIButton.Configuration.plain()
-        
-        config.attributedTitle = AttributedString(title, attributes: AttributeContainer([.font: UIFont.systemFont(ofSize: 9, weight: .regular),
-            .foregroundColor: UIColor.black]))
-
-        self.configuration = config
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
-
 class MYView: UIView {
 
     override init(frame: CGRect){
@@ -90,21 +31,32 @@ class MYView: UIView {
     }
     //카메라버튼
     
-    public lazy var profileImage = ProfileImageView(imageName: "IMG_0477.JPG")
+    public lazy var profileImage = UIImageView().then {
+        $0.image = UIImage(named: "IMG_0477.JPG")
+        $0.frame = CGRect(x: 0, y: 0, width: 90, height: 90)
+        $0.layer.cornerRadius = $0.frame.height/2
+        $0.clipsToBounds = true
+    }
     
-    private lazy var ProfileNicName = Label(title: "Nau_iOS", size: 16, weight: .medium, color: .black)
+    private lazy var ProfileNicName = Label(title: "Nau_iOS", size: 16, weight: .medium)
     
-    public lazy var profileManageButton = CustomButton1(title: "프로필 관리")
+    lazy var profileManageButton = CustomButton2().then {
+        $0.configLabel(text: "프로필 관리", size: 9, weight: .regular, color: .black)
+        $0.configLayer(layerBorderWidth: 0.8, layerCornerRadius: 8, layerColor: UIColor(hue: 0/360, saturation: 0/100, brightness: 83/100, alpha: 1.0))
+    }
     
-    public lazy var profileShareButton = CustomButton1(title: "프로필 공유")
+    lazy var profileShareButton = CustomButton2().then {
+        $0.configLabel(text: "프로필 공유", size: 9, weight: .regular, color: .black)
+        $0.configLayer(layerBorderWidth: 0.8, layerCornerRadius: 8, layerColor: UIColor(hue: 0/360, saturation: 0/100, brightness: 83/100, alpha: 1.0))
+    }
     
-    private lazy var follower = Label(title: "팔로워", size: 12, weight: .regular, color: .black)
+    private lazy var follower = Label(title: "팔로워", size: 12, weight: .regular)
     
-    private lazy var following = Label(title: "팔로잉", size: 12, weight: .regular, color: .black)
+    private lazy var following = Label(title: "팔로잉", size: 12, weight: .regular)
     
-    private lazy var followerCount = Label(title: " 326", size: 12, weight: .semibold, color: .black)
+    private lazy var followerCount = Label(title: " 326", size: 12, weight: .semibold)
     
-    private lazy var followingCount = Label(title: " 326", size: 12, weight: .semibold, color: .black)
+    private lazy var followingCount = Label(title: " 326", size: 12, weight: .semibold)
     
     private func addComponents(){
         [
