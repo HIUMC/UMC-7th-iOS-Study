@@ -130,4 +130,13 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         }
         return UICollectionViewCell()
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView.tag == 1 {
+            let vc = ProductDetailViewController()
+            vc.hidesBottomBarWhenPushed = true
+//            vc.profileManageView.profileImg.image = mypageView.profileImg.image
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }

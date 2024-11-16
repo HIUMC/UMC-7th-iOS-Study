@@ -22,7 +22,8 @@ extension DroppedModel {
             DroppedModel(trade: "15.6만", image: .jordan, brand: "Jordan", name: "Jordan 1 Retro High OG Yellow Ochre", price: "228,000"),
             DroppedModel(trade: "7.8만", image: .humanmade, brand: "Human Made", name: "Human Made x Kaws Varsity Jacket #1 Black", price: "556,000"),
             DroppedModel(trade: "15.6만", image: .jordan, brand: "Jordan", name: "Jordan 1 Retro High OG Yellow Ochre", price: "228,000"),
-            DroppedModel(trade: "12.8만", image: .mlb, brand: "MLB", name: "청키라이너 뉴욕양키스", price: "139,000")
+            DroppedModel(trade: "12.8만", image: .mlb, brand: "MLB", name: "청키라이너 뉴욕양키스", price: "139,000"),
+            DroppedModel(trade: "1.2만", image: .black, brand: "Matin Kim", name: "Matin Kim Logo Coating Jumper", price: "228,000")
         ]
     }
 }
