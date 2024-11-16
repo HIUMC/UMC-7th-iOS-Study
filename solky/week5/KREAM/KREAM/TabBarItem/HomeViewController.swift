@@ -78,11 +78,28 @@ class HomeViewController: UIViewController {
         if homeview.segmentedControl.selectedSegmentIndex == 0 {
             homeview.HomeCollectionView.isHidden = false
             homeview.dontlateimage.isHidden = false
+            homeview.MustItemCollectionView.isHidden = false
+            homeview.ReleasedCollectionView.isHidden = false
+            homeview.separateview1.isHidden = false
+            homeview.separateview2.isHidden = false
+            homeview.dropLabel.isHidden = false
+            homeview.releasedLabel.isHidden = false
+            homeview.mustitLabel.isHidden = false
+            homeview.happyLabel.isHidden = false
             emptyview.isHidden = true
+            
         }
         else {
             homeview.HomeCollectionView.isHidden = true
             homeview.dontlateimage.isHidden = true
+            homeview.MustItemCollectionView.isHidden = true
+            homeview.ReleasedCollectionView.isHidden = true
+            homeview.separateview1.isHidden = true
+            homeview.separateview2.isHidden = true
+            homeview.dropLabel.isHidden = true
+            homeview.releasedLabel.isHidden = true
+            homeview.mustitLabel.isHidden = true
+            homeview.happyLabel.isHidden = true
             emptyview.isHidden = false
         }
     }
@@ -111,7 +128,7 @@ extension HomeViewController: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            let list = HomeModel.dummy()
+            _ = HomeModel.dummy()
             
             cell.imageview.image = HomeModel.dummy()[indexPath.row].image
             cell.titleLabel.text = HomeModel.dummy()[indexPath.row].name

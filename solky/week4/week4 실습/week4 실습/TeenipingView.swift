@@ -11,8 +11,14 @@ import Then
 
 class TeenipingView: UIView {
     public lazy var segmentedControl = UISegmentedControl(items: ["티니핑", "not 티니핑"]).then {
+        $0.setBackgroundImage(UIImage(), for: .normal, barMetrics: .default)
+        $0.setBackgroundImage(UIImage(), for: .selected, barMetrics: .default)
+        $0.setBackgroundImage(UIImage(), for: .highlighted, barMetrics: .default)
+        $0.setDividerImage(UIImage(), forLeftSegmentState: .selected, rightSegmentState: .normal, barMetrics: .default)
         
+        $0.apportionsSegmentWidthsByContent = true
         $0.selectedSegmentIndex = 0
+        
         $0.setTitleTextAttributes(
             [
                 NSAttributedString.Key.foregroundColor: UIColor.black,
@@ -74,7 +80,9 @@ class TeenipingView: UIView {
         
         segmentedControl.snp.makeConstraints {
             $0.top.equalTo(safeAreaLayoutGuide).offset(20)
-            $0.centerX.equalToSuperview()
+            $0.leading.equalToSuperview().offset(92)
+            $0.trailing.equalToSuperview().offset(-91)
+            $0.height.equalTo(19)
         }
         
         divideLine.snp.makeConstraints {
