@@ -15,7 +15,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 30 // 반지름을 30으로 설정하여 동그랗게 만듭니다.
+        imageView.layer.cornerRadius = 30
         imageView.layer.masksToBounds = true
         return imageView
     }()
@@ -44,7 +44,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
         imageView.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.centerX.equalToSuperview()
-            make.width.height.equalTo(60) // 동그란 이미지 크기 설정
+            make.width.height.equalTo(60) 
         }
         
         nameLabel.snp.makeConstraints { make in
