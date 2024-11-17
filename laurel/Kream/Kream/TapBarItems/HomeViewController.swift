@@ -43,18 +43,17 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     }()
     
     private lazy var segmentControl: UISegmentedControl = {
-            let items = ["추천", "랭킹", "발매정보", "럭셔리", "남성", "여성"]
-            let segmentControl = UISegmentedControl(items: items)
-            segmentControl.selectedSegmentIndex = 0
-            segmentControl.setBackgroundImage(UIImage(), for: .normal, barMetrics: .default)
-            segmentControl.setBackgroundImage(UIImage(), for: .selected, barMetrics: .default)
-            segmentControl.setBackgroundImage(UIImage(), for: .highlighted, barMetrics: .default)
-            segmentControl.setDividerImage(UIImage(), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
-            
-            segmentControl.addTarget(self, action: #selector(segmentChanged(_:)), for: .valueChanged)
-            return segmentControl
-        }()
+        let items = ["추천", "랭킹", "발매정보", "럭셔리", "남성", "여성"]
+        let segmentControl = UISegmentedControl(items: items)
+        segmentControl.selectedSegmentIndex = 0
+        segmentControl.setBackgroundImage(UIImage(), for: .normal, barMetrics: .default)
+        segmentControl.setBackgroundImage(UIImage(), for: .selected, barMetrics: .default)
+        segmentControl.setBackgroundImage(UIImage(), for: .highlighted, barMetrics: .default)
+        segmentControl.setDividerImage(UIImage(), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
         
+        segmentControl.addTarget(self, action: #selector(segmentChanged(_:)), for: .valueChanged)
+        return segmentControl
+    }()
     
     private let underlineView = UIView()
     
@@ -71,26 +70,37 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         return UICollectionView(frame: .zero, collectionViewLayout: layout)
     }()
-
     
-    private let homeItems = DummyHomeData.HomeItems
+    private lazy var separatorView: UIView = {
+        return UIView.separatorView()
+    }()
     
-    private lazy var homeImageView: UIImageView = {
-          let imageView = UIImageView()
-          imageView.contentMode = .scaleAspectFill
-          imageView.clipsToBounds = true
-          imageView.image = UIImage(named: "homeImage")
-          imageView.alpha = 1.0
-          return imageView
-      }()
-    
-
     private let justDroppedCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 10
         layout.itemSize = CGSize(width: 120, height: 200) // 셀 크기 조정
         return UICollectionView(frame: .zero, collectionViewLayout: layout)
+    }()
+    
+    private let winterCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 10
+        layout.itemSize = CGSize(width: 120, height: 170) // 셀 크기 조정
+        return UICollectionView(frame: .zero, collectionViewLayout: layout)
+    }()
+    
+    private let homeItems = DummyHomeData.HomeItems
+    private let winterItems = ["winter", "karina"] // WinterCollectionView 이미지 데이터
+
+    private lazy var homeImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = UIImage(named: "homeImage")
+        imageView.alpha = 1.0
+        return imageView
     }()
     
     override func viewDidLoad() {
@@ -101,7 +111,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         setupHomeImageView()
         setupCollectionView()
         setupUnderlineLayout()
-        setupJustDroppedCollectionView()
+        setupJustDroppedCollectionView() // Winter 섹션 호출 포함
     }
     
     private func setupScrollView() {
@@ -183,42 +193,90 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     private func setupJustDroppedCollectionView() {
+        contentView.addSubview(separatorView)
+        separatorView.snp.makeConstraints { make in
+            make.top.equalTo(collectionView.snp.bottom).offset(20) // collectionView와 연결
+            make.leading.trailing.equalToSuperview() // 좌우 맞춤
+            make.height.equalTo(1) // 선 두께
+        }
+
+        let sectionTitleLabel = UILabel()
+        sectionTitleLabel.text = "Just Dropped"
+        sectionTitleLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        contentView.addSubview(sectionTitleLabel)
+
+        let detailLabel = UILabel()
+        detailLabel.text = "발매상품"
+        detailLabel.font = UIFont.systemFont(ofSize: 15)
+        contentView.addSubview(detailLabel)
+
+        sectionTitleLabel.snp.makeConstraints { make in
+            make.top.equalTo(separatorView.snp.bottom).offset(20)
+            make.leading.equalToSuperview().offset(20)
+        }
+
+        detailLabel.snp.makeConstraints { make in
+            make.top.equalTo(sectionTitleLabel.snp.bottom).offset(5)
+            make.leading.equalToSuperview().offset(20)
+        }
+
         contentView.addSubview(justDroppedCollectionView)
         justDroppedCollectionView.dataSource = self
         justDroppedCollectionView.delegate = self
         justDroppedCollectionView.register(JustDroppedCollectionViewCell.self, forCellWithReuseIdentifier: JustDroppedCollectionViewCell.identifier)
-        
-        let sectionTitleLabel = UILabel()
-        sectionTitleLabel.text = "Just Dropped"
-        sectionTitleLabel.font = UIFont.boldSystemFont(ofSize: 18)
-        
-        let detailLabel = UILabel()
-        detailLabel.text = "발매상품"
-        detailLabel.font = UIFont.systemFont(ofSize: 15)
-        
-        
-        contentView.addSubview(sectionTitleLabel)
-        contentView.addSubview(detailLabel)
-        
-        sectionTitleLabel.snp.makeConstraints {
-            $0.top.equalTo(collectionView.snp.bottom).offset(20)
-            $0.leading.equalToSuperview().offset(20)
+
+        justDroppedCollectionView.snp.makeConstraints { make in
+            make.top.equalTo(detailLabel.snp.bottom).offset(10)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(230)
         }
-        
-        detailLabel.snp.makeConstraints {
-            $0.top.equalTo(sectionTitleLabel.snp.bottom).offset(5)
-            $0.leading.equalToSuperview().offset(20)
+
+        let bottomSeparatorView = UIView.separatorView()
+        contentView.addSubview(bottomSeparatorView)
+        bottomSeparatorView.snp.makeConstraints { make in
+            make.top.equalTo(justDroppedCollectionView.snp.bottom).offset(10)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(1)
         }
-        
-        justDroppedCollectionView.snp.makeConstraints {
-            $0.top.equalTo(detailLabel.snp.bottom).offset(10)
-            $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(230)
-            $0.bottom.equalToSuperview().offset(-20)
-        }
-       
+
+        setupWinterCollectionView(topView: bottomSeparatorView)
     }
     
+    private func setupWinterCollectionView(topView: UIView) {
+        let winterTitleLabel = UILabel()
+        winterTitleLabel.text = "겨울 추천 아이템"
+        winterTitleLabel.font = .boldSystemFont(ofSize: 20)
+        contentView.addSubview(winterTitleLabel)
+        
+        let detailLabel = UILabel()
+        detailLabel.text = "#해피홀리룩챌린지"
+        detailLabel.font = UIFont.systemFont(ofSize: 15)
+        detailLabel.textColor = .gray
+        contentView.addSubview(detailLabel)
+
+        contentView.addSubview(winterCollectionView)
+        winterCollectionView.dataSource = self
+        winterCollectionView.delegate = self
+        winterCollectionView.register(WinterCollectionViewCell.self, forCellWithReuseIdentifier: WinterCollectionViewCell.identifier)
+
+        winterTitleLabel.snp.makeConstraints { make in
+            make.top.equalTo(topView.snp.bottom).offset(20)
+            make.leading.equalToSuperview().offset(20)
+        }
+
+        detailLabel.snp.makeConstraints { make in
+            make.top.equalTo(winterTitleLabel.snp.bottom).offset(5)
+            make.leading.equalToSuperview().offset(20)
+        }
+
+        winterCollectionView.snp.makeConstraints { make in
+            make.top.equalTo(detailLabel.snp.bottom).offset(10) 
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(170)
+            make.bottom.equalToSuperview().offset(-20)
+        }
+    }
+
     @objc private func notificationButtonTapped() {
         // 알림 버튼 동작
     }
@@ -243,11 +301,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
     }
     
-    // MARK: - UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == justDroppedCollectionView {
             return DummyJustDroppedData.items.count
+        } else if collectionView == winterCollectionView {
+            return winterItems.count
         } else {
             return homeItems.count
         }
@@ -261,6 +320,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             let item = DummyJustDroppedData.items[indexPath.item]
             cell.configure(with: item)
             return cell
+        } else if collectionView == winterCollectionView {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WinterCollectionViewCell.identifier, for: indexPath) as? WinterCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            cell.configure(with: winterItems[indexPath.item]) // Winter 이미지 설정
+            return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell else {
                 return UICollectionViewCell()
@@ -269,5 +334,15 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             cell.configure(with: item)
             return cell
         }
+    }
+}
+
+extension UIView {
+    static func separatorView(borderColor: UIColor = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1), borderWidth: CGFloat = 1) -> UIView {
+        let view = UIView()
+        view.backgroundColor = .clear
+        view.layer.borderColor = borderColor.cgColor
+        view.layer.borderWidth = borderWidth
+        return view
     }
 }
