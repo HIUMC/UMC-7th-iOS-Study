@@ -36,7 +36,6 @@ class ViewController: UIViewController {
             case .failure(let error):
                 print("네트워킹 오류: \(error)")
             }
-            
         }
     }
     

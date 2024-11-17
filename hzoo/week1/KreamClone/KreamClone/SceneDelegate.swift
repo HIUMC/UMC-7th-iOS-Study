@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KakaoSDKAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -18,6 +19,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.rootViewController = LoginViewController() // 원하는 뷰 컨트롤러 파일의 이름을 작성하면 됩니다.
         window?.makeKeyAndVisible()
+    }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        if let url = URLContexts.first?.url {
+            if (AuthApi.isKakaoTalkLoginUrl(url)) {
+                _ = AuthController.handleOpenUrl(url: url)
+            }
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

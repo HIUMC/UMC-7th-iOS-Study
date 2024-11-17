@@ -16,6 +16,7 @@ class ProductDetailViewController: UIViewController {
 
         self.view = productDetailView
         
+        navigationController?.isNavigationBarHidden = false
         let backbutton = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"), style: .done, target: self, action: #selector(goToBack))
         self.navigationItem.leftBarButtonItem = backbutton
         self.navigationController?.navigationBar.tintColor = UIColor(hex: "#848484")

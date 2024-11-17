@@ -13,6 +13,11 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         self.view = homeView
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+      navigationController?.setNavigationBarHidden(true, animated: true) // 뷰 컨트롤러가 나타날 때 숨기기
     }
     
     private lazy var homeView: HomeView = {

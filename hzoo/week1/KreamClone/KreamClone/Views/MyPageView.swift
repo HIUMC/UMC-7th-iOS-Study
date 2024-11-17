@@ -145,7 +145,7 @@ class MyPageView: UIView {
         addSubview(bar)
         
         settings.snp.makeConstraints {
-            $0.top.equalTo(safeAreaLayoutGuide)
+            $0.top.equalTo(safeAreaLayoutGuide).offset(30)
             $0.leading.equalToSuperview().offset(32.5)
             $0.width.height.equalTo(30)
         }

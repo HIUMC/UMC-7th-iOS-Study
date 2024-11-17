@@ -191,7 +191,7 @@ class ProductDetailView: UIView {
         sellBtn.addSubview(sellLabel3)
         
         nowImage.snp.makeConstraints { make in
-            make.top.equalTo(safeAreaLayoutGuide)//.offset(48)
+            make.top.equalTo(safeAreaLayoutGuide).offset(10)
             make.horizontalEdges.equalTo(safeAreaLayoutGuide)
             make.height.width.equalTo(373)
         }

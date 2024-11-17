@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1F053A1D2CB3AB3D004D7A10 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1F053A1C2CB3AB3D004D7A10 /* SnapKit */; };
 		1F053A652CB3EA3F004D7A10 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 1F053A642CB3EA3F004D7A10 /* Then */; };
+		1F8EC6D32CEA324C00245336 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8EC6D22CEA324C00245336 /* KakaoSDK */; };
+		1F8EC6D52CEA324C00245336 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8EC6D42CEA324C00245336 /* KakaoSDKAuth */; };
+		1F8EC6D72CEA324C00245336 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8EC6D62CEA324C00245336 /* KakaoSDKCommon */; };
+		1F8EC6D92CEA3E1E00245336 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1F8EC6D82CEA3E1E00245336 /* Secrets.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F8EC6D82CEA3E1E00245336 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		1FC522C12CAD3F4F00EC0635 /* KreamClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KreamClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC522D72CAD3F5100EC0635 /* KreamCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KreamCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC522E12CAD3F5100EC0635 /* KreamCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KreamCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +77,9 @@
 			files = (
 				1F053A1D2CB3AB3D004D7A10 /* SnapKit in Frameworks */,
 				1F053A652CB3EA3F004D7A10 /* Then in Frameworks */,
+				1F8EC6D32CEA324C00245336 /* KakaoSDK in Frameworks */,
+				1F8EC6D72CEA324C00245336 /* KakaoSDKCommon in Frameworks */,
+				1F8EC6D52CEA324C00245336 /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +103,7 @@
 		1FC522B82CAD3F4F00EC0635 = {
 			isa = PBXGroup;
 			children = (
+				1F8EC6D82CEA3E1E00245336 /* Secrets.xcconfig */,
 				1FC522C32CAD3F4F00EC0635 /* KreamClone */,
 				1FC522DA2CAD3F5100EC0635 /* KreamCloneTests */,
 				1FC522E42CAD3F5100EC0635 /* KreamCloneUITests */,
@@ -134,6 +143,9 @@
 			packageProductDependencies = (
 				1F053A1C2CB3AB3D004D7A10 /* SnapKit */,
 				1F053A642CB3EA3F004D7A10 /* Then */,
+				1F8EC6D22CEA324C00245336 /* KakaoSDK */,
+				1F8EC6D42CEA324C00245336 /* KakaoSDKAuth */,
+				1F8EC6D62CEA324C00245336 /* KakaoSDKCommon */,
 			);
 			productName = KreamClone;
 			productReference = 1FC522C12CAD3F4F00EC0635 /* KreamClone.app */;
@@ -220,6 +232,7 @@
 			packageReferences = (
 				1F053A1B2CB3AB3D004D7A10 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				1F053A632CB3EA3F004D7A10 /* XCRemoteSwiftPackageReference "Then" */,
+				1F8EC6D12CEA324C00245336 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1FC522C22CAD3F4F00EC0635 /* Products */;
@@ -238,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F8EC6D92CEA3E1E00245336 /* Secrets.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +311,7 @@
 /* Begin XCBuildConfiguration section */
 		1FC522EB2CAD3F5100EC0635 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F8EC6D82CEA3E1E00245336 /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -472,6 +487,7 @@
 		};
 		1FC522F02CAD3F5100EC0635 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F8EC6D82CEA3E1E00245336 /* Secrets.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -600,6 +616,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		1F8EC6D12CEA324C00245336 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.23.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -612,6 +636,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1F053A632CB3EA3F004D7A10 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		1F8EC6D22CEA324C00245336 /* KakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F8EC6D12CEA324C00245336 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDK;
+		};
+		1F8EC6D42CEA324C00245336 /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F8EC6D12CEA324C00245336 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		1F8EC6D62CEA324C00245336 /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F8EC6D12CEA324C00245336 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -10,6 +10,9 @@
 		1F8EC6732CEA1B9900245336 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8EC6722CEA1B9900245336 /* SnapKit */; };
 		1F8EC6762CEA200100245336 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8EC6752CEA200100245336 /* Alamofire */; };
 		1F8EC6782CEA20F900245336 /* secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1F8EC6772CEA20F900245336 /* secret.xcconfig */; };
+		1F8EC6CC2CEA31DF00245336 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8EC6CB2CEA31DF00245336 /* KakaoSDK */; };
+		1F8EC6CE2CEA31DF00245336 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8EC6CD2CEA31DF00245336 /* KakaoSDKAuth */; };
+		1F8EC6D02CEA31DF00245336 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8EC6CF2CEA31DF00245336 /* KakaoSDKCommon */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,9 @@
 			files = (
 				1F8EC6732CEA1B9900245336 /* SnapKit in Frameworks */,
 				1F8EC6762CEA200100245336 /* Alamofire in Frameworks */,
+				1F8EC6CC2CEA31DF00245336 /* KakaoSDK in Frameworks */,
+				1F8EC6D02CEA31DF00245336 /* KakaoSDKCommon in Frameworks */,
+				1F8EC6CE2CEA31DF00245336 /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +143,9 @@
 			packageProductDependencies = (
 				1F8EC6722CEA1B9900245336 /* SnapKit */,
 				1F8EC6752CEA200100245336 /* Alamofire */,
+				1F8EC6CB2CEA31DF00245336 /* KakaoSDK */,
+				1F8EC6CD2CEA31DF00245336 /* KakaoSDKAuth */,
+				1F8EC6CF2CEA31DF00245336 /* KakaoSDKCommon */,
 			);
 			productName = APIPractice;
 			productReference = 1F8EC5E12CEA1A3F00245336 /* APIPractice.app */;
@@ -223,6 +232,7 @@
 			packageReferences = (
 				1F8EC6712CEA1B9900245336 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				1F8EC6742CEA200100245336 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				1F8EC6CA2CEA31DF00245336 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1F8EC5E22CEA1A3F00245336 /* Products */;
@@ -606,6 +616,14 @@
 				minimumVersion = 5.10.1;
 			};
 		};
+		1F8EC6CA2CEA31DF00245336 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.23.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -618,6 +636,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1F8EC6742CEA200100245336 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		1F8EC6CB2CEA31DF00245336 /* KakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F8EC6CA2CEA31DF00245336 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDK;
+		};
+		1F8EC6CD2CEA31DF00245336 /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F8EC6CA2CEA31DF00245336 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		1F8EC6CF2CEA31DF00245336 /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F8EC6CA2CEA31DF00245336 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
