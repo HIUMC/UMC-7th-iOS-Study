@@ -270,10 +270,17 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
 
         winterCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(detailLabel.snp.bottom).offset(10) 
+            make.top.equalTo(detailLabel.snp.bottom).offset(10)
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(170)
             make.bottom.equalToSuperview().offset(-20)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == justDroppedCollectionView {
+            let detailVC = JustDroppedDetailViewController()
+            navigationController?.pushViewController(detailVC, animated: true)
         }
     }
 
@@ -336,6 +343,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
     }
 }
+
+
 
 extension UIView {
     static func separatorView(borderColor: UIColor = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1), borderWidth: CGFloat = 1) -> UIView {
