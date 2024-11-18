@@ -1,12 +1,11 @@
 //
 //  SceneDelegate.swift
-//  KreamClone
+//  APIPractice
 //
-//  Created by 이현주 on 10/2/24.
+//  Created by 이현주 on 11/17/24.
 //
 
 import UIKit
-import KakaoSDKAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -17,16 +16,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = LoginViewController() // 원하는 뷰 컨트롤러 파일의 이름을 작성하면 됩니다.
+        window?.rootViewController = ViewController() // 원하는 뷰 컨트롤러 파일의 이름을 작성하면 됩니다.
         window?.makeKeyAndVisible()
-    }
-    
-    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        if let url = URLContexts.first?.url {
-            if (AuthApi.isKakaoTalkLoginUrl(url)) {
-                _ = AuthController.handleOpenUrl(url: url)
-            }
-        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

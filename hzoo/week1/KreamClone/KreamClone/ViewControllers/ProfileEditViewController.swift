@@ -23,6 +23,7 @@ class ProfileEditViewController: UIViewController {
         titleLabel.textColor = .black
         navigationItem.titleView = titleLabel
     
+        navigationController?.isNavigationBarHidden = false
         let backbutton = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"), style: .done, target: self, action: #selector(goToBack))
         self.navigationItem.leftBarButtonItem = backbutton
         self.navigationController?.navigationBar.tintColor = .black
