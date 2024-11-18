@@ -22,6 +22,10 @@ struct LoginModel{
         defaults.set(pwd, forKey: userPwd)
     }
     
+    public func savedNickname(_ nickname: String) {
+        defaults.set(nickname, forKey: "nickname")
+    }
+    
     public func loadId() -> String? {
         return defaults.string(forKey: userId)
     }
@@ -30,6 +34,8 @@ struct LoginModel{
         return defaults.string(forKey: userPwd)
     }
     
+    public func loadNickname() -> String? {
+        return defaults.string(forKey: "nickname")
+    }
+    
 }
-
-

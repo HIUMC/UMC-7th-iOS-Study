@@ -10,32 +10,23 @@ import Then
 import SnapKit
     
 class CustomTextField: UITextField, TextFieldConfig {
+    func configTextField(placeholder: String?, leftView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 0)), leftViewMode: UITextField.ViewMode = .always , interaction: Bool? = false) {
+        self.placeholder = placeholder
+        self.leftView = leftView
+        self.leftViewMode = leftViewMode
+        self.isUserInteractionEnabled = interaction!
+    }
+    
     func configLabel(text: String?, size: CGFloat = 14, weight: UIFont.Weight = .regular, color: UIColor = .black) {
         self.text = text
         self.font = UIFont.systemFont(ofSize: size, weight: weight)
         self.textColor = color
     }
     
-    func configLayer(layerBorderWidth: CGFloat? = 1, layerCornerRadius: CGFloat? = 15, layerColor: UIColor = UIColor(hexCode: "D5D5D5")) {
+    func configLayer(layerBorderWidth: CGFloat? = 1, layerCornerRadius: CGFloat? = 15, layerColor: UIColor? = UIColor(hexCode: "D5D5D5")) {
         self.layer.borderWidth = layerBorderWidth!
         self.layer.cornerRadius = layerCornerRadius!
-        self.layer.borderColor = layerColor.cgColor
-    }
-    
-    func configTextField(placeholder: String?) {
-        self.placeholder = placeholder
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 16.0, height: 0.0))
-        self.leftViewMode = .always
-        self.translatesAutoresizingMaskIntoConstraints = false
-        self.isUserInteractionEnabled = false
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        self.layer.borderColor = layerColor?.cgColor
     }
 }
 
@@ -73,7 +64,6 @@ class profileModifyView: UIView {
         }
         $0.configLayer()
         $0.configTextField(placeholder: "새로운 이메일을 입력해주세요!")
-        
     }
 
     public lazy var userPwdInput = CustomTextField().then {
@@ -81,6 +71,7 @@ class profileModifyView: UIView {
         if let pwd = LoginModel().loadPwd() {
             $0.configLabel(text: pwd)
         }
+        $0.isSecureTextEntry = true
         $0.configLayer()
         $0.configTextField(placeholder: "새로운 비밀번호를 입력해주세요!")
     }

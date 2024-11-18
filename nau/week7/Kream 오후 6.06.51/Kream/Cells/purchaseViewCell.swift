@@ -8,10 +8,10 @@
 import UIKit
 
 class customView : UIView, layerConfig {
-    func configLayer(layerBorderWidth: CGFloat?, layerCornerRadius: CGFloat?, layerColor: UIColor) {
+    func configLayer(layerBorderWidth: CGFloat?, layerCornerRadius: CGFloat?, layerColor: UIColor?) {
         self.layer.borderWidth = layerBorderWidth!
         self.layer.cornerRadius = layerCornerRadius!
-        self.layer.borderColor = layerColor.cgColor
+        self.layer.borderColor = layerColor?.cgColor
     }
     
     override init(frame: CGRect) {

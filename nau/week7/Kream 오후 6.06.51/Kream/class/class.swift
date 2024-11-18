@@ -13,7 +13,7 @@ protocol BtnConfig {
 }
 
 protocol layerConfig {
-    func configLayer(layerBorderWidth: CGFloat?, layerCornerRadius: CGFloat?, layerColor: UIColor)
+    func configLayer(layerBorderWidth: CGFloat?, layerCornerRadius: CGFloat?, layerColor: UIColor?)
 }
 
 protocol LabelConfig {
@@ -21,7 +21,28 @@ protocol LabelConfig {
 }
 
 protocol TextFieldConfig : LabelConfig, layerConfig {
-    func configTextField(placeholder: String?)
+    func configTextField(placeholder: String?, leftView: UIView, leftViewMode: UITextField.ViewMode , interaction: Bool?)
+}
+
+class TextField: UITextField, TextFieldConfig {
+    func configTextField(placeholder: String?, leftView: UIView, leftViewMode: UITextField.ViewMode, interaction: Bool?) {
+        self.placeholder = placeholder
+        self.leftView = leftView
+        self.leftViewMode = leftViewMode
+        self.isUserInteractionEnabled = interaction!
+    }
+    
+    func configLabel(text: String?, size: CGFloat, weight: UIFont.Weight, color: UIColor) {
+        self.text = text
+        self.font = UIFont.systemFont(ofSize: size, weight: weight)
+        self.textColor = color
+    }
+    
+    func configLayer(layerBorderWidth: CGFloat? = 0, layerCornerRadius: CGFloat?, layerColor: UIColor?) {
+        self.layer.borderWidth = layerBorderWidth!
+        self.layer.cornerRadius = layerCornerRadius!
+        self.layer.borderColor = layerColor?.cgColor
+    }
 }
 
 class BasicButton : UIButton, BtnConfig {
@@ -37,6 +58,8 @@ class Label: UILabel {
         self.text = title
         self.font = UIFont.systemFont(ofSize: size, weight: weight)
         self.textColor = color
+        self.textAlignment = .center
+        self.numberOfLines = 0
     }
     
     required init?(coder: NSCoder) {
@@ -51,10 +74,10 @@ class CustomButton2 : UIButton, layerConfig, LabelConfig {
         self.titleLabel?.font = UIFont.systemFont(ofSize: size, weight: weight)
     }
     
-    func configLayer(layerBorderWidth: CGFloat?, layerCornerRadius: CGFloat?, layerColor: UIColor) {
+    func configLayer(layerBorderWidth: CGFloat?, layerCornerRadius: CGFloat?, layerColor: UIColor?) {
         self.layer.borderWidth = layerBorderWidth!
         self.layer.cornerRadius = layerCornerRadius!
-        self.layer.borderColor = layerColor.cgColor
+        self.layer.borderColor = layerColor?.cgColor
     }
     
     override init(frame: CGRect) {

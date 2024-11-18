@@ -12,7 +12,8 @@ class profileModifyViewController: UIViewController {
     
     var loginModel = LoginModel()
     
-    var changeBefore = true
+    var changeBefore1 = true
+    var changeBefore2 = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +26,11 @@ class profileModifyViewController: UIViewController {
     
     @objc func changeBtn1DidTap(){
         profileModifyView1.do(){
-            if changeBefore == true {//변경 누를때
+            if changeBefore1 == true {//변경 누를때
                 $0.userIdInput.text = ""
                 $0.changeBtn1.setTitle("확인", for: .normal)
                 $0.userIdInput.isUserInteractionEnabled = true
-                changeBefore = false
+                changeBefore1 = false
             }
             
             else {//확인을 누를때
@@ -40,18 +41,18 @@ class profileModifyViewController: UIViewController {
                 
                 $0.changeBtn1.setTitle("변경", for: .normal)
                 $0.userPwdInput.isUserInteractionEnabled = false
-                changeBefore = true
+                changeBefore1 = true
             }
         }
     }
     
     @objc func changeBtn2DidTap(){
         profileModifyView1.do(){
-            if changeBefore == true {//변경을 누를때
+            if changeBefore2 == true {//변경을 누를때
                 $0.userPwdInput.text = ""
                 $0.changeBtn2.setTitle("확인", for: .normal)
                 $0.userPwdInput.isUserInteractionEnabled = true
-                changeBefore = false
+                changeBefore2 = false
             }
             
             else {//확인을 누를때
@@ -62,7 +63,7 @@ class profileModifyViewController: UIViewController {
                 
                 $0.changeBtn2.setTitle("변경", for: .normal)
                 $0.userPwdInput.isUserInteractionEnabled = false
-                changeBefore = true
+                changeBefore2 = true
             }
         }
     }

@@ -132,6 +132,7 @@ class LoginView: UIView {
         text.layer.borderColor = UIColor(hue: 0/360, saturation: 0/100, brightness: 63/100, alpha: 1.0).cgColor
         text.layer.borderWidth = 1
         text.layer.cornerRadius = 15
+        text.isSecureTextEntry = true
             
         text.translatesAutoresizingMaskIntoConstraints = false
                 
