@@ -10,6 +10,8 @@ import SnapKit
 
 class BuyModalViewController: UIViewController {
     
+    private var selectedSizeButton: UIButton? // 선택된 버튼을 추적
+    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "구매하기"
@@ -156,7 +158,6 @@ class BuyModalViewController: UIViewController {
             rows.last?.addArrangedSubview(button)
         }
 
-        // 마지막 행에 남은 공간을 채워 버튼을 왼쪽 정렬
         if let lastRow = rows.last, lastRow.arrangedSubviews.count < buttonsPerRow {
             let emptyButtonCount = buttonsPerRow - lastRow.arrangedSubviews.count
             for _ in 0..<emptyButtonCount {
@@ -211,6 +212,9 @@ class BuyModalViewController: UIViewController {
             make.center.equalToSuperview()
         }
         
+        // 버튼 클릭 이벤트 추가
+        button.addTarget(self, action: #selector(sizeButtonTapped(_:)), for: .touchUpInside)
+        
         return button
     }
     
@@ -243,5 +247,18 @@ class BuyModalViewController: UIViewController {
         }
         
         return button
+    }
+    
+    @objc private func sizeButtonTapped(_ sender: UIButton) {
+        // 기존 선택된 버튼 초기화
+        if let selectedButton = selectedSizeButton {
+            selectedButton.backgroundColor = .white
+            selectedButton.layer.borderColor = UIColor.lightGray.cgColor
+        }
+        
+        // 새로 선택된 버튼 설정
+        selectedSizeButton = sender
+        sender.backgroundColor = .lightGray
+        sender.layer.borderColor = UIColor.darkGray.cgColor
     }
 }
