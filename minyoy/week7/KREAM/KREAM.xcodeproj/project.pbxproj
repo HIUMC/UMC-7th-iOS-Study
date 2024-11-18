@@ -1,0 +1,620 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA4C8CF22CE8911E00BF6802 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = FA4C8CF12CE8911E00BF6802 /* KakaoSDK */; };
+		FA4C8CF62CE897A000BF6802 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FA4C8CF52CE897A000BF6802 /* Alamofire */; };
+		FA4C8CF92CE8992100BF6802 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C8CF82CE8992100BF6802 /* APIClient.swift */; };
+		FA4C8CFB2CE8993100BF6802 /* AuthorizationInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C8CFA2CE8993100BF6802 /* AuthorizationInterceptor.swift */; };
+		FA5538962CABB88B006CF255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5538952CABB88B006CF255 /* AppDelegate.swift */; };
+		FA5538982CABB88B006CF255 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5538972CABB88B006CF255 /* SceneDelegate.swift */; };
+		FA55389A2CABB88B006CF255 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5538992CABB88B006CF255 /* LoginViewController.swift */; };
+		FA55389F2CABB88C006CF255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA55389E2CABB88C006CF255 /* Assets.xcassets */; };
+		FA5538AD2CABB94B006CF255 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5538AC2CABB94B006CF255 /* LoginModel.swift */; };
+		FA5538AF2CABB95F006CF255 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5538AE2CABB95F006CF255 /* LoginView.swift */; };
+		FA5538B12CABBAC2006CF255 /* KREAM_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA5538B02CABBAC2006CF255 /* KREAM_logo.png */; };
+		FA63617F2CD7F80A00826033 /* ProductCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA63617E2CD7F80A00826033 /* ProductCardModel.swift */; };
+		FA63618B2CD89D7D00826033 /* ImageCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA63618A2CD89D7D00826033 /* ImageCardModel.swift */; };
+		FA63618F2CD9165700826033 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA63618E2CD9165700826033 /* ProductCollectionViewCell.swift */; };
+		FA6361912CD9200A00826033 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6361902CD9200A00826033 /* ImageCollectionViewCell.swift */; };
+		FA92D5162CDE790D0084438D /* DetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92D5152CDE790D0084438D /* DetailCollectionViewCell.swift */; };
+		FA9B2D712CB5631700343A37 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FA9B2D702CB5631700343A37 /* SnapKit */; };
+		FA9B2D752CB566F100343A37 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B2D742CB566F100343A37 /* TabBarViewController.swift */; };
+		FA9B2D772CB5673300343A37 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B2D762CB5673300343A37 /* HomeViewController.swift */; };
+		FA9B2D792CB5674200343A37 /* StyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B2D782CB5674200343A37 /* StyleViewController.swift */; };
+		FA9B2D7B2CB5674B00343A37 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B2D7A2CB5674B00343A37 /* ShopViewController.swift */; };
+		FA9B2D7D2CB5675700343A37 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B2D7C2CB5675700343A37 /* SavedViewController.swift */; };
+		FA9B2D7F2CB5676200343A37 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B2D7E2CB5676200343A37 /* MyPageViewController.swift */; };
+		FA9B2D812CB56DB600343A37 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B2D802CB56DB600343A37 /* MyPageView.swift */; };
+		FA9B2D832CB5808E00343A37 /* ProfileManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B2D822CB5808E00343A37 /* ProfileManagerView.swift */; };
+		FA9B2D852CB5886D00343A37 /* ProfileManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B2D842CB5886D00343A37 /* ProfileManagerViewController.swift */; };
+		FA9B2D882CB5B24200343A37 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = FA9B2D872CB5B24200343A37 /* Then */; };
+		FAACF5052CCFCAA200C82272 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACF5042CCFCAA200C82272 /* HomeView.swift */; };
+		FAACF5072CCFD62500C82272 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACF5062CCFD62500C82272 /* MenuCollectionViewCell.swift */; };
+		FAACF5092CCFD85B00C82272 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACF5082CCFD85B00C82272 /* MenuModel.swift */; };
+		FAACF50B2CD0B07B00C82272 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACF50A2CD0B07B00C82272 /* SearchView.swift */; };
+		FAACF50D2CD0B1DD00C82272 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACF50C2CD0B1DD00C82272 /* SearchViewController.swift */; };
+		FAD50FAF2CBB69AB00791058 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD50FAE2CBB69AB00791058 /* ProductTableViewCell.swift */; };
+		FAD50FB12CBB69CA00791058 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD50FB02CBB69CA00791058 /* ProductModel.swift */; };
+		FAD50FB32CBB6F6800791058 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD50FB22CBB6F6800791058 /* SavedView.swift */; };
+		FAF3B82C2CDE8B9100A77E5E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3B82B2CDE8B9100A77E5E /* DetailViewController.swift */; };
+		FAF3B82E2CDE8BBE00A77E5E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3B82D2CDE8BBE00A77E5E /* DetailView.swift */; };
+		FAF3B8302CDE8C1E00A77E5E /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3B82F2CDE8C1E00A77E5E /* DetailModel.swift */; };
+		FAF3B8322CDF1F3E00A77E5E /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3B8312CDF1F3E00A77E5E /* BuyViewController.swift */; };
+		FAF3B8342CDF21FD00A77E5E /* BuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3B8332CDF21FD00A77E5E /* BuyView.swift */; };
+		FAF3B8362CDF35B100A77E5E /* SizeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3B8352CDF35B100A77E5E /* SizeCollectionViewCell.swift */; };
+		FAF3B83B2CDF48B100A77E5E /* TradeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3B83A2CDF48B100A77E5E /* TradeButton.swift */; };
+		FAFD0F662CEA692A00113896 /* KaKaoUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD0F652CEA692A00113896 /* KaKaoUserInfo.swift */; };
+		FAFD0F692CEA696400113896 /* KaKaoKeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD0F682CEA696400113896 /* KaKaoKeychainService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FA4C8CF32CE8966100BF6802 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		FA4C8CF82CE8992100BF6802 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		FA4C8CFA2CE8993100BF6802 /* AuthorizationInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationInterceptor.swift; sourceTree = "<group>"; };
+		FA5538922CABB88B006CF255 /* KREAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KREAM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA5538952CABB88B006CF255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA5538972CABB88B006CF255 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FA5538992CABB88B006CF255 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FA55389E2CABB88C006CF255 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA5538A32CABB88C006CF255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA5538AC2CABB94B006CF255 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		FA5538AE2CABB95F006CF255 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FA5538B02CABBAC2006CF255 /* KREAM_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KREAM_logo.png; sourceTree = "<group>"; };
+		FA63617E2CD7F80A00826033 /* ProductCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardModel.swift; sourceTree = "<group>"; };
+		FA63618A2CD89D7D00826033 /* ImageCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCardModel.swift; sourceTree = "<group>"; };
+		FA63618E2CD9165700826033 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA6361902CD9200A00826033 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA92D5152CDE790D0084438D /* DetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA9B2D742CB566F100343A37 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		FA9B2D762CB5673300343A37 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FA9B2D782CB5674200343A37 /* StyleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleViewController.swift; sourceTree = "<group>"; };
+		FA9B2D7A2CB5674B00343A37 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		FA9B2D7C2CB5675700343A37 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
+		FA9B2D7E2CB5676200343A37 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		FA9B2D802CB56DB600343A37 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		FA9B2D822CB5808E00343A37 /* ProfileManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManagerView.swift; sourceTree = "<group>"; };
+		FA9B2D842CB5886D00343A37 /* ProfileManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManagerViewController.swift; sourceTree = "<group>"; };
+		FAACF5042CCFCAA200C82272 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FAACF5062CCFD62500C82272 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		FAACF5082CCFD85B00C82272 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		FAACF50A2CD0B07B00C82272 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		FAACF50C2CD0B1DD00C82272 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FAD50FAE2CBB69AB00791058 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		FAD50FB02CBB69CA00791058 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		FAD50FB22CBB6F6800791058 /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
+		FAF3B82B2CDE8B9100A77E5E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FAF3B82D2CDE8BBE00A77E5E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		FAF3B82F2CDE8C1E00A77E5E /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
+		FAF3B8312CDF1F3E00A77E5E /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
+		FAF3B8332CDF21FD00A77E5E /* BuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyView.swift; sourceTree = "<group>"; };
+		FAF3B8352CDF35B100A77E5E /* SizeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCollectionViewCell.swift; sourceTree = "<group>"; };
+		FAF3B83A2CDF48B100A77E5E /* TradeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeButton.swift; sourceTree = "<group>"; };
+		FAFD0F652CEA692A00113896 /* KaKaoUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaKaoUserInfo.swift; sourceTree = "<group>"; };
+		FAFD0F682CEA696400113896 /* KaKaoKeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaKaoKeychainService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA55388F2CABB88B006CF255 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA9B2D712CB5631700343A37 /* SnapKit in Frameworks */,
+				FA4C8CF62CE897A000BF6802 /* Alamofire in Frameworks */,
+				FA9B2D882CB5B24200343A37 /* Then in Frameworks */,
+				FA4C8CF22CE8911E00BF6802 /* KakaoSDK in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA4C8CF72CE8991100BF6802 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C8CF82CE8992100BF6802 /* APIClient.swift */,
+				FA4C8CFA2CE8993100BF6802 /* AuthorizationInterceptor.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FA5538892CABB88B006CF255 = {
+			isa = PBXGroup;
+			children = (
+				FA5538942CABB88B006CF255 /* KREAM */,
+				FA5538932CABB88B006CF255 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA5538932CABB88B006CF255 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA5538922CABB88B006CF255 /* KREAM.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA5538942CABB88B006CF255 /* KREAM */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C8CF32CE8966100BF6802 /* Secrets.xcconfig */,
+				FAFD0F672CEA693E00113896 /* KeyChain */,
+				FA4C8CF72CE8991100BF6802 /* Service */,
+				FAF3B8392CDF48A400A77E5E /* Custom */,
+				FAD50FAD2CBB691300791058 /* Cells */,
+				FA5538AA2CABB919006CF255 /* Views */,
+				FA5538AB2CABB921006CF255 /* ViewControllers */,
+				FA5538A92CABB902006CF255 /* Models */,
+				FA5538952CABB88B006CF255 /* AppDelegate.swift */,
+				FA5538972CABB88B006CF255 /* SceneDelegate.swift */,
+				FA55389E2CABB88C006CF255 /* Assets.xcassets */,
+				FA5538A32CABB88C006CF255 /* Info.plist */,
+				FA5538B02CABBAC2006CF255 /* KREAM_logo.png */,
+			);
+			path = KREAM;
+			sourceTree = "<group>";
+		};
+		FA5538A92CABB902006CF255 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA5538AC2CABB94B006CF255 /* LoginModel.swift */,
+				FAD50FB02CBB69CA00791058 /* ProductModel.swift */,
+				FAACF5082CCFD85B00C82272 /* MenuModel.swift */,
+				FA63617E2CD7F80A00826033 /* ProductCardModel.swift */,
+				FA63618A2CD89D7D00826033 /* ImageCardModel.swift */,
+				FAF3B82F2CDE8C1E00A77E5E /* DetailModel.swift */,
+				FAFD0F652CEA692A00113896 /* KaKaoUserInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA5538AA2CABB919006CF255 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA5538AE2CABB95F006CF255 /* LoginView.swift */,
+				FA9B2D802CB56DB600343A37 /* MyPageView.swift */,
+				FA9B2D822CB5808E00343A37 /* ProfileManagerView.swift */,
+				FAD50FB22CBB6F6800791058 /* SavedView.swift */,
+				FAACF5042CCFCAA200C82272 /* HomeView.swift */,
+				FAACF50A2CD0B07B00C82272 /* SearchView.swift */,
+				FAF3B82D2CDE8BBE00A77E5E /* DetailView.swift */,
+				FAF3B8332CDF21FD00A77E5E /* BuyView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA5538AB2CABB921006CF255 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA5538992CABB88B006CF255 /* LoginViewController.swift */,
+				FA9B2D742CB566F100343A37 /* TabBarViewController.swift */,
+				FA9B2D762CB5673300343A37 /* HomeViewController.swift */,
+				FA9B2D782CB5674200343A37 /* StyleViewController.swift */,
+				FA9B2D7A2CB5674B00343A37 /* ShopViewController.swift */,
+				FA9B2D7C2CB5675700343A37 /* SavedViewController.swift */,
+				FA9B2D7E2CB5676200343A37 /* MyPageViewController.swift */,
+				FA9B2D842CB5886D00343A37 /* ProfileManagerViewController.swift */,
+				FAACF50C2CD0B1DD00C82272 /* SearchViewController.swift */,
+				FAF3B82B2CDE8B9100A77E5E /* DetailViewController.swift */,
+				FAF3B8312CDF1F3E00A77E5E /* BuyViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FAD50FAD2CBB691300791058 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FAD50FAE2CBB69AB00791058 /* ProductTableViewCell.swift */,
+				FAACF5062CCFD62500C82272 /* MenuCollectionViewCell.swift */,
+				FA63618E2CD9165700826033 /* ProductCollectionViewCell.swift */,
+				FA6361902CD9200A00826033 /* ImageCollectionViewCell.swift */,
+				FA92D5152CDE790D0084438D /* DetailCollectionViewCell.swift */,
+				FAF3B8352CDF35B100A77E5E /* SizeCollectionViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		FAF3B8392CDF48A400A77E5E /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				FAF3B83A2CDF48B100A77E5E /* TradeButton.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		FAFD0F672CEA693E00113896 /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				FAFD0F682CEA696400113896 /* KaKaoKeychainService.swift */,
+			);
+			path = KeyChain;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA5538912CABB88B006CF255 /* KREAM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA5538A62CABB88C006CF255 /* Build configuration list for PBXNativeTarget "KREAM" */;
+			buildPhases = (
+				FA55388E2CABB88B006CF255 /* Sources */,
+				FA55388F2CABB88B006CF255 /* Frameworks */,
+				FA5538902CABB88B006CF255 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KREAM;
+			packageProductDependencies = (
+				FA9B2D702CB5631700343A37 /* SnapKit */,
+				FA9B2D872CB5B24200343A37 /* Then */,
+				FA4C8CF12CE8911E00BF6802 /* KakaoSDK */,
+				FA4C8CF52CE897A000BF6802 /* Alamofire */,
+			);
+			productName = KREAM;
+			productReference = FA5538922CABB88B006CF255 /* KREAM.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA55388A2CABB88B006CF255 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					FA5538912CABB88B006CF255 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = FA55388D2CABB88B006CF255 /* Build configuration list for PBXProject "KREAM" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA5538892CABB88B006CF255;
+			packageReferences = (
+				FA9B2D6F2CB5631700343A37 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				FA9B2D862CB5B24200343A37 /* XCRemoteSwiftPackageReference "Then" */,
+				FA4C8CF02CE8911E00BF6802 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				FA4C8CF42CE897A000BF6802 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = FA5538932CABB88B006CF255 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA5538912CABB88B006CF255 /* KREAM */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA5538902CABB88B006CF255 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA55389F2CABB88C006CF255 /* Assets.xcassets in Resources */,
+				FA5538B12CABBAC2006CF255 /* KREAM_logo.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA55388E2CABB88B006CF255 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA9B2D852CB5886D00343A37 /* ProfileManagerViewController.swift in Sources */,
+				FA55389A2CABB88B006CF255 /* LoginViewController.swift in Sources */,
+				FA92D5162CDE790D0084438D /* DetailCollectionViewCell.swift in Sources */,
+				FAD50FAF2CBB69AB00791058 /* ProductTableViewCell.swift in Sources */,
+				FAF3B8322CDF1F3E00A77E5E /* BuyViewController.swift in Sources */,
+				FAFD0F692CEA696400113896 /* KaKaoKeychainService.swift in Sources */,
+				FA5538AD2CABB94B006CF255 /* LoginModel.swift in Sources */,
+				FA9B2D7B2CB5674B00343A37 /* ShopViewController.swift in Sources */,
+				FAF3B82C2CDE8B9100A77E5E /* DetailViewController.swift in Sources */,
+				FA4C8CF92CE8992100BF6802 /* APIClient.swift in Sources */,
+				FA63617F2CD7F80A00826033 /* ProductCardModel.swift in Sources */,
+				FA9B2D832CB5808E00343A37 /* ProfileManagerView.swift in Sources */,
+				FA5538962CABB88B006CF255 /* AppDelegate.swift in Sources */,
+				FAFD0F662CEA692A00113896 /* KaKaoUserInfo.swift in Sources */,
+				FA5538AF2CABB95F006CF255 /* LoginView.swift in Sources */,
+				FA6361912CD9200A00826033 /* ImageCollectionViewCell.swift in Sources */,
+				FAACF5072CCFD62500C82272 /* MenuCollectionViewCell.swift in Sources */,
+				FA9B2D812CB56DB600343A37 /* MyPageView.swift in Sources */,
+				FAF3B8362CDF35B100A77E5E /* SizeCollectionViewCell.swift in Sources */,
+				FAF3B82E2CDE8BBE00A77E5E /* DetailView.swift in Sources */,
+				FAF3B8302CDE8C1E00A77E5E /* DetailModel.swift in Sources */,
+				FAACF50B2CD0B07B00C82272 /* SearchView.swift in Sources */,
+				FAACF5052CCFCAA200C82272 /* HomeView.swift in Sources */,
+				FAF3B8342CDF21FD00A77E5E /* BuyView.swift in Sources */,
+				FAACF50D2CD0B1DD00C82272 /* SearchViewController.swift in Sources */,
+				FA9B2D792CB5674200343A37 /* StyleViewController.swift in Sources */,
+				FA63618F2CD9165700826033 /* ProductCollectionViewCell.swift in Sources */,
+				FAACF5092CCFD85B00C82272 /* MenuModel.swift in Sources */,
+				FAD50FB32CBB6F6800791058 /* SavedView.swift in Sources */,
+				FA9B2D7F2CB5676200343A37 /* MyPageViewController.swift in Sources */,
+				FA9B2D752CB566F100343A37 /* TabBarViewController.swift in Sources */,
+				FA4C8CFB2CE8993100BF6802 /* AuthorizationInterceptor.swift in Sources */,
+				FA63618B2CD89D7D00826033 /* ImageCardModel.swift in Sources */,
+				FA9B2D772CB5673300343A37 /* HomeViewController.swift in Sources */,
+				FA9B2D7D2CB5675700343A37 /* SavedViewController.swift in Sources */,
+				FA5538982CABB88B006CF255 /* SceneDelegate.swift in Sources */,
+				FAF3B83B2CDF48B100A77E5E /* TradeButton.swift in Sources */,
+				FAD50FB12CBB69CA00791058 /* ProductModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FA5538A42CABB88C006CF255 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA5538A52CABB88C006CF255 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA5538A72CABB88C006CF255 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA4C8CF32CE8966100BF6802 /* Secrets.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KREAM/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minyoy.KREAM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA5538A82CABB88C006CF255 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KREAM/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minyoy.KREAM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA55388D2CABB88B006CF255 /* Build configuration list for PBXProject "KREAM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA5538A42CABB88C006CF255 /* Debug */,
+				FA5538A52CABB88C006CF255 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA5538A62CABB88C006CF255 /* Build configuration list for PBXNativeTarget "KREAM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA5538A72CABB88C006CF255 /* Debug */,
+				FA5538A82CABB88C006CF255 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA4C8CF02CE8911E00BF6802 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		FA4C8CF42CE897A000BF6802 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.1;
+			};
+		};
+		FA9B2D6F2CB5631700343A37 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		FA9B2D862CB5B24200343A37 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA4C8CF12CE8911E00BF6802 /* KakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA4C8CF02CE8911E00BF6802 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDK;
+		};
+		FA4C8CF52CE897A000BF6802 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA4C8CF42CE897A000BF6802 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		FA9B2D702CB5631700343A37 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA9B2D6F2CB5631700343A37 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		FA9B2D872CB5B24200343A37 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA9B2D862CB5B24200343A37 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = FA55388A2CABB88B006CF255 /* Project object */;
+}
