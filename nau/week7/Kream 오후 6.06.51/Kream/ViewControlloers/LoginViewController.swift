@@ -51,14 +51,13 @@ class LoginViewController: UIViewController {
        }
 
        private func KakaoLoginSuccess(oauthToken: OAuthToken) {
-           // Keychain에 액세스 토큰 저장
-           saveLoginData(accessToken: "accessToken", nickname: oauthToken.accessToken)
-
+           
            APIClient.shared.fetchKakaoUserProfile { result in
                switch result {
                case .success(let nickname):
                    print("사용자 닉네임: \(nickname)")
-                   self.saveLoginData(accessToken: "nickname", nickname: nickname)
+                   //self.saveLoginData(accessToken: "accessToken", nickname: oauthToken.accessToken)
+                   self.saveLoginData(accessToken: "accessToken", nickname: nickname)
                    self.loginModel.savedNickname(nickname)
                    self.viewChange()
                case .failure(let error):
@@ -84,7 +83,5 @@ class LoginViewController: UIViewController {
         if let nicknameData = nickname.data(using: .utf8) {
             KeychainHelper.shared.save(nicknameData, service: service, account: "nickname")
         }
-
     }
-    
 }
