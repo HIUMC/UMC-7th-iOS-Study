@@ -21,7 +21,7 @@ protocol LabelConfig {
 }
 
 protocol TextFieldConfig : LabelConfig, layerConfig {
-    func configTextField(placeholder: String?)
+    func configTextField(placeholder: String?, leftView: UIView, leftViewMode: UITextField.ViewMode , interaction: Bool?)
 }
 
 class Label: UILabel {
@@ -30,6 +30,8 @@ class Label: UILabel {
         self.text = title
         self.font = UIFont.systemFont(ofSize: size, weight: weight)
         self.textColor = color
+        self.textAlignment = .center
+        self.numberOfLines = 0
     }
     
     required init?(coder: NSCoder) {
@@ -38,8 +40,11 @@ class Label: UILabel {
 }
 
 class TextField: UITextField, TextFieldConfig {
-    func configTextField(placeholder: String?) {
+    func configTextField(placeholder: String?, leftView: UIView, leftViewMode: UITextField.ViewMode, interaction: Bool?) {
         self.placeholder = placeholder
+        self.leftView = leftView
+        self.leftViewMode = leftViewMode
+        self.isUserInteractionEnabled = interaction!
     }
     
     func configLabel(text: String?, size: CGFloat, weight: UIFont.Weight, color: UIColor) {
@@ -73,6 +78,19 @@ class CustomButton2 : UIButton, layerConfig, LabelConfig {
     }
     
     required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+class Stack : UIStackView {
+    init(axis: NSLayoutConstraint.Axis, spacing: CGFloat){
+        super.init(frame: .zero)
+        self.axis = axis
+        self.spacing = spacing
+        self.distribution = .fill
+    }
+    
+    required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }

@@ -37,8 +37,8 @@ class MYView: UIView {
         $0.layer.cornerRadius = $0.frame.height/2
         $0.clipsToBounds = true
     }
-    
-    private lazy var ProfileNicName = Label(title: "Nau_iOS", size: 16, weight: .medium)
+     
+    private lazy var ProfileNicName = Label(title: LoginModel().loadNickname(), size: 16, weight: .medium)
     
     lazy var profileManageButton = CustomButton2().then {
         $0.configLabel(text: "프로필 관리", size: 9, weight: .regular, color: .black)
