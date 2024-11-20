@@ -11,6 +11,8 @@ import Then
 
 class HomeView: UIView {
 
+    private var segmentWidth: [CGFloat] = []
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .white
@@ -20,6 +22,27 @@ class HomeView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.layoutIfNeeded()
+        
+        for subview in segmentedControl.subviews {
+            guard let imageView = subview as? UIImageView else { return }
+            if !imageView.isUserInteractionEnabled {
+                segmentWidth.append(imageView.frame.width)
+            }
+        }
+    }
+    
+    func updateunderlineView(index: Int) {
+        underlineView.snp.remakeConstraints({
+            $0.top.equalTo(segmentedControl.snp.bottom)
+            $0.leading.equalTo(segmentedControl.snp.leading).offset(segmentWidth.prefix(index).reduce(0, +) + segmentWidth[index]*0.2)
+            $0.width.equalTo(segmentWidth[index]*0.6)
+            $0.height.equalTo(2)
+        })
     }
     
     public lazy var homeScrollView: UIScrollView = {
@@ -207,6 +230,14 @@ class HomeView: UIView {
             $0.leading.equalToSuperview().offset(24)
             $0.trailing.equalToSuperview().offset(-25)
             $0.height.equalTo(27)
+        }
+        
+        underlineView.snp.makeConstraints {
+            $0.top.equalTo(segmentedControl.snp.bottom)
+            $0.leading.equalTo(segmentedControl.snp.leading).offset(Int(segmentedControl.bounds.width)/5/segmentedControl.numberOfSegments)
+                    
+            $0.width.equalTo(segmentedControl.snp.width).multipliedBy(3.0/(5.0*CGFloat(segmentedControl.numberOfSegments)))
+            $0.height.equalTo(2)
         }
         
         dontlateimage.snp.makeConstraints {

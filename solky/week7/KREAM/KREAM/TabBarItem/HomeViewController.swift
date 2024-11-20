@@ -23,7 +23,7 @@ class HomeViewController: UIViewController {
         self.view = homeview
         
         homeview.searchButton.addTarget(self, action: #selector(search), for: .touchUpInside)
-        homeview.segmentedControl.addTarget(self, action: #selector(segmentChanged), for: .valueChanged)
+        homeview.segmentedControl.addTarget(self, action: #selector(segmentChanged(segment:)), for: .valueChanged)
         setupDelegate()
         releasedsetupDelegate()
         MustItemsetupDelegate()
@@ -31,7 +31,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        segmentChanged()
     }
     
     private func setupDelegate() {
@@ -61,18 +60,12 @@ class HomeViewController: UIViewController {
     }
     
     
-    @objc private func segmentChanged() {
-        let segmentedWidth = homeview.segmentedControl.bounds.width / CGFloat(homeview.segmentedControl.numberOfSegments)
-        let xPosition = segmentedWidth * CGFloat(homeview.segmentedControl.selectedSegmentIndex)
+    @objc private func segmentChanged(segment: UISegmentedControl) {
         
-        UIView.animate(withDuration: 0.1) {
-            self.homeview.underlineView.frame = CGRect(
-                x: xPosition,
-                y: self.homeview.segmentedControl.frame.maxY,
-                width: segmentedWidth,
-                height: 2
-            )
-        }
+        UIView.animate(withDuration: 0.1, animations: {
+            self.homeview.updateunderlineView(index: segment.selectedSegmentIndex)
+            self.homeview.layoutIfNeeded()
+        })
         
         if homeview.segmentedControl.selectedSegmentIndex == 0 {
             homeview.HomeCollectionView.isHidden = false
