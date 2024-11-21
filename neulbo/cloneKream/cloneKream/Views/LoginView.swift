@@ -90,7 +90,7 @@ class LoginView: UIView {
         return button
     }()
     
-    private let kakaoLoginButton: UIButton = {
+    public lazy var kakaoLoginButton: UIButton = {
         let button = UIButton()
         
         let label = UILabel()

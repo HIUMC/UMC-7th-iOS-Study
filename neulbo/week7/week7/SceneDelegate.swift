@@ -1,12 +1,11 @@
 //
 //  SceneDelegate.swift
-//  cloneKream
+//  week7
 //
-//  Created by 김서현 on 10/2/24.
+//  Created by 김서현 on 11/17/24.
 //
 
 import UIKit
-import KakaoSDKAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -14,24 +13,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
         
+        guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = LoginViewController()
-        //window?.rootViewController = UINavigationController(rootViewController: ProductViewController())
+        window?.rootViewController = ViewController()
         window?.makeKeyAndVisible()
-        
-        
     }
-    
-    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-            if let url = URLContexts.first?.url {
-                if (AuthApi.isKakaoTalkLoginUrl(url)) {
-                    _ = AuthController.handleOpenUrl(url: url)
-                }
-            }
-        }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
