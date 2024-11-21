@@ -1,13 +1,11 @@
 //
 //  AppDelegate.swift
-//  cloneKream
+//  week7
 //
-//  Created by 김서현 on 10/2/24.
+//  Created by 김서현 on 11/17/24.
 //
 
 import UIKit
-import KakaoSDKCommon
-import KakaoSDKAuth
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,22 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        KakaoSDK.initSDK(appKey: "3a9600a1f56e17295620cdd02e1c8276")
         // Override point for customization after application launch.
-        
-        UINavigationBar.appearance().backIndicatorImage = UIImage(named: "backButton")
-        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "backButton")
         return true
     }
-    
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-            if (AuthApi.isKakaoTalkLoginUrl(url)) {
-                return AuthController.handleOpenUrl(url: url)
-            }
-
-            return false
-        }
 
     // MARK: UISceneSession Lifecycle
 

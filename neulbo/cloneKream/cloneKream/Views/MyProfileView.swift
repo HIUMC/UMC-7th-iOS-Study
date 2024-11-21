@@ -19,7 +19,7 @@ class MyProfileView: UIView {
         return imageView
     }()
     
-    private let userId: UILabel = {
+    public lazy var userId: UILabel = {
         let label = UILabel()
         label.text = "tokkislove"
         label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
@@ -130,8 +130,6 @@ class MyProfileView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(userStack)
-        addSubview(buttonStack)
         setUpConstraints()
     }
     
@@ -140,6 +138,8 @@ class MyProfileView: UIView {
     }
     
     private func setUpConstraints() {
+        addSubview(userStack)
+        addSubview(buttonStack)
         
         profileImage.snp.makeConstraints {
             $0.width.height.equalTo(90)

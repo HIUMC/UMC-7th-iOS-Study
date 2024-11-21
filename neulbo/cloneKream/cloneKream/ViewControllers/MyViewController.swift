@@ -10,12 +10,18 @@ import UIKit
 class MyViewController: UIViewController {
     
     private let myProfileView = MyProfileView()
+    let keychainService = KeychainService.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .white
         view.addSubview(myProfileView)
+        
+        // 닉네임 읽기
+        if let storedNickname = keychainService.getNicknameFromKeychain() {
+            myProfileView.userId.text = storedNickname
+        }
         
         myProfileView.snp.makeConstraints {
             $0.top.leading.trailing.equalToSuperview()
