@@ -11,19 +11,56 @@ class SearchHomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view = searchHomeView
+    }
 
-        // Do any additional setup after loading the view.
+    public lazy var searchHomeView: SearchHomeView = {
+        let v = SearchHomeView()
+        
+        v.cancelBtn.addTarget(self, action: #selector(cancelBtnTapped), for: .touchUpInside)
+        v.searchBtn.addTarget(self, action: #selector(searchBtnTapped), for: .touchUpInside)
+        
+        v.recomWordCollectionView.delegate = self
+        v.recomWordCollectionView.dataSource = self
+        
+        return v
+    }()
+    
+    @objc
+    private func cancelBtnTapped() {
+        self.dismiss(animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc
+    private func searchBtnTapped() {
+        let vc = SearchDetailViewController()
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: true)
     }
-    */
+}
 
+extension SearchHomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return RecomWordModel.list().count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecomWordCollectionViewCell.identifier, for: indexPath) as! RecomWordCollectionViewCell
+        let list = RecomWordModel.list()
+        
+        cell.searchWord.text = list[indexPath.row].word
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let title = RecomWordModel.list()[indexPath.row].word
+        let font = UIFont.systemFont(ofSize: 13.5, weight: .regular)
+        let size = title.size(withAttributes: [.font: font])
+        
+        let padding: CGFloat = 22
+        let cellWidth = size.width + padding
+        
+        return CGSize(width: cellWidth, height: 32)
+    }
 }

@@ -13,6 +13,10 @@
 		1F8EC6D52CEA324C00245336 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8EC6D42CEA324C00245336 /* KakaoSDKAuth */; };
 		1F8EC6D72CEA324C00245336 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8EC6D62CEA324C00245336 /* KakaoSDKCommon */; };
 		1F8EC6D92CEA3E1E00245336 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1F8EC6D82CEA3E1E00245336 /* Secrets.xcconfig */; };
+		1F8ECA342CF381E500245336 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8ECA332CF381E500245336 /* CombineMoya */; };
+		1F8ECA362CF381E500245336 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8ECA352CF381E500245336 /* Moya */; };
+		1F8ECA382CF381E500245336 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8ECA372CF381E500245336 /* ReactiveMoya */; };
+		1F8ECA3A2CF381E500245336 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8ECA392CF381E500245336 /* RxMoya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,8 +81,12 @@
 			files = (
 				1F053A1D2CB3AB3D004D7A10 /* SnapKit in Frameworks */,
 				1F053A652CB3EA3F004D7A10 /* Then in Frameworks */,
+				1F8ECA342CF381E500245336 /* CombineMoya in Frameworks */,
 				1F8EC6D32CEA324C00245336 /* KakaoSDK in Frameworks */,
 				1F8EC6D72CEA324C00245336 /* KakaoSDKCommon in Frameworks */,
+				1F8ECA382CF381E500245336 /* ReactiveMoya in Frameworks */,
+				1F8ECA3A2CF381E500245336 /* RxMoya in Frameworks */,
+				1F8ECA362CF381E500245336 /* Moya in Frameworks */,
 				1F8EC6D52CEA324C00245336 /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +154,10 @@
 				1F8EC6D22CEA324C00245336 /* KakaoSDK */,
 				1F8EC6D42CEA324C00245336 /* KakaoSDKAuth */,
 				1F8EC6D62CEA324C00245336 /* KakaoSDKCommon */,
+				1F8ECA332CF381E500245336 /* CombineMoya */,
+				1F8ECA352CF381E500245336 /* Moya */,
+				1F8ECA372CF381E500245336 /* ReactiveMoya */,
+				1F8ECA392CF381E500245336 /* RxMoya */,
 			);
 			productName = KreamClone;
 			productReference = 1FC522C12CAD3F4F00EC0635 /* KreamClone.app */;
@@ -233,6 +245,7 @@
 				1F053A1B2CB3AB3D004D7A10 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				1F053A632CB3EA3F004D7A10 /* XCRemoteSwiftPackageReference "Then" */,
 				1F8EC6D12CEA324C00245336 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				1F8ECA322CF381E500245336 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1FC522C22CAD3F4F00EC0635 /* Products */;
@@ -624,6 +637,14 @@
 				minimumVersion = 2.23.0;
 			};
 		};
+		1F8ECA322CF381E500245336 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -651,6 +672,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1F8EC6D12CEA324C00245336 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
 			productName = KakaoSDKCommon;
+		};
+		1F8ECA332CF381E500245336 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F8ECA322CF381E500245336 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		1F8ECA352CF381E500245336 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F8ECA322CF381E500245336 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		1F8ECA372CF381E500245336 /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F8ECA322CF381E500245336 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		1F8ECA392CF381E500245336 /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F8ECA322CF381E500245336 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -24,6 +24,7 @@ class HomeViewController: UIViewController {
         let hv =  HomeView()
         hv.segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged(segment: )), for: .valueChanged)
         hv.segmentedControl.addTarget(self, action: #selector(updateUnderlinePosition(segment: )), for: .valueChanged)
+        hv.searchBtn.addTarget(self, action: #selector(goToSearchHome), for: .touchUpInside)
         
         hv.menuCollectionView.delegate = self
         hv.menuCollectionView.dataSource = self
@@ -85,6 +86,14 @@ class HomeViewController: UIViewController {
         UIView.animate(withDuration: 0.2) {
             self.view.layoutIfNeeded()
         }
+    }
+    
+    @objc
+    private func goToSearchHome() {
+        //모달로 바꾸기
+        let vc = SearchHomeViewController()
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: true)
     }
 }
 

@@ -45,11 +45,13 @@ class SearchResultTableViewCell: UITableViewCell {
         addSubview(result)
         
         result.snp.makeConstraints { make in
-            make.top.leading.bottom.equalToSuperview()
+            make.leading.equalToSuperview()
+            make.top.equalToSuperview().offset(15.5)
+            make.bottom.equalToSuperview().offset(-15.5)
         }
     }
     
-    public func configure(model: SearchResponse) {
-        result.text = model.title
+    public func configure(model: String) {
+        result.text = model
     }
 }
