@@ -7,9 +7,11 @@
 
 import UIKit
 import Then
+import Kingfisher
 
 class profileModifyViewController: UIViewController {
     
+    var profileImage: UIImage? // 마이뷰에서 전달받은 프로필 이미지
     var loginModel = LoginModel()
     
     var changeBefore1 = true
@@ -19,8 +21,13 @@ class profileModifyViewController: UIViewController {
         super.viewDidLoad()
         self.view = profileModifyView1
         loadLoginValue()
-        
+    
         self.navigationItem.hidesBackButton = true
+        
+        //전달받은 이미지 설정
+        if let profileImage = profileImage {
+            profileModifyView1.profileImage.image = profileImage
+        }
         
     }
     

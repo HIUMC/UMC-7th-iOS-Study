@@ -24,6 +24,19 @@ protocol TextFieldConfig : LabelConfig, layerConfig {
     func configTextField(placeholder: String?, leftView: UIView, leftViewMode: UITextField.ViewMode , interaction: Bool?)
 }
 
+class Stack : UIStackView {
+    init(axis: NSLayoutConstraint.Axis, spacing: CGFloat){
+        super.init(frame: .zero)
+        self.axis = axis
+        self.spacing = spacing
+        self.distribution = .fill
+    }
+    
+    required init(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
 class TextField: UITextField, TextFieldConfig {
     func configTextField(placeholder: String?, leftView: UIView, leftViewMode: UITextField.ViewMode, interaction: Bool?) {
         self.placeholder = placeholder
@@ -58,7 +71,7 @@ class Label: UILabel {
         self.text = title
         self.font = UIFont.systemFont(ofSize: size, weight: weight)
         self.textColor = color
-        self.textAlignment = .center
+        //self.textAlignment = .center
         self.numberOfLines = 0
     }
     
@@ -67,12 +80,23 @@ class Label: UILabel {
     }
 }
 
-class CustomButton2 : UIButton, layerConfig, LabelConfig {
-    func configLabel(text: String?, size: CGFloat, weight: UIFont.Weight, color: UIColor) {
+class CustomButton1 : UIButton, LabelConfig {
+    func configLabel(text: String?, size: CGFloat, weight: UIFont.Weight, color: UIColor = .black) {
         self.setTitle(text, for: .normal)
         self.setTitleColor(color, for: .normal)
         self.titleLabel?.font = UIFont.systemFont(ofSize: size, weight: weight)
     }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+class CustomButton2 : CustomButton1, layerConfig {
     
     func configLayer(layerBorderWidth: CGFloat?, layerCornerRadius: CGFloat?, layerColor: UIColor?) {
         self.layer.borderWidth = layerBorderWidth!
@@ -88,6 +112,7 @@ class CustomButton2 : UIButton, layerConfig, LabelConfig {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
 
 extension UIColor {
     

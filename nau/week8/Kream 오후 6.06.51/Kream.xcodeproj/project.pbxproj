@@ -9,6 +9,18 @@
 /* Begin PBXBuildFile section */
 		AF7139DB2CE7ECAD008C79D9 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7139DA2CE7ECAD008C79D9 /* KeyChain.swift */; };
 		AF7139F92CEB26D0008C79D9 /* AuthorizationInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7139F82CEB26D0008C79D9 /* AuthorizationInterceptor.swift */; };
+		AF713A6B2CED3C35008C79D9 /* searchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF713A6A2CED3C35008C79D9 /* searchViewCell.swift */; };
+		AF713A6D2CED3C52008C79D9 /* searchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF713A6C2CED3C52008C79D9 /* searchModel.swift */; };
+		AF713A6F2CEE3C43008C79D9 /* detailedSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF713A6E2CEE3C43008C79D9 /* detailedSearchView.swift */; };
+		AF713A712CEE3C5D008C79D9 /* detailedSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF713A702CEE3C5D008C79D9 /* detailedSearchViewController.swift */; };
+		AF713A8A2CEF904B008C79D9 /* searchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF713A892CEF904B008C79D9 /* searchResponseModel.swift */; };
+		AF713A8E2CEF90FA008C79D9 /* searchTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF713A8D2CEF90FA008C79D9 /* searchTargetType.swift */; };
+		AF713A912CEF9139008C79D9 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = AF713A902CEF9139008C79D9 /* CombineMoya */; };
+		AF713A932CEF9139008C79D9 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = AF713A922CEF9139008C79D9 /* Moya */; };
+		AF713A952CEF9139008C79D9 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = AF713A942CEF9139008C79D9 /* ReactiveMoya */; };
+		AF713A972CEF9139008C79D9 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = AF713A962CEF9139008C79D9 /* RxMoya */; };
+		AF713A992CEFA3EB008C79D9 /* detailedSearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF713A982CEFA3EB008C79D9 /* detailedSearchViewCell.swift */; };
+		AF713A9C2CF0D3ED008C79D9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AF713A9B2CF0D3ED008C79D9 /* Kingfisher */; };
 		AFB1C48C2CA9B37A0064D054 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1C48B2CA9B37A0064D054 /* AppDelegate.swift */; };
 		AFB1C48E2CA9B37A0064D054 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1C48D2CA9B37A0064D054 /* SceneDelegate.swift */; };
 		AFB1C4902CA9B37A0064D054 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB1C48F2CA9B37A0064D054 /* LoginViewController.swift */; };
@@ -79,6 +91,13 @@
 /* Begin PBXFileReference section */
 		AF7139DA2CE7ECAD008C79D9 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		AF7139F82CEB26D0008C79D9 /* AuthorizationInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationInterceptor.swift; sourceTree = "<group>"; };
+		AF713A6A2CED3C35008C79D9 /* searchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewCell.swift; sourceTree = "<group>"; };
+		AF713A6C2CED3C52008C79D9 /* searchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchModel.swift; sourceTree = "<group>"; };
+		AF713A6E2CEE3C43008C79D9 /* detailedSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailedSearchView.swift; sourceTree = "<group>"; };
+		AF713A702CEE3C5D008C79D9 /* detailedSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailedSearchViewController.swift; sourceTree = "<group>"; };
+		AF713A892CEF904B008C79D9 /* searchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchResponseModel.swift; sourceTree = "<group>"; };
+		AF713A8D2CEF90FA008C79D9 /* searchTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchTargetType.swift; sourceTree = "<group>"; };
+		AF713A982CEFA3EB008C79D9 /* detailedSearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailedSearchViewCell.swift; sourceTree = "<group>"; };
 		AFB1C4882CA9B37A0064D054 /* Kream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB1C48B2CA9B37A0064D054 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFB1C48D2CA9B37A0064D054 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,23 +167,29 @@
 			files = (
 				AFC9CBA42CE7773E00B1BC80 /* KakaoSDKCommon in Frameworks */,
 				AFC9CB982CE76FCB00B1BC80 /* Alamofire in Frameworks */,
+				AF713A912CEF9139008C79D9 /* CombineMoya in Frameworks */,
 				AFC9CB9C2CE7773E00B1BC80 /* KakaoSDK in Frameworks */,
 				AFC9C8742CB1B64C00B1BC80 /* SnapKit in Frameworks */,
 				AFC9CBA02CE7773E00B1BC80 /* KakaoSDKCert in Frameworks */,
+				AF713A972CEF9139008C79D9 /* RxMoya in Frameworks */,
 				AFC9C8D02CB558F100B1BC80 /* Then in Frameworks */,
+				AF713A9C2CF0D3ED008C79D9 /* Kingfisher in Frameworks */,
 				AFC9CB9E2CE7773E00B1BC80 /* KakaoSDKAuth in Frameworks */,
+				AF713A932CEF9139008C79D9 /* Moya in Frameworks */,
 				AFC9CBA22CE7773E00B1BC80 /* KakaoSDKCertCore in Frameworks */,
+				AF713A952CEF9139008C79D9 /* ReactiveMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AF7139D92CE7EC8F008C79D9 /* KeyChains */ = {
+		AF713A8C2CEF90E2008C79D9 /* Networks */ = {
 			isa = PBXGroup;
 			children = (
+				AF713A8D2CEF90FA008C79D9 /* searchTargetType.swift */,
 			);
-			path = KeyChains;
+			path = Networks;
 			sourceTree = "<group>";
 		};
 		AFB1C47F2CA9B37A0064D054 = {
@@ -187,7 +212,7 @@
 		AFB1C48A2CA9B37A0064D054 /* Kream */ = {
 			isa = PBXGroup;
 			children = (
-				AF7139D92CE7EC8F008C79D9 /* KeyChains */,
+				AF713A8C2CEF90E2008C79D9 /* Networks */,
 				AFC9CA392CBD374B00B1BC80 /* Cells */,
 				AFB1C4A12CA9B3B80064D054 /* Models */,
 				AFB1C4A02CA9B3B30064D054 /* Views */,
@@ -220,6 +245,7 @@
 				AFC9C8802CB2E09C00B1BC80 /* profileModifyView.swift */,
 				AFC9CA922CD3328000B1BC80 /* HOMEView.swift */,
 				AFC9CB0B2CD6BD9200B1BC80 /* searchView.swift */,
+				AF713A6E2CEE3C43008C79D9 /* detailedSearchView.swift */,
 				AFC9CA402CC7DBA500B1BC80 /* SavedView.swift */,
 				AFC9CB182CDF58E700B1BC80 /* ProductDetailedView.swift */,
 				AFC9CB282CDFE47500B1BC80 /* purchaseView.swift */,
@@ -235,6 +261,8 @@
 				AFC9CAA12CD3447E00B1BC80 /* HOMEModel.swift */,
 				AFC9CB222CDFA9BE00B1BC80 /* ProductDetailedModel.swift */,
 				AFC9CB2E2CE5A9B000B1BC80 /* purchaseModel.swift */,
+				AF713A6C2CED3C52008C79D9 /* searchModel.swift */,
+				AF713A892CEF904B008C79D9 /* searchResponseModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -297,6 +325,7 @@
 			children = (
 				AFC9C8642CB1A88900B1BC80 /* MainViewController.swift */,
 				AFC9CB0D2CD6BDE900B1BC80 /* searchViewController.swift */,
+				AF713A702CEE3C5D008C79D9 /* detailedSearchViewController.swift */,
 				AFC9C85A2CB1A71700B1BC80 /* HOMEViewController.swift */,
 				AFC9C85C2CB1A73300B1BC80 /* STYLEViewController.swift */,
 				AFC9C85E2CB1A75300B1BC80 /* SHOPViewController.swift */,
@@ -313,9 +342,11 @@
 			isa = PBXGroup;
 			children = (
 				AFC9CA3A2CBD379300B1BC80 /* ProductCell.swift */,
+				AF713A982CEFA3EB008C79D9 /* detailedSearchViewCell.swift */,
 				AFC9CA9D2CD33C7300B1BC80 /* HOMECollectionViewCell.swift */,
 				AFC9CB202CDFA7DF00B1BC80 /* ProductDetailedViewCell.swift */,
 				AFC9CB302CE5AAEF00B1BC80 /* purchaseViewCell.swift */,
+				AF713A6A2CED3C35008C79D9 /* searchViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -397,6 +428,8 @@
 				AFC9C8CE2CB558F100B1BC80 /* XCRemoteSwiftPackageReference "Then" */,
 				AFC9CB962CE76FCB00B1BC80 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				AFC9CB9A2CE7773E00B1BC80 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				AF713A8F2CEF9139008C79D9 /* XCRemoteSwiftPackageReference "Moya" */,
+				AF713A9A2CF0D3ED008C79D9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = AFB1C4892CA9B37A0064D054 /* Products */;
 			projectDirPath = "";
@@ -466,7 +499,9 @@
 				AFC9CB2F2CE5A9B000B1BC80 /* purchaseModel.swift in Sources */,
 				AFC9CB272CDFE39500B1BC80 /* purchaseViewController.swift in Sources */,
 				AFC9CA9E2CD33C7300B1BC80 /* HOMECollectionViewCell.swift in Sources */,
+				AF713A6F2CEE3C43008C79D9 /* detailedSearchView.swift in Sources */,
 				AFC9C8882CB2E66A00B1BC80 /* profileModifyViewController.swift in Sources */,
+				AF713A8E2CEF90FA008C79D9 /* searchTargetType.swift in Sources */,
 				AFB1C4A52CA9B4060064D054 /* LoginView.swift in Sources */,
 				AFC9CA412CC7DBA500B1BC80 /* SavedView.swift in Sources */,
 				AF7139DB2CE7ECAD008C79D9 /* KeyChain.swift in Sources */,
@@ -476,10 +511,15 @@
 				AFB1C48E2CA9B37A0064D054 /* SceneDelegate.swift in Sources */,
 				AF7139F92CEB26D0008C79D9 /* AuthorizationInterceptor.swift in Sources */,
 				AFC9C8632CB1A79600B1BC80 /* MYViewController.swift in Sources */,
+				AF713A712CEE3C5D008C79D9 /* detailedSearchViewController.swift in Sources */,
 				AFC9CB292CDFE47500B1BC80 /* purchaseView.swift in Sources */,
 				AFC9C85B2CB1A71700B1BC80 /* HOMEViewController.swift in Sources */,
+				AF713A8A2CEF904B008C79D9 /* searchResponseModel.swift in Sources */,
+				AF713A992CEFA3EB008C79D9 /* detailedSearchViewCell.swift in Sources */,
 				AFC9C8812CB2E09C00B1BC80 /* profileModifyView.swift in Sources */,
 				AFC9CA3D2CBD38F700B1BC80 /* ProductModel.swift in Sources */,
+				AF713A6D2CED3C52008C79D9 /* searchModel.swift in Sources */,
+				AF713A6B2CED3C35008C79D9 /* searchViewCell.swift in Sources */,
 				AFC9CB192CDF58E700B1BC80 /* ProductDetailedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -688,6 +728,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AF713A8F2CEF9139008C79D9 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+		AF713A9A2CF0D3ED008C79D9 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.1;
+			};
+		};
 		AFC9C8722CB1B64C00B1BC80 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -723,6 +779,31 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AF713A902CEF9139008C79D9 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF713A8F2CEF9139008C79D9 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		AF713A922CEF9139008C79D9 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF713A8F2CEF9139008C79D9 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		AF713A942CEF9139008C79D9 /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF713A8F2CEF9139008C79D9 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		AF713A962CEF9139008C79D9 /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF713A8F2CEF9139008C79D9 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		AF713A9B2CF0D3ED008C79D9 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF713A9A2CF0D3ED008C79D9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		AFC9C8732CB1B64C00B1BC80 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AFC9C8722CB1B64C00B1BC80 /* XCRemoteSwiftPackageReference "SnapKit" */;

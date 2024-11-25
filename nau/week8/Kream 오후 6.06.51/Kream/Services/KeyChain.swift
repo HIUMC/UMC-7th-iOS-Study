@@ -14,11 +14,10 @@ final class KeychainHelper {
     private init() {}
     
     // 데이터 저장
-    func save(_ data: Data, service: String, account: String) {
+    func save(_ data: Data, key: String) {
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
-            kSecAttrService as String: service,
-            kSecAttrAccount as String: account,
+            kSecAttrAccount as String: key,
             kSecValueData as String: data
         ]
         
@@ -27,6 +26,7 @@ final class KeychainHelper {
         
         // 새 값 추가
         SecItemAdd(query as CFDictionary, nil)
+    
     }
     
     // 데이터 가져오기
@@ -53,33 +53,34 @@ final class KeychainHelper {
         SecItemDelete(query as CFDictionary)
     }
     
-    private var nicknameCache: String?
-    
-    func loadNickname(key: String) -> String? {
-        //캐싱 적용
-        if let cachedNickname = nicknameCache {
-            return cachedNickname
+    //private var nicknameCache : String?
+    private var cache: [String: String ] = [:] //닉네임과 이미지URL 캐싱 분리
+        
+        func loadValue(key: String) -> String? {
+            //캐싱 적용
+            if let cachedValue = cache[key] {
+                return cachedValue
+            }
+            
+            let query: [String: Any] = [
+                kSecClass as String: kSecClassGenericPassword,
+                kSecAttrAccount as String: key,
+                kSecReturnData as String: true,
+                kSecMatchLimit as String: kSecMatchLimitOne
+            ]
+            
+            var result: AnyObject?
+            let status = SecItemCopyMatching(query as CFDictionary, &result)
+            
+            if status == errSecSuccess, let data = result as? Data,
+               let value = String(data: data, encoding: .utf8) {
+                cache[key] = value
+                return value
+            } else {
+                print("Failed to retrieve value for key \(key): \(status)")
+                return nil
+            }
         }
-        
-        let query: [String: Any] = [
-            kSecClass as String: kSecClassGenericPassword,
-            kSecAttrAccount as String: key,
-            kSecReturnData as String: true,
-            kSecMatchLimit as String: kSecMatchLimitOne
-        ]
-        
-        var result: AnyObject?
-        let status = SecItemCopyMatching(query as CFDictionary, &result)
-        
-        if status == errSecSuccess, let data = result as? Data,
-           let value = String(data: data, encoding: .utf8) {
-            nicknameCache = value
-            return value
-        } else {
-            print("Failed to retrieve value for key \(key): \(status)")
-            return nil
-        }
-    }
 }
 
 

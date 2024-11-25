@@ -23,8 +23,10 @@ class HOMEViewController: UIViewController {
     
     @objc
     private func searchBarBtnDidTap(){
-        let searchVC = searchViewController()
-        navigationController?.pushViewController(searchVC, animated: true)
+        let searchVC = UINavigationController(rootViewController: searchViewController())
+        searchVC.modalPresentationStyle = .fullScreen
+        present(searchVC, animated: false)
+        //navigationController?.pushViewController(searchVC, animated: true)
     }
 
     @objc
@@ -38,7 +40,7 @@ class HOMEViewController: UIViewController {
         }
     }
     
-    @objc // 모르겠다
+    /*@objc // 모르겠다
     private func changeSegmentedControlLinePosition(_ segment: UISegmentedControl){
         let selectedIndex = homeView.segmentedControl.selectedSegmentIndex
         
@@ -55,11 +57,11 @@ class HOMEViewController: UIViewController {
             }
             self.homeView.layoutIfNeeded()
         }
-    }
+    }*/
     
     private func setupAction() {
         homeView.segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged(segment:)), for: .valueChanged)
-        homeView.segmentedControl.addTarget(self, action: #selector(changeSegmentedControlLinePosition(_:)), for: .valueChanged)
+        //homeView.segmentedControl.addTarget(self, action: #selector(changeSegmentedControlLinePosition(_:)), for: .valueChanged)
         homeView.searchBar.addTarget(self, action:
                                         #selector(searchBarBtnDidTap), for: .editingDidBegin)
     }
@@ -71,8 +73,6 @@ class HOMEViewController: UIViewController {
         
         homeView.HOMECollectionView2.delegate = self
     }
-    
-    
 
 }
 

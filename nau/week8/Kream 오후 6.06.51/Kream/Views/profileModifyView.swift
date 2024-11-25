@@ -65,17 +65,15 @@ class profileModifyView: UIView {
         $0.configLayer()
         $0.configTextField(placeholder: "새로운 이메일을 입력해주세요!")
     }
-
+    
     public lazy var userPwdInput = CustomTextField().then {
-        //"******************"
-        if let pwd = LoginModel().loadPwd() {
+        if let pwd = LoginModel().loadId() {
             $0.configLabel(text: pwd)
         }
-        $0.isSecureTextEntry = true
         $0.configLayer()
         $0.configTextField(placeholder: "새로운 비밀번호를 입력해주세요!")
     }
-    
+  
     public lazy var changeBtn1 = CustomButton2().then {
         $0.configLabel(text: "변경", size: 14, weight: .regular, color: .black)
         $0.configLayer(layerBorderWidth: 1, layerCornerRadius: 6, layerColor: .black)

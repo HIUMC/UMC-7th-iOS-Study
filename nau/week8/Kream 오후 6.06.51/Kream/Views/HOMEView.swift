@@ -45,29 +45,13 @@ class HOMEView: UIView {
         $0.leftViewMode = .always
     }
     
-    let segmentedControl = UISegmentedControl(items: ["추천", "랭킹", "발매정보", "럭셔리", "남성", "여성"]).then{
-        $0.setBackgroundImage(UIImage(), for: .normal, barMetrics: .default)
-        $0.setBackgroundImage(UIImage(), for: .selected, barMetrics: .default)
-        $0.setBackgroundImage(UIImage(), for: .highlighted, barMetrics: .default)
-        $0.setDividerImage(UIImage(), forLeftSegmentState: .selected, rightSegmentState: .normal, barMetrics: .default)
-        $0.apportionsSegmentWidthsByContent = true //아이템 폭이 내용에 맞춰 자동 조절
-        $0.selectedSegmentIndex = 0 //앱 실행됐을때 선택할 인덱t=스
-        
-        $0.setTitleTextAttributes(
-            [
-                NSAttributedString.Key.foregroundColor: UIColor.black,
-                .font: UIFont.systemFont(ofSize: 16, weight: .light)
-            ],
-            for: .normal
-        )
-        $0.setTitleTextAttributes(
-            [
-                NSAttributedString.Key.foregroundColor: UIColor.black,
-                .font: UIFont.systemFont(ofSize: 16, weight: .bold)
-            ],
-            for: .selected
-        )
-    }
+    public lazy var segmentedControl: HomeSegmentControl = {
+        let items = ["추천", "랭킹", "발매정보", "럭셔리", "남성", "여성"]
+        let segmentControl = HomeSegmentControl(items: items)
+        segmentControl.selectedSegmentIndex = 0
+        segmentControl.apportionsSegmentWidthsByContent = true
+        return segmentControl
+        }()
     
     let line = UIView().then {
         $0.backgroundColor = .black
@@ -91,17 +75,10 @@ class HOMEView: UIView {
         $0.backgroundColor = UIColor(hue: 0/360, saturation: 0/100, brightness: 94/100, alpha: 1.0)
     }
     
-    private lazy var dropTitle = UILabel().then {
-        $0.text = "Just Dropped"
-        $0.textColor = .black
-        $0.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
-    }
+    private lazy var dropTitle = Label(title: "Just Dropped", size: 16, weight: .semibold)
     
-    private lazy var dropSmallTitle = UILabel().then {
-        $0.text = "발매 상품"
-        $0.textColor = UIColor(hue: 0, saturation: 0, brightness: 0.52, alpha: 1.0)
-        $0.font = UIFont.systemFont(ofSize: 13, weight: .light)
-    }
+    private lazy var dropSmallTitle = Label(title: "발매 상품", size: 13, weight: .light, color: UIColor(hue: 0, saturation: 0, brightness: 0.52, alpha: 1.0))
+
     
     let HOMECollectionView2 = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout().then {
         $0.itemSize = CGSize(width: 142, height: 237)
@@ -119,17 +96,9 @@ class HOMEView: UIView {
         $0.backgroundColor = UIColor(hue: 0/360, saturation: 0/100, brightness: 94/100, alpha: 1.0)
     }
     
-    private lazy var dropTitle2 = UILabel().then {
-        $0.text = "본격 한파대비! 연말 필수템 모음"
-        $0.textColor = .black
-        $0.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
-    }
+    private lazy var dropTitle2 = Label(title: "본격 한파대비! 연말 필수템 모음", size: 16, weight: .semibold)
     
-    private lazy var dropSmallTitle2 = UILabel().then {
-        $0.text = "#해피홀리룩챌린지"
-        $0.textColor = UIColor(hue: 0, saturation: 0, brightness: 0.52, alpha: 1.0)
-        $0.font = UIFont.systemFont(ofSize: 13, weight: .light)
-    }
+    private lazy var dropSmallTitle2 = Label(title: "#해피홀리룩챌린지", size: 13, weight: .light, color: UIColor(hue: 0, saturation: 0, brightness: 0.52, alpha: 1.0))
     
     lazy var HOMECollectionView3 = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout().then {
         $0.itemSize = CGSize(width: 124, height: 165)
@@ -183,8 +152,7 @@ class HOMEView: UIView {
         [
             bellBtn,
             searchBar,
-            segmentedControl,
-            line
+            segmentedControl
         ].forEach{
             topView.addSubview($0)
         }
@@ -217,25 +185,13 @@ class HOMEView: UIView {
         }
         
         segmentedControl.snp.makeConstraints{
-            $0.top.equalTo(searchBar.snp.bottom).offset(16)
-            $0.centerX.equalToSuperview()
-            $0.height.equalTo(27)
+            $0.top.equalTo(searchBar.snp.bottom).offset(8)
+            $0.horizontalEdges.equalToSuperview().inset(20)
+            $0.height.equalTo(33)
         }
-        
-        line.snp.makeConstraints{
-            segmentedControl.layoutIfNeeded()
-            
-            $0.top.equalTo(segmentedControl.snp.bottom).offset(8)
-            $0.height.equalTo(2)
-            
-            if let selectedSegmentFrame = segmentedControl.subviews.first?.frame { $0.leading.equalTo(segmentedControl).offset(selectedSegmentFrame.minX + 7.9)
-                $0.width.equalTo(selectedSegmentFrame.width * 0.75)
-            }
-        }
-            
             
         mainImage.snp.makeConstraints{
-            $0.top.equalTo(line.snp.bottom)
+            $0.top.equalTo(segmentedControl.snp.bottom)
             $0.centerX.equalToSuperview()
             $0.left.equalToSuperview()
         }
@@ -383,16 +339,14 @@ extension HomeSegmentControl {
     /// 세그먼트 막대 포지션 이동 설정
     /// - Parameter animated: 애니메이션 유/무 설정
     private func updateIndicatorPosition(animated: Bool) {
-        let segmentWidth = bounds.width / CGFloat(numberOfSegments)
-        
-        /* 세그먼트 인디케이터와 세그먼트 텍스트 중간 정렬을 위한 여백 값 */
-        let leftOffset: CGFloat = 1
+
         
         /* 선택된 세그먼트의 텍스트 길이에 맞춰 막대의 가로 길이 설정 */
         let indicatorWidth = calculateLabelWidth(for: selectedSegmentIndex)
         
-        let indicatorPositionX = segmentWidth * CGFloat(selectedSegmentIndex) + (segmentWidth - indicatorWidth) / 2 - leftOffset
-        let indicatorFrame = CGRect(x: indicatorPositionX, y: bounds.height - 3, width: indicatorWidth, height: 2)
+        let selectedSegmentFrame = subviews[selectedSegmentIndex].frame
+        let indicatorPositionX = selectedSegmentFrame.origin.x + (selectedSegmentFrame.width-calculateLabelWidth(for: selectedSegmentIndex))/2
+        let indicatorFrame = CGRect(x: indicatorPositionX, y: bounds.height - 2, width: indicatorWidth, height: 2)
         
         if animated {
             UIView.animate(withDuration: 0.3, animations: {
