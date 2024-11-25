@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
 struct KaKaoUserInfo: Codable {
     struct KakaoUserAccount: Codable {
         var nickname: String?
+        var profile_image: String?
     }
     var connected_at: String?
     var id: Int?

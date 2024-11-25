@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KakaoSDKUser
 
 class MyPageViewController: UIViewController {
     
@@ -17,6 +18,8 @@ class MyPageViewController: UIViewController {
     
     private lazy var myPageView: MyPageView = {
         let view = MyPageView()
+        
+        displayImage()
         view.profileManagerButton.addTarget(self, action: #selector(btnDidTap), for: .touchUpInside)
         
         return view
@@ -38,5 +41,25 @@ class MyPageViewController: UIViewController {
             myPageView.nameTitleLabel.text = "닉네임 정보를 불러올 수 없습니다."
         }
     }
-
+    
+    func displayImage() {
+        UserApi.shared.me() {(user, error) in
+            if let error = error {
+                print(error)
+            }
+            else {
+                let response = user?.kakaoAccount?.profile?.profileImageUrl
+                
+                DispatchQueue.global().async { [weak self] in
+                    if let data = try? Data(contentsOf: response!) {
+                        if let image = UIImage(data: data) {
+                            DispatchQueue.main.async {
+                                self?.myPageView.profileImage.image = image
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

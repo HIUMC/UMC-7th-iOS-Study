@@ -41,6 +41,7 @@ class ProfileManagerView: UIView {
         profileImage.snp.makeConstraints {
             $0.top.equalTo(profileManagerTitleLabel.snp.bottom).offset(52)
             $0.centerX.equalToSuperview()
+            $0.width.height.equalTo(90)
         }
         
         profileInfoLabel.snp.makeConstraints {
@@ -112,6 +113,11 @@ class ProfileManagerView: UIView {
     
     public lazy var profileImage = UIImageView().then {
         $0.image = UIImage()
+        $0.layer.cornerRadius = 90/2
+        $0.layer.borderWidth = 1
+        $0.clipsToBounds = true
+        $0.layer.borderColor = UIColor.clear.cgColor
+        $0.contentMode = .scaleToFill
     }
 
     public lazy var profileInfoLabel = UILabel().then {

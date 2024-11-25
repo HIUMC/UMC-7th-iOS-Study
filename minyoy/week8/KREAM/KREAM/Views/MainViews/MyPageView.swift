@@ -9,6 +9,7 @@ class MyPageView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .white
+        self.layoutIfNeeded()
         self.addComponents()
     }
     
@@ -35,6 +36,7 @@ class MyPageView: UIView {
         profileImage.snp.makeConstraints {
             $0.top.equalTo(settingImage.snp.bottom).offset(26)
             $0.leading.equalTo(settingImage.snp.leading)
+            $0.width.height.equalTo(90)
         }
         
         nameTitleLabel.snp.makeConstraints {
@@ -80,7 +82,12 @@ class MyPageView: UIView {
     }
     
     public lazy var profileImage = UIImageView().then {
-        $0.image = UIImage(named: "profile")
+        $0.image = UIImage()
+        $0.layer.cornerRadius = 90/2
+        $0.layer.borderWidth = 1
+        $0.clipsToBounds = true
+        $0.layer.borderColor = UIColor.clear.cgColor
+        $0.contentMode = .scaleToFill
     }
     
     public lazy var nameTitleLabel = UILabel().then {
