@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3CA82F102CB5A9E6009BB2AD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3CA82F0F2CB5A9E6009BB2AD /* SnapKit */; };
+		3CC5F5C62CF3818C006C7435 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 3CC5F5C52CF3818C006C7435 /* CombineMoya */; };
+		3CC5F5C82CF3818C006C7435 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 3CC5F5C72CF3818C006C7435 /* Moya */; };
+		3CC5F5CA2CF3818C006C7435 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 3CC5F5C92CF3818C006C7435 /* ReactiveMoya */; };
+		3CC5F5CC2CF3818C006C7435 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 3CC5F5CB2CF3818C006C7435 /* RxMoya */; };
+		3CC5F5D32CF385AC006C7435 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 3CC5F5D22CF385AC006C7435 /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +45,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CC5F5CC2CF3818C006C7435 /* RxMoya in Frameworks */,
+				3CC5F5D32CF385AC006C7435 /* Then in Frameworks */,
+				3CC5F5C62CF3818C006C7435 /* CombineMoya in Frameworks */,
+				3CC5F5CA2CF3818C006C7435 /* ReactiveMoya in Frameworks */,
 				3CA82F102CB5A9E6009BB2AD /* SnapKit in Frameworks */,
+				3CC5F5C82CF3818C006C7435 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +94,11 @@
 			name = Kream;
 			packageProductDependencies = (
 				3CA82F0F2CB5A9E6009BB2AD /* SnapKit */,
+				3CC5F5C52CF3818C006C7435 /* CombineMoya */,
+				3CC5F5C72CF3818C006C7435 /* Moya */,
+				3CC5F5C92CF3818C006C7435 /* ReactiveMoya */,
+				3CC5F5CB2CF3818C006C7435 /* RxMoya */,
+				3CC5F5D22CF385AC006C7435 /* Then */,
 			);
 			productName = Kream;
 			productReference = 3CA82EA62CADCFCA009BB2AD /* Kream.app */;
@@ -115,6 +130,8 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				3CA82F0E2CB5A9E6009BB2AD /* XCRemoteSwiftPackageReference "SnapKit" */,
+				3CC5F5C42CF3818C006C7435 /* XCRemoteSwiftPackageReference "Moya" */,
+				3CC5F5D12CF385AC006C7435 /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3CA82EA72CADCFCA009BB2AD /* Products */;
@@ -350,6 +367,22 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		3CC5F5C42CF3818C006C7435 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+		3CC5F5D12CF385AC006C7435 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -357,6 +390,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3CA82F0E2CB5A9E6009BB2AD /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		3CC5F5C52CF3818C006C7435 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CC5F5C42CF3818C006C7435 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		3CC5F5C72CF3818C006C7435 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CC5F5C42CF3818C006C7435 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		3CC5F5C92CF3818C006C7435 /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CC5F5C42CF3818C006C7435 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		3CC5F5CB2CF3818C006C7435 /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CC5F5C42CF3818C006C7435 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		3CC5F5D22CF385AC006C7435 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CC5F5D12CF385AC006C7435 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
