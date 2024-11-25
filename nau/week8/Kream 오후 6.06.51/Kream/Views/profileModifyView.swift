@@ -70,6 +70,7 @@ class profileModifyView: UIView {
         if let pwd = LoginModel().loadId() {
             $0.configLabel(text: pwd)
         }
+        $0.isSecureTextEntry = true
         $0.configLayer()
         $0.configTextField(placeholder: "새로운 비밀번호를 입력해주세요!")
     }
