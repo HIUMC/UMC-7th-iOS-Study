@@ -46,6 +46,18 @@
 		929D69772CEAD7A70073C9CC /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 929D69762CEAD7A70073C9CC /* KakaoSDK */; };
 		929D69792CEAD7A70073C9CC /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 929D69782CEAD7A70073C9CC /* KakaoSDKAuth */; };
 		929D697B2CEB278A0073C9CC /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D697A2CEB278A0073C9CC /* KeyChain.swift */; };
+		929D69CC2CF40FCD0073C9CC /* RecommenedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D69CB2CF40FCD0073C9CC /* RecommenedViewController.swift */; };
+		929D69CE2CF4101B0073C9CC /* RecommenedSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D69CD2CF4101B0073C9CC /* RecommenedSearchView.swift */; };
+		929D69D02CF412A70073C9CC /* SearchedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D69CF2CF412A70073C9CC /* SearchedModel.swift */; };
+		929D69D22CF413630073C9CC /* SearchedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D69D12CF413630073C9CC /* SearchedCollectionViewCell.swift */; };
+		929D69D42CF4531A0073C9CC /* UserSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D69D32CF4531A0073C9CC /* UserSearchView.swift */; };
+		929D69D62CF453350073C9CC /* UserSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D69D52CF453350073C9CC /* UserSearchViewController.swift */; };
+		929D69D92CF466BD0073C9CC /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 929D69D82CF466BD0073C9CC /* CombineMoya */; };
+		929D69DB2CF466BD0073C9CC /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 929D69DA2CF466BD0073C9CC /* Moya */; };
+		929D69DD2CF466BD0073C9CC /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 929D69DC2CF466BD0073C9CC /* ReactiveMoya */; };
+		929D69DF2CF466BD0073C9CC /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 929D69DE2CF466BD0073C9CC /* RxMoya */; };
+		929D69E32CF466F60073C9CC /* SearchResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D69E22CF466F60073C9CC /* SearchResultType.swift */; };
+		929D69E52CF469E10073C9CC /* SearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D69E42CF469E10073C9CC /* SearchResultModel.swift */; };
 		92D3BBF82CE0FF9E00665795 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D3BBF72CE0FF9E00665795 /* ProductViewController.swift */; };
 		92D3BBFA2CE0FFB100665795 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D3BBF92CE0FFB100665795 /* ProductView.swift */; };
 		92D3BBFC2CE1023300665795 /* OtherColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D3BBFB2CE1023300665795 /* OtherColorCollectionViewCell.swift */; };
@@ -108,6 +120,14 @@
 		925A3F652CE12378003164C4 /* BuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyView.swift; sourceTree = "<group>"; };
 		925A3F672CE1264A003164C4 /* ProductSizeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSizeCollectionViewCell.swift; sourceTree = "<group>"; };
 		929D697A2CEB278A0073C9CC /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
+		929D69CB2CF40FCD0073C9CC /* RecommenedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommenedViewController.swift; sourceTree = "<group>"; };
+		929D69CD2CF4101B0073C9CC /* RecommenedSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommenedSearchView.swift; sourceTree = "<group>"; };
+		929D69CF2CF412A70073C9CC /* SearchedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedModel.swift; sourceTree = "<group>"; };
+		929D69D12CF413630073C9CC /* SearchedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedCollectionViewCell.swift; sourceTree = "<group>"; };
+		929D69D32CF4531A0073C9CC /* UserSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchView.swift; sourceTree = "<group>"; };
+		929D69D52CF453350073C9CC /* UserSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchViewController.swift; sourceTree = "<group>"; };
+		929D69E22CF466F60073C9CC /* SearchResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultType.swift; sourceTree = "<group>"; };
+		929D69E42CF469E10073C9CC /* SearchResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultModel.swift; sourceTree = "<group>"; };
 		92D3BBF72CE0FF9E00665795 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		92D3BBF92CE0FFB100665795 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		92D3BBFB2CE1023300665795 /* OtherColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherColorCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -121,8 +141,12 @@
 			files = (
 				929D69742CEAD4D80073C9CC /* Alamofire in Frameworks */,
 				929D69772CEAD7A70073C9CC /* KakaoSDK in Frameworks */,
+				929D69D92CF466BD0073C9CC /* CombineMoya in Frameworks */,
 				925A3F5E2CE11757003164C4 /* SnapKit in Frameworks */,
 				925A3F622CE1176A003164C4 /* Then in Frameworks */,
+				929D69DD2CF466BD0073C9CC /* ReactiveMoya in Frameworks */,
+				929D69DF2CF466BD0073C9CC /* RxMoya in Frameworks */,
+				929D69DB2CF466BD0073C9CC /* Moya in Frameworks */,
 				929D69792CEAD7A70073C9CC /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,6 +177,7 @@
 				922D84332CD7DC0F00A861F4 /* ChallengeCollectionViewCell.swift */,
 				92D3BBFB2CE1023300665795 /* OtherColorCollectionViewCell.swift */,
 				925A3F672CE1264A003164C4 /* ProductSizeCollectionViewCell.swift */,
+				929D69D12CF413630073C9CC /* SearchedCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -214,10 +239,12 @@
 		923E396B2CAD3BF7007E2CD5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				929D69E12CF466E80073C9CC /* Network */,
 				923E396C2CAD3C08007E2CD5 /* LoginModel.swift */,
 				922D83DB2CD21A2400A861F4 /* SavedModel.swift */,
 				922D83E42CD2C23600A861F4 /* HomeModel.swift */,
 				92D3BBFD2CE1138900665795 /* ProductModel.swift */,
+				929D69CF2CF412A70073C9CC /* SearchedModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -234,6 +261,8 @@
 				922D83E62CD369E200A861F4 /* UnderBarCustom.swift */,
 				92D3BBF92CE0FFB100665795 /* ProductView.swift */,
 				925A3F652CE12378003164C4 /* BuyView.swift */,
+				929D69CD2CF4101B0073C9CC /* RecommenedSearchView.swift */,
+				929D69D32CF4531A0073C9CC /* UserSearchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -252,6 +281,8 @@
 				922D84372CD8B84B00A861F4 /* SearchResultViewController.swift */,
 				92D3BBF72CE0FF9E00665795 /* ProductViewController.swift */,
 				925A3F632CE1233B003164C4 /* BuyViewController.swift */,
+				929D69CB2CF40FCD0073C9CC /* RecommenedViewController.swift */,
+				929D69D52CF453350073C9CC /* UserSearchViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -262,6 +293,15 @@
 				929D697A2CEB278A0073C9CC /* KeyChain.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		929D69E12CF466E80073C9CC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				929D69E22CF466F60073C9CC /* SearchResultType.swift */,
+				929D69E42CF469E10073C9CC /* SearchResultModel.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +326,10 @@
 				929D69732CEAD4D80073C9CC /* Alamofire */,
 				929D69762CEAD7A70073C9CC /* KakaoSDK */,
 				929D69782CEAD7A70073C9CC /* KakaoSDKAuth */,
+				929D69D82CF466BD0073C9CC /* CombineMoya */,
+				929D69DA2CF466BD0073C9CC /* Moya */,
+				929D69DC2CF466BD0073C9CC /* ReactiveMoya */,
+				929D69DE2CF466BD0073C9CC /* RxMoya */,
 			);
 			productName = cloneKream;
 			productReference = 923E39382CAD3AF7007E2CD5 /* cloneKream.app */;
@@ -364,6 +408,7 @@
 				925A3F602CE1176A003164C4 /* XCRemoteSwiftPackageReference "Then" */,
 				929D69722CEAD4D80073C9CC /* XCRemoteSwiftPackageReference "Alamofire" */,
 				929D69752CEAD7A70073C9CC /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				929D69D72CF466BD0073C9CC /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 923E39392CAD3AF7007E2CD5 /* Products */;
 			projectDirPath = "";
@@ -409,11 +454,14 @@
 			files = (
 				92D3BBF82CE0FF9E00665795 /* ProductViewController.swift in Sources */,
 				923E39402CAD3AF7007E2CD5 /* LoginViewController.swift in Sources */,
+				929D69D02CF412A70073C9CC /* SearchedModel.swift in Sources */,
 				925A3F662CE12378003164C4 /* BuyView.swift in Sources */,
 				923E396D2CAD3C08007E2CD5 /* LoginModel.swift in Sources */,
+				929D69D42CF4531A0073C9CC /* UserSearchView.swift in Sources */,
 				923E397C2CAD6AC1007E2CD5 /* ShopViewController.swift in Sources */,
 				923E393C2CAD3AF7007E2CD5 /* AppDelegate.swift in Sources */,
 				923E39702CAD3C37007E2CD5 /* LoginView.swift in Sources */,
+				929D69CC2CF40FCD0073C9CC /* RecommenedViewController.swift in Sources */,
 				92D3BBFE2CE1138900665795 /* ProductModel.swift in Sources */,
 				922D83DA2CD219FC00A861F4 /* SavedTableViewCell.swift in Sources */,
 				925A3F682CE1264A003164C4 /* ProductSizeCollectionViewCell.swift in Sources */,
@@ -426,16 +474,21 @@
 				923E39862CAE87FE007E2CD5 /* ManageProfileViewController.swift in Sources */,
 				922D83DC2CD21A2400A861F4 /* SavedModel.swift in Sources */,
 				922D83E72CD369E200A861F4 /* UnderBarCustom.swift in Sources */,
+				929D69D62CF453350073C9CC /* UserSearchViewController.swift in Sources */,
+				929D69CE2CF4101B0073C9CC /* RecommenedSearchView.swift in Sources */,
+				929D69E32CF466F60073C9CC /* SearchResultType.swift in Sources */,
 				923E39822CAD7ADB007E2CD5 /* MyProfileView.swift in Sources */,
 				922D83D82CD219D900A861F4 /* SavedView.swift in Sources */,
 				92D3BBFC2CE1023300665795 /* OtherColorCollectionViewCell.swift in Sources */,
 				923E39802CAD6AD8007E2CD5 /* MyViewController.swift in Sources */,
 				923E39882CAE95A0007E2CD5 /* UITextFieldExtension.swift in Sources */,
 				923E393E2CAD3AF7007E2CD5 /* SceneDelegate.swift in Sources */,
+				929D69E52CF469E10073C9CC /* SearchResultModel.swift in Sources */,
 				922D83E52CD2C23600A861F4 /* HomeModel.swift in Sources */,
 				922D84342CD7DC0F00A861F4 /* ChallengeCollectionViewCell.swift in Sources */,
 				923E39782CAD6AA4007E2CD5 /* HomeViewController.swift in Sources */,
 				923E397E2CAD6ACE007E2CD5 /* SavedViewController.swift in Sources */,
+				929D69D22CF413630073C9CC /* SearchedCollectionViewCell.swift in Sources */,
 				923E39762CAD698B007E2CD5 /* BaseViewController.swift in Sources */,
 				922D84322CD7C3D900A861F4 /* JustDroppedCollectionViewCell.swift in Sources */,
 				929D697B2CEB278A0073C9CC /* KeyChain.swift in Sources */,
@@ -810,6 +863,14 @@
 				minimumVersion = 2.23.0;
 			};
 		};
+		929D69D72CF466BD0073C9CC /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -837,6 +898,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 929D69752CEAD7A70073C9CC /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
 			productName = KakaoSDKAuth;
+		};
+		929D69D82CF466BD0073C9CC /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 929D69D72CF466BD0073C9CC /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		929D69DA2CF466BD0073C9CC /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 929D69D72CF466BD0073C9CC /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		929D69DC2CF466BD0073C9CC /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 929D69D72CF466BD0073C9CC /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		929D69DE2CF466BD0073C9CC /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 929D69D72CF466BD0073C9CC /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
