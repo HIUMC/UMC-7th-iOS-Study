@@ -7,14 +7,14 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UISearchControllerDelegate {
+class HomeViewController: UIViewController, UISearchBarDelegate {
     
     private let rootView = HomeView()
     private var underbarAnimator: UnderbarAnimator?
     private var segmentedControlManager: SegmentedControlManager?
     
-    private lazy var searchController = UISearchController(searchResultsController: SearchResultViewController()).then {
-        $0.searchBar.placeholder = "브랜드, 상품, 프로필 태그 등"
+    private lazy var searchController = UISearchController().then {
+        $0.searchBar.placeholder = "브랜드, 상품, 프로필, 태그 등"
         $0.searchBar.setImage(UIImage(), for: .search, state: .normal)
         $0.hidesNavigationBarDuringPresentation = false
     }
@@ -33,18 +33,17 @@ class HomeViewController: UIViewController, UISearchControllerDelegate {
         
         
         self.navigationItem.titleView = searchController.searchBar
-        searchController.hidesNavigationBarDuringPresentation = false
-        
+        self.definesPresentationContext = true
         
         let alarmBarButton = UIBarButtonItem(image: .searchBarIcon, style: .plain, target: self, action: #selector(alarmButtonTapped))
         self.navigationItem.rightBarButtonItem  = alarmBarButton
-        
-        searchController.delegate = self
+    
         
         // UnderbarAnimator와 SegmentedControlManager 초기화
         underbarAnimator = UnderbarAnimator(underBarView: rootView.underBar, segmentedControl: rootView.segmentedControl)
         segmentedControlManager = SegmentedControlManager(segmentedControl: rootView.segmentedControl, underbarAnimator: underbarAnimator ?? UnderbarAnimator(underBarView: rootView.underBar, segmentedControl: rootView.segmentedControl))
     }
+    
     
     @objc private func alarmButtonTapped() {
         
@@ -100,11 +99,31 @@ class HomeViewController: UIViewController, UISearchControllerDelegate {
             }
         }*/
     
+    /*func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+            self.present(UINavigationController(rootViewController: RecommenedViewController()), animated: true, completion: nil)
+            searchBar.setShowsCancelButton(false, animated: true)
+            return false
+        }*/
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        let recommendedViewController = RecommenedViewController()
+        navigationController?.pushViewController(recommendedViewController, animated: true)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchBar.text = ""
+        searchBar.showsCancelButton = false
+    }
+    
+    
 
     private func setUpDelegate() {
         rootView.menuCollectionView.dataSource = self
         rootView.justDroppedCollectionView.dataSource = self
         rootView.challengeCollectionView.dataSource = self
+        
+        searchController.searchBar.delegate = self
     }
 
 }
