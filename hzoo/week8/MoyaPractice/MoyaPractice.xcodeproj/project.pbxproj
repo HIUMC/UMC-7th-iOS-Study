@@ -7,98 +7,90 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F053A1D2CB3AB3D004D7A10 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1F053A1C2CB3AB3D004D7A10 /* SnapKit */; };
-		1F053A652CB3EA3F004D7A10 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 1F053A642CB3EA3F004D7A10 /* Then */; };
-		1F8EC6D32CEA324C00245336 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8EC6D22CEA324C00245336 /* KakaoSDK */; };
-		1F8EC6D52CEA324C00245336 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8EC6D42CEA324C00245336 /* KakaoSDKAuth */; };
-		1F8EC6D72CEA324C00245336 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8EC6D62CEA324C00245336 /* KakaoSDKCommon */; };
-		1F8EC6D92CEA3E1E00245336 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1F8EC6D82CEA3E1E00245336 /* Secrets.xcconfig */; };
-		1F8ECA342CF381E500245336 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8ECA332CF381E500245336 /* CombineMoya */; };
-		1F8ECA362CF381E500245336 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8ECA352CF381E500245336 /* Moya */; };
-		1F8ECA382CF381E500245336 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8ECA372CF381E500245336 /* ReactiveMoya */; };
-		1F8ECA3A2CF381E500245336 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8ECA392CF381E500245336 /* RxMoya */; };
+		1F8EC96D2CF359C300245336 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8EC96C2CF359C300245336 /* CombineMoya */; };
+		1F8EC96F2CF359C300245336 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8EC96E2CF359C300245336 /* Moya */; };
+		1F8EC9712CF359C300245336 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8EC9702CF359C300245336 /* ReactiveMoya */; };
+		1F8EC9732CF359C300245336 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8EC9722CF359C300245336 /* RxMoya */; };
+		1F8EC9762CF359DC00245336 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8EC9752CF359DC00245336 /* SnapKit */; };
+		1F8EC9792CF359E400245336 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8EC9782CF359E400245336 /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1FC522D82CAD3F5100EC0635 /* PBXContainerItemProxy */ = {
+		1F8EC8DF2CF358AE00245336 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1FC522B92CAD3F4F00EC0635 /* Project object */;
+			containerPortal = 1F8EC8C02CF358AC00245336 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1FC522C02CAD3F4F00EC0635;
-			remoteInfo = KreamClone;
+			remoteGlobalIDString = 1F8EC8C72CF358AC00245336;
+			remoteInfo = MoyaPractice;
 		};
-		1FC522E22CAD3F5100EC0635 /* PBXContainerItemProxy */ = {
+		1F8EC8E92CF358AE00245336 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1FC522B92CAD3F4F00EC0635 /* Project object */;
+			containerPortal = 1F8EC8C02CF358AC00245336 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1FC522C02CAD3F4F00EC0635;
-			remoteInfo = KreamClone;
+			remoteGlobalIDString = 1F8EC8C72CF358AC00245336;
+			remoteInfo = MoyaPractice;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1F8EC6D82CEA3E1E00245336 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
-		1FC522C12CAD3F4F00EC0635 /* KreamClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KreamClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FC522D72CAD3F5100EC0635 /* KreamCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KreamCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FC522E12CAD3F5100EC0635 /* KreamCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KreamCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F8EC8C82CF358AC00245336 /* MoyaPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoyaPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F8EC8DE2CF358AE00245336 /* MoyaPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoyaPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F8EC8E82CF358AE00245336 /* MoyaPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoyaPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		1FC522E92CAD3F5100EC0635 /* Exceptions for "KreamClone" folder in "KreamClone" target */ = {
+		1F8EC8F02CF358AE00245336 /* Exceptions for "MoyaPractice" folder in "MoyaPractice" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 1FC522C02CAD3F4F00EC0635 /* KreamClone */;
+			target = 1F8EC8C72CF358AC00245336 /* MoyaPractice */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		1FC522C32CAD3F4F00EC0635 /* KreamClone */ = {
+		1F8EC8CA2CF358AC00245336 /* MoyaPractice */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				1FC522E92CAD3F5100EC0635 /* Exceptions for "KreamClone" folder in "KreamClone" target */,
+				1F8EC8F02CF358AE00245336 /* Exceptions for "MoyaPractice" folder in "MoyaPractice" target */,
 			);
-			path = KreamClone;
+			path = MoyaPractice;
 			sourceTree = "<group>";
 		};
-		1FC522DA2CAD3F5100EC0635 /* KreamCloneTests */ = {
+		1F8EC8E12CF358AE00245336 /* MoyaPracticeTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = KreamCloneTests;
+			path = MoyaPracticeTests;
 			sourceTree = "<group>";
 		};
-		1FC522E42CAD3F5100EC0635 /* KreamCloneUITests */ = {
+		1F8EC8EB2CF358AE00245336 /* MoyaPracticeUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = KreamCloneUITests;
+			path = MoyaPracticeUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1FC522BE2CAD3F4F00EC0635 /* Frameworks */ = {
+		1F8EC8C52CF358AC00245336 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F053A1D2CB3AB3D004D7A10 /* SnapKit in Frameworks */,
-				1F053A652CB3EA3F004D7A10 /* Then in Frameworks */,
-				1F8ECA342CF381E500245336 /* CombineMoya in Frameworks */,
-				1F8EC6D32CEA324C00245336 /* KakaoSDK in Frameworks */,
-				1F8EC6D72CEA324C00245336 /* KakaoSDKCommon in Frameworks */,
-				1F8ECA382CF381E500245336 /* ReactiveMoya in Frameworks */,
-				1F8ECA3A2CF381E500245336 /* RxMoya in Frameworks */,
-				1F8ECA362CF381E500245336 /* Moya in Frameworks */,
-				1F8EC6D52CEA324C00245336 /* KakaoSDKAuth in Frameworks */,
+				1F8EC96F2CF359C300245336 /* Moya in Frameworks */,
+				1F8EC9792CF359E400245336 /* Then in Frameworks */,
+				1F8EC96D2CF359C300245336 /* CombineMoya in Frameworks */,
+				1F8EC9732CF359C300245336 /* RxMoya in Frameworks */,
+				1F8EC9712CF359C300245336 /* ReactiveMoya in Frameworks */,
+				1F8EC9762CF359DC00245336 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1FC522D42CAD3F5100EC0635 /* Frameworks */ = {
+		1F8EC8DB2CF358AE00245336 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1FC522DE2CAD3F5100EC0635 /* Frameworks */ = {
+		1F8EC8E52CF358AE00245336 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -108,23 +100,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1FC522B82CAD3F4F00EC0635 = {
+		1F8EC8BF2CF358AC00245336 = {
 			isa = PBXGroup;
 			children = (
-				1F8EC6D82CEA3E1E00245336 /* Secrets.xcconfig */,
-				1FC522C32CAD3F4F00EC0635 /* KreamClone */,
-				1FC522DA2CAD3F5100EC0635 /* KreamCloneTests */,
-				1FC522E42CAD3F5100EC0635 /* KreamCloneUITests */,
-				1FC522C22CAD3F4F00EC0635 /* Products */,
+				1F8EC8CA2CF358AC00245336 /* MoyaPractice */,
+				1F8EC8E12CF358AE00245336 /* MoyaPracticeTests */,
+				1F8EC8EB2CF358AE00245336 /* MoyaPracticeUITests */,
+				1F8EC8C92CF358AC00245336 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		1FC522C22CAD3F4F00EC0635 /* Products */ = {
+		1F8EC8C92CF358AC00245336 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1FC522C12CAD3F4F00EC0635 /* KreamClone.app */,
-				1FC522D72CAD3F5100EC0635 /* KreamCloneTests.xctest */,
-				1FC522E12CAD3F5100EC0635 /* KreamCloneUITests.xctest */,
+				1F8EC8C82CF358AC00245336 /* MoyaPractice.app */,
+				1F8EC8DE2CF358AE00245336 /* MoyaPracticeTests.xctest */,
+				1F8EC8E82CF358AE00245336 /* MoyaPracticeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,150 +123,145 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1FC522C02CAD3F4F00EC0635 /* KreamClone */ = {
+		1F8EC8C72CF358AC00245336 /* MoyaPractice */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1FC522EA2CAD3F5100EC0635 /* Build configuration list for PBXNativeTarget "KreamClone" */;
+			buildConfigurationList = 1F8EC8F12CF358AE00245336 /* Build configuration list for PBXNativeTarget "MoyaPractice" */;
 			buildPhases = (
-				1FC522BD2CAD3F4F00EC0635 /* Sources */,
-				1FC522BE2CAD3F4F00EC0635 /* Frameworks */,
-				1FC522BF2CAD3F4F00EC0635 /* Resources */,
+				1F8EC8C42CF358AC00245336 /* Sources */,
+				1F8EC8C52CF358AC00245336 /* Frameworks */,
+				1F8EC8C62CF358AC00245336 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				1FC522C32CAD3F4F00EC0635 /* KreamClone */,
+				1F8EC8CA2CF358AC00245336 /* MoyaPractice */,
 			);
-			name = KreamClone;
+			name = MoyaPractice;
 			packageProductDependencies = (
-				1F053A1C2CB3AB3D004D7A10 /* SnapKit */,
-				1F053A642CB3EA3F004D7A10 /* Then */,
-				1F8EC6D22CEA324C00245336 /* KakaoSDK */,
-				1F8EC6D42CEA324C00245336 /* KakaoSDKAuth */,
-				1F8EC6D62CEA324C00245336 /* KakaoSDKCommon */,
-				1F8ECA332CF381E500245336 /* CombineMoya */,
-				1F8ECA352CF381E500245336 /* Moya */,
-				1F8ECA372CF381E500245336 /* ReactiveMoya */,
-				1F8ECA392CF381E500245336 /* RxMoya */,
+				1F8EC96C2CF359C300245336 /* CombineMoya */,
+				1F8EC96E2CF359C300245336 /* Moya */,
+				1F8EC9702CF359C300245336 /* ReactiveMoya */,
+				1F8EC9722CF359C300245336 /* RxMoya */,
+				1F8EC9752CF359DC00245336 /* SnapKit */,
+				1F8EC9782CF359E400245336 /* Then */,
 			);
-			productName = KreamClone;
-			productReference = 1FC522C12CAD3F4F00EC0635 /* KreamClone.app */;
+			productName = MoyaPractice;
+			productReference = 1F8EC8C82CF358AC00245336 /* MoyaPractice.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1FC522D62CAD3F5100EC0635 /* KreamCloneTests */ = {
+		1F8EC8DD2CF358AE00245336 /* MoyaPracticeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1FC522EF2CAD3F5100EC0635 /* Build configuration list for PBXNativeTarget "KreamCloneTests" */;
+			buildConfigurationList = 1F8EC8F62CF358AE00245336 /* Build configuration list for PBXNativeTarget "MoyaPracticeTests" */;
 			buildPhases = (
-				1FC522D32CAD3F5100EC0635 /* Sources */,
-				1FC522D42CAD3F5100EC0635 /* Frameworks */,
-				1FC522D52CAD3F5100EC0635 /* Resources */,
+				1F8EC8DA2CF358AE00245336 /* Sources */,
+				1F8EC8DB2CF358AE00245336 /* Frameworks */,
+				1F8EC8DC2CF358AE00245336 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1FC522D92CAD3F5100EC0635 /* PBXTargetDependency */,
+				1F8EC8E02CF358AE00245336 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				1FC522DA2CAD3F5100EC0635 /* KreamCloneTests */,
+				1F8EC8E12CF358AE00245336 /* MoyaPracticeTests */,
 			);
-			name = KreamCloneTests;
+			name = MoyaPracticeTests;
 			packageProductDependencies = (
 			);
-			productName = KreamCloneTests;
-			productReference = 1FC522D72CAD3F5100EC0635 /* KreamCloneTests.xctest */;
+			productName = MoyaPracticeTests;
+			productReference = 1F8EC8DE2CF358AE00245336 /* MoyaPracticeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1FC522E02CAD3F5100EC0635 /* KreamCloneUITests */ = {
+		1F8EC8E72CF358AE00245336 /* MoyaPracticeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1FC522F22CAD3F5100EC0635 /* Build configuration list for PBXNativeTarget "KreamCloneUITests" */;
+			buildConfigurationList = 1F8EC8F92CF358AE00245336 /* Build configuration list for PBXNativeTarget "MoyaPracticeUITests" */;
 			buildPhases = (
-				1FC522DD2CAD3F5100EC0635 /* Sources */,
-				1FC522DE2CAD3F5100EC0635 /* Frameworks */,
-				1FC522DF2CAD3F5100EC0635 /* Resources */,
+				1F8EC8E42CF358AE00245336 /* Sources */,
+				1F8EC8E52CF358AE00245336 /* Frameworks */,
+				1F8EC8E62CF358AE00245336 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1FC522E32CAD3F5100EC0635 /* PBXTargetDependency */,
+				1F8EC8EA2CF358AE00245336 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				1FC522E42CAD3F5100EC0635 /* KreamCloneUITests */,
+				1F8EC8EB2CF358AE00245336 /* MoyaPracticeUITests */,
 			);
-			name = KreamCloneUITests;
+			name = MoyaPracticeUITests;
 			packageProductDependencies = (
 			);
-			productName = KreamCloneUITests;
-			productReference = 1FC522E12CAD3F5100EC0635 /* KreamCloneUITests.xctest */;
+			productName = MoyaPracticeUITests;
+			productReference = 1F8EC8E82CF358AE00245336 /* MoyaPracticeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1FC522B92CAD3F4F00EC0635 /* Project object */ = {
+		1F8EC8C02CF358AC00245336 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1600;
-				LastUpgradeCheck = 1600;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
 				TargetAttributes = {
-					1FC522C02CAD3F4F00EC0635 = {
-						CreatedOnToolsVersion = 16.0;
+					1F8EC8C72CF358AC00245336 = {
+						CreatedOnToolsVersion = 16.1;
 					};
-					1FC522D62CAD3F5100EC0635 = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = 1FC522C02CAD3F4F00EC0635;
+					1F8EC8DD2CF358AE00245336 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 1F8EC8C72CF358AC00245336;
 					};
-					1FC522E02CAD3F5100EC0635 = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = 1FC522C02CAD3F4F00EC0635;
+					1F8EC8E72CF358AE00245336 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 1F8EC8C72CF358AC00245336;
 					};
 				};
 			};
-			buildConfigurationList = 1FC522BC2CAD3F4F00EC0635 /* Build configuration list for PBXProject "KreamClone" */;
+			buildConfigurationList = 1F8EC8C32CF358AC00245336 /* Build configuration list for PBXProject "MoyaPractice" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 1FC522B82CAD3F4F00EC0635;
+			mainGroup = 1F8EC8BF2CF358AC00245336;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				1F053A1B2CB3AB3D004D7A10 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				1F053A632CB3EA3F004D7A10 /* XCRemoteSwiftPackageReference "Then" */,
-				1F8EC6D12CEA324C00245336 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
-				1F8ECA322CF381E500245336 /* XCRemoteSwiftPackageReference "Moya" */,
+				1F8EC96B2CF359C300245336 /* XCRemoteSwiftPackageReference "Moya" */,
+				1F8EC9742CF359DC00245336 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				1F8EC9772CF359E400245336 /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 1FC522C22CAD3F4F00EC0635 /* Products */;
+			productRefGroup = 1F8EC8C92CF358AC00245336 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1FC522C02CAD3F4F00EC0635 /* KreamClone */,
-				1FC522D62CAD3F5100EC0635 /* KreamCloneTests */,
-				1FC522E02CAD3F5100EC0635 /* KreamCloneUITests */,
+				1F8EC8C72CF358AC00245336 /* MoyaPractice */,
+				1F8EC8DD2CF358AE00245336 /* MoyaPracticeTests */,
+				1F8EC8E72CF358AE00245336 /* MoyaPracticeUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1FC522BF2CAD3F4F00EC0635 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1F8EC6D92CEA3E1E00245336 /* Secrets.xcconfig in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1FC522D52CAD3F5100EC0635 /* Resources */ = {
+		1F8EC8C62CF358AC00245336 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1FC522DF2CAD3F5100EC0635 /* Resources */ = {
+		1F8EC8DC2CF358AE00245336 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F8EC8E62CF358AE00245336 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -285,21 +271,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1FC522BD2CAD3F4F00EC0635 /* Sources */ = {
+		1F8EC8C42CF358AC00245336 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1FC522D32CAD3F5100EC0635 /* Sources */ = {
+		1F8EC8DA2CF358AE00245336 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1FC522DD2CAD3F5100EC0635 /* Sources */ = {
+		1F8EC8E42CF358AE00245336 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -309,22 +295,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1FC522D92CAD3F5100EC0635 /* PBXTargetDependency */ = {
+		1F8EC8E02CF358AE00245336 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1FC522C02CAD3F4F00EC0635 /* KreamClone */;
-			targetProxy = 1FC522D82CAD3F5100EC0635 /* PBXContainerItemProxy */;
+			target = 1F8EC8C72CF358AC00245336 /* MoyaPractice */;
+			targetProxy = 1F8EC8DF2CF358AE00245336 /* PBXContainerItemProxy */;
 		};
-		1FC522E32CAD3F5100EC0635 /* PBXTargetDependency */ = {
+		1F8EC8EA2CF358AE00245336 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1FC522C02CAD3F4F00EC0635 /* KreamClone */;
-			targetProxy = 1FC522E22CAD3F5100EC0635 /* PBXContainerItemProxy */;
+			target = 1F8EC8C72CF358AC00245336 /* MoyaPractice */;
+			targetProxy = 1F8EC8E92CF358AE00245336 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1FC522EB2CAD3F5100EC0635 /* Debug */ = {
+		1F8EC8F22CF358AE00245336 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F8EC6D82CEA3E1E00245336 /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -332,7 +317,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UKY6HK6U6Y;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = KreamClone/Info.plist;
+				INFOPLIST_FILE = MoyaPractice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -343,7 +328,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.KreamClone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.MoyaPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -351,7 +336,7 @@
 			};
 			name = Debug;
 		};
-		1FC522EC2CAD3F5100EC0635 /* Release */ = {
+		1F8EC8F32CF358AE00245336 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -360,7 +345,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UKY6HK6U6Y;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = KreamClone/Info.plist;
+				INFOPLIST_FILE = MoyaPractice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -371,7 +356,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.KreamClone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.MoyaPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -379,7 +364,7 @@
 			};
 			name = Release;
 		};
-		1FC522ED2CAD3F5100EC0635 /* Debug */ = {
+		1F8EC8F42CF358AE00245336 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -431,7 +416,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -442,7 +427,7 @@
 			};
 			name = Debug;
 		};
-		1FC522EE2CAD3F5100EC0635 /* Release */ = {
+		1F8EC8F52CF358AE00245336 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -488,7 +473,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -498,27 +483,26 @@
 			};
 			name = Release;
 		};
-		1FC522F02CAD3F5100EC0635 /* Debug */ = {
+		1F8EC8F72CF358AE00245336 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F8EC6D82CEA3E1E00245336 /* Secrets.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UKY6HK6U6Y;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.KreamCloneTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.MoyaPracticeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KreamClone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KreamClone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoyaPractice.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MoyaPractice";
 			};
 			name = Debug;
 		};
-		1FC522F12CAD3F5100EC0635 /* Release */ = {
+		1F8EC8F82CF358AE00245336 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -526,18 +510,18 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UKY6HK6U6Y;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.KreamCloneTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.MoyaPracticeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KreamClone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KreamClone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoyaPractice.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MoyaPractice";
 			};
 			name = Release;
 		};
-		1FC522F32CAD3F5100EC0635 /* Debug */ = {
+		1F8EC8FA2CF358AE00245336 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -545,16 +529,16 @@
 				DEVELOPMENT_TEAM = UKY6HK6U6Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.KreamCloneUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.MoyaPracticeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = KreamClone;
+				TEST_TARGET_NAME = MoyaPractice;
 			};
 			name = Debug;
 		};
-		1FC522F42CAD3F5100EC0635 /* Release */ = {
+		1F8EC8FB2CF358AE00245336 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -562,50 +546,50 @@
 				DEVELOPMENT_TEAM = UKY6HK6U6Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.KreamCloneUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.MoyaPracticeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = KreamClone;
+				TEST_TARGET_NAME = MoyaPractice;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1FC522BC2CAD3F4F00EC0635 /* Build configuration list for PBXProject "KreamClone" */ = {
+		1F8EC8C32CF358AC00245336 /* Build configuration list for PBXProject "MoyaPractice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1FC522ED2CAD3F5100EC0635 /* Debug */,
-				1FC522EE2CAD3F5100EC0635 /* Release */,
+				1F8EC8F42CF358AE00245336 /* Debug */,
+				1F8EC8F52CF358AE00245336 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1FC522EA2CAD3F5100EC0635 /* Build configuration list for PBXNativeTarget "KreamClone" */ = {
+		1F8EC8F12CF358AE00245336 /* Build configuration list for PBXNativeTarget "MoyaPractice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1FC522EB2CAD3F5100EC0635 /* Debug */,
-				1FC522EC2CAD3F5100EC0635 /* Release */,
+				1F8EC8F22CF358AE00245336 /* Debug */,
+				1F8EC8F32CF358AE00245336 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1FC522EF2CAD3F5100EC0635 /* Build configuration list for PBXNativeTarget "KreamCloneTests" */ = {
+		1F8EC8F62CF358AE00245336 /* Build configuration list for PBXNativeTarget "MoyaPracticeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1FC522F02CAD3F5100EC0635 /* Debug */,
-				1FC522F12CAD3F5100EC0635 /* Release */,
+				1F8EC8F72CF358AE00245336 /* Debug */,
+				1F8EC8F82CF358AE00245336 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1FC522F22CAD3F5100EC0635 /* Build configuration list for PBXNativeTarget "KreamCloneUITests" */ = {
+		1F8EC8F92CF358AE00245336 /* Build configuration list for PBXNativeTarget "MoyaPracticeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1FC522F32CAD3F5100EC0635 /* Debug */,
-				1FC522F42CAD3F5100EC0635 /* Release */,
+				1F8EC8FA2CF358AE00245336 /* Debug */,
+				1F8EC8FB2CF358AE00245336 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -613,31 +597,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1F053A1B2CB3AB3D004D7A10 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.7.1;
-			};
-		};
-		1F053A632CB3EA3F004D7A10 /* XCRemoteSwiftPackageReference "Then" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/devxoul/Then";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
-		1F8EC6D12CEA324C00245336 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.23.0;
-			};
-		};
-		1F8ECA322CF381E500245336 /* XCRemoteSwiftPackageReference "Moya" */ = {
+		1F8EC96B2CF359C300245336 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya";
 			requirement = {
@@ -645,55 +605,56 @@
 				minimumVersion = 15.0.3;
 			};
 		};
+		1F8EC9742CF359DC00245336 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		1F8EC9772CF359E400245336 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1F053A1C2CB3AB3D004D7A10 /* SnapKit */ = {
+		1F8EC96C2CF359C300245336 /* CombineMoya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1F053A1B2CB3AB3D004D7A10 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		1F053A642CB3EA3F004D7A10 /* Then */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1F053A632CB3EA3F004D7A10 /* XCRemoteSwiftPackageReference "Then" */;
-			productName = Then;
-		};
-		1F8EC6D22CEA324C00245336 /* KakaoSDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1F8EC6D12CEA324C00245336 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
-			productName = KakaoSDK;
-		};
-		1F8EC6D42CEA324C00245336 /* KakaoSDKAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1F8EC6D12CEA324C00245336 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
-			productName = KakaoSDKAuth;
-		};
-		1F8EC6D62CEA324C00245336 /* KakaoSDKCommon */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1F8EC6D12CEA324C00245336 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
-			productName = KakaoSDKCommon;
-		};
-		1F8ECA332CF381E500245336 /* CombineMoya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1F8ECA322CF381E500245336 /* XCRemoteSwiftPackageReference "Moya" */;
+			package = 1F8EC96B2CF359C300245336 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = CombineMoya;
 		};
-		1F8ECA352CF381E500245336 /* Moya */ = {
+		1F8EC96E2CF359C300245336 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1F8ECA322CF381E500245336 /* XCRemoteSwiftPackageReference "Moya" */;
+			package = 1F8EC96B2CF359C300245336 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
 		};
-		1F8ECA372CF381E500245336 /* ReactiveMoya */ = {
+		1F8EC9702CF359C300245336 /* ReactiveMoya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1F8ECA322CF381E500245336 /* XCRemoteSwiftPackageReference "Moya" */;
+			package = 1F8EC96B2CF359C300245336 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = ReactiveMoya;
 		};
-		1F8ECA392CF381E500245336 /* RxMoya */ = {
+		1F8EC9722CF359C300245336 /* RxMoya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1F8ECA322CF381E500245336 /* XCRemoteSwiftPackageReference "Moya" */;
+			package = 1F8EC96B2CF359C300245336 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = RxMoya;
+		};
+		1F8EC9752CF359DC00245336 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F8EC9742CF359DC00245336 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		1F8EC9782CF359E400245336 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F8EC9772CF359E400245336 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 1FC522B92CAD3F4F00EC0635 /* Project object */;
+	rootObject = 1F8EC8C02CF358AC00245336 /* Project object */;
 }
