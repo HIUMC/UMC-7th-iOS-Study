@@ -46,6 +46,13 @@ class ChallengeCollectionViewCell: UICollectionViewCell {
         }
         
     }
+    
+    public func loadImage(from url: String) {
+        if let imageURL = URL(string: url) {
+            imageView.kf.setImage(with: imageURL)
+        }
+    }
+
 }
 
     
