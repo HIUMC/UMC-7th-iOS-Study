@@ -1,0 +1,167 @@
+//
+//  HomeViewController.swift
+//  KREAM
+//
+//  Created by 이태림 on 10/8/24.
+//
+
+import UIKit
+
+class HomeViewController: UIViewController {
+    
+    private lazy var emptyview = UIView().then {
+        $0.backgroundColor = .white
+    }
+    
+    private lazy var homeview = HomeView().then {
+        $0.backgroundColor = .white
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view = homeview
+        
+        homeview.searchButton.addTarget(self, action: #selector(search), for: .touchUpInside)
+        homeview.segmentedControl.addTarget(self, action: #selector(segmentChanged(segment:)), for: .valueChanged)
+        setupDelegate()
+        releasedsetupDelegate()
+        MustItemsetupDelegate()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    }
+    
+    private func setupDelegate() {
+        homeview.HomeCollectionView.dataSource = self
+        homeview.HomeCollectionView.tag = 1
+    }
+    
+    private func releasedsetupDelegate() {
+        homeview.ReleasedCollectionView.delegate = self
+        homeview.ReleasedCollectionView.dataSource = self
+        homeview.ReleasedCollectionView.tag = 2
+    }
+    
+    private func MustItemsetupDelegate() {
+        homeview.MustItemCollectionView.dataSource = self
+        homeview.MustItemCollectionView.tag = 3
+    }
+    
+    @objc
+    func search() {
+        let viewcontroller = SearchViewController()
+        
+        viewcontroller.hidesBottomBarWhenPushed = false
+        viewcontroller.modalPresentationStyle = .fullScreen
+
+        present(viewcontroller, animated: true)
+    }
+    
+    
+    @objc private func segmentChanged(segment: UISegmentedControl) {
+        
+        UIView.animate(withDuration: 0.1, animations: {
+            self.homeview.updateunderlineView(index: segment.selectedSegmentIndex)
+            self.homeview.layoutIfNeeded()
+        })
+        
+        if homeview.segmentedControl.selectedSegmentIndex == 0 {
+            homeview.HomeCollectionView.isHidden = false
+            homeview.dontlateimage.isHidden = false
+            homeview.MustItemCollectionView.isHidden = false
+            homeview.ReleasedCollectionView.isHidden = false
+            homeview.separateview1.isHidden = false
+            homeview.separateview2.isHidden = false
+            homeview.dropLabel.isHidden = false
+            homeview.releasedLabel.isHidden = false
+            homeview.mustitLabel.isHidden = false
+            homeview.happyLabel.isHidden = false
+            emptyview.isHidden = true
+            
+        }
+        else {
+            homeview.HomeCollectionView.isHidden = true
+            homeview.dontlateimage.isHidden = true
+            homeview.MustItemCollectionView.isHidden = true
+            homeview.ReleasedCollectionView.isHidden = true
+            homeview.separateview1.isHidden = true
+            homeview.separateview2.isHidden = true
+            homeview.dropLabel.isHidden = true
+            homeview.releasedLabel.isHidden = true
+            homeview.mustitLabel.isHidden = true
+            homeview.happyLabel.isHidden = true
+            emptyview.isHidden = false
+        }
+    }
+}
+
+
+extension HomeViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView.tag == 1 {
+            return HomeModel.dummy().count
+        }
+        else if collectionView.tag == 2 {
+            return ReleasedModel.releaseddummy().count // 새로운 모델 사용
+        }
+        else if collectionView.tag == 3 {
+            return MustItemModel.mustitemdummy().count
+        }
+        return 0
+    }
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if collectionView.tag == 1 {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            _ = HomeModel.dummy()
+            
+            cell.imageview.image = HomeModel.dummy()[indexPath.row].image
+            cell.titleLabel.text = HomeModel.dummy()[indexPath.row].name
+            
+            return cell
+        }
+        else if collectionView.tag == 2 {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReleasedCollectionViewCell.identifier, for: indexPath) as? ReleasedCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            
+            let list = ReleasedModel.releaseddummy()
+            
+            cell.releasedconfigure(model: list[indexPath.row])
+            
+            return cell
+        }
+        else if collectionView.tag == 3 {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MustItemCollectionViewCell.identifier, for: indexPath) as? MustItemCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            
+            let list = MustItemModel.mustitemdummy()
+            
+            cell.mustitemconfigure(model: list[indexPath.row])
+            
+            return cell
+        }
+        
+        return UICollectionViewCell()
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView.tag == 2 {
+            let detailViewController = DetailViewController()
+            detailViewController.hidesBottomBarWhenPushed = true
+            detailViewController.receivedreleasedData = ReleasedModel.releaseddummy()[indexPath.row]
+            navigationController?.pushViewController(detailViewController, animated: true)
+        }
+    }
+}
+
