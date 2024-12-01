@@ -20,6 +20,7 @@ class searchViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //이렇게 할 필요없이 컨텐츠뷰로 해도됨 UIView 안넣어도됨!
     lazy var back = UIView().then {
         $0.backgroundColor = UIColor(hexCode: "F6F6F6")
         $0.clipsToBounds = true
