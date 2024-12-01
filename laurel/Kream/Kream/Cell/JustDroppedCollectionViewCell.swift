@@ -7,9 +7,9 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 class JustDroppedCollectionViewCell: UICollectionViewCell {
-    
     static let identifier = "JustDroppedCollectionViewCell"
     
     private lazy var productImageView: UIImageView = {
@@ -63,13 +63,11 @@ class JustDroppedCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(productImageView)
         contentView.addSubview(stackView)
         
-        // 이미지 뷰 제약 조건 설정
         productImageView.snp.makeConstraints { make in
             make.top.leading.trailing.equalToSuperview()
-            make.height.equalTo(contentView.snp.width) // 정사각형으로 설정
+            make.height.equalTo(contentView.snp.width) // 정사각형 비율 유지
         }
         
-        // 스택 뷰 제약 조건 설정
         stackView.snp.makeConstraints { make in
             make.top.equalTo(productImageView.snp.bottom).offset(8)
             make.leading.trailing.equalToSuperview()
@@ -78,7 +76,7 @@ class JustDroppedCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(with model: JustDroppedModel) {
-        productImageView.image = UIImage(named: model.image)
+        productImageView.kf.setImage(with: URL(string: model.image)) // Kingfisher 적용
         nameLabel.text = model.name
         descriptionLabel.text = model.description
         priceLabel.text = "\(model.price)원"
