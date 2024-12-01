@@ -27,6 +27,12 @@ class DetailView: UIView {
         return image
     }()
     
+    public func loadImage(from url: String) {
+        if let imageURL = URL(string: url) {
+            productimage.kf.setImage(with: imageURL)
+        }
+    }
+    
     public lazy var DetailCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout().then {
         $0.estimatedItemSize = .init(width: 53, height: 53)
         $0.minimumInteritemSpacing = 8

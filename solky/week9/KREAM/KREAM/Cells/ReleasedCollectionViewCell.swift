@@ -65,6 +65,12 @@ class ReleasedCollectionViewCell: UICollectionViewCell {
         $0.numberOfLines = 0
     }
     
+    public func loadImage(from url: String) {
+        if let imageURL = URL(string: url) {
+            imageview.kf.setImage(with: imageURL)
+        }
+    }
+    
     private func setViews() {
         addSubview(imageview)
         addSubview(volumeLabel)
@@ -122,7 +128,7 @@ class ReleasedCollectionViewCell: UICollectionViewCell {
     }
     
     public func releasedconfigure(model: ReleasedModel) {
-        self.imageview.image = UIImage(named: model.image)
+        self.loadImage(from: model.image)
         self.volumeLabel.text = model.volumename
         self.savedScrapButton.setImage(UIImage(named: model.savedimage), for: .normal)
         self.brandLabel.text = model.brandname

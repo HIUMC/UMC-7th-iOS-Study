@@ -25,7 +25,8 @@ class DetailViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = backButton
         
         if let data = receivedreleasedData {
-            detailview.productimage.image = UIImage(named: data.image)
+            
+            detailview.loadImage(from: data.image)
             detailview.nowbuyLabel.text = data.rightbuyname
             detailview.detailpriceLabel.text = data.pricename
             detailview.detailproductLabel.text = data.productname
@@ -35,6 +36,7 @@ class DetailViewController: UIViewController {
         
         detailview.buybutton.addTarget(self, action: #selector(didTappedbuybutton), for: .touchUpInside)
     }
+    
     
     private func detailDelegate() {
         detailview.DetailCollectionView.dataSource = self
