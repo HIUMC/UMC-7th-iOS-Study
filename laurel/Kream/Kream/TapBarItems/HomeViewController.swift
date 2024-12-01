@@ -6,7 +6,10 @@
 //
 
 import UIKit
+
 import SnapKit
+import Kingfisher
+
 
 class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -313,12 +316,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         if collectionView == justDroppedCollectionView {
             return DummyJustDroppedData.items.count
         } else if collectionView == winterCollectionView {
-            return winterItems.count
+            return DummyWinterData.items.count
         } else {
             return homeItems.count
         }
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == justDroppedCollectionView {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: JustDroppedCollectionViewCell.identifier, for: indexPath) as? JustDroppedCollectionViewCell else {
@@ -331,7 +334,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WinterCollectionViewCell.identifier, for: indexPath) as? WinterCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            cell.configure(with: winterItems[indexPath.item]) // Winter 이미지 설정
+            let item = DummyWinterData.items[indexPath.item]
+            cell.configure(with: item) // WinterModel만 전달
             return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell else {
@@ -343,8 +347,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
     }
 }
-
-
 
 extension UIView {
     static func separatorView(borderColor: UIColor = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1), borderWidth: CGFloat = 1) -> UIView {
