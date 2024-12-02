@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeViewController: UIViewController, UISearchBarDelegate {
     
@@ -157,7 +158,7 @@ extension HomeViewController: UICollectionViewDataSource {
         } else if collectionView.tag == 1 {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: JustDroppedCollectionViewCell.identifier, for: indexPath) as? JustDroppedCollectionViewCell else { return UICollectionViewCell() }
             let list = JustDroppedModel.dummy()
-            cell.imageView.image = list[indexPath.row].image
+            cell.loadImage(from: list[indexPath.row].image)
             cell.brandLabel.text = list[indexPath.row].brandName
             cell.productLabel.text = list[indexPath.row].productName
             cell.priceLabel.text = "\(list[indexPath.row].price)원"
@@ -166,7 +167,7 @@ extension HomeViewController: UICollectionViewDataSource {
         } else if collectionView.tag == 2 {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChallengeCollectionViewCell.identifier, for: indexPath) as? ChallengeCollectionViewCell else { return UICollectionViewCell() }
             let list = ChallengeModel.dummy()
-            cell.imageView.image = list[indexPath.row].image
+            cell.loadImage(from: list[indexPath.row].image)
             cell.userId.text = list[indexPath.row].userId
             return cell
         } else {

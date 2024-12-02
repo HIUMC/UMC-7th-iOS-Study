@@ -113,6 +113,12 @@ class JustDroppedCollectionViewCell: UICollectionViewCell {
             $0.trailing.equalTo(imageView.snp.trailing).offset(-10)
         }
     }
+    
+    public func loadImage(from url: String) {
+        if let imageURL = URL(string: url) {
+            imageView.kf.setImage(with: imageURL)
+        }
+    }
 
 }
 

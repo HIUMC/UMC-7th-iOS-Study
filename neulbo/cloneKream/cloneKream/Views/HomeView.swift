@@ -31,8 +31,6 @@ class HomeView: UIView {
     }
     
     
-    //let segmentedControl = CustomSegmentedControl(items: ["추천", "랭킹", "발매정보", "럭셔리", "남성", "여성"])
-    
     
     let segmentedControl = UISegmentedControl(items: ["추천", "랭킹", "발매정보", "럭셔리", "남성", "여성"]).then {
 
@@ -244,6 +242,8 @@ class HomeView: UIView {
         }
         
     }
+    
+    
     
 
 
