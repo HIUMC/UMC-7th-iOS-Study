@@ -38,6 +38,7 @@ class SearchDetailViewController: UIViewController {
         self.dismiss(animated: false) { [weak self] in
             self?.parentNavigationController?.popToRootViewController(animated: false)
         }
+        self.presentingViewController?.navigationController?.popToRootViewController(animated: false)
     }
     @objc private func onValueChanged(sender: UITextField) {
         print(sender.text)
