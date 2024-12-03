@@ -126,7 +126,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             let list = DroppedModel.list()
             
             cell.trade.text = "거래 " + list[indexPath.row].trade
-            cell.image.image = list[indexPath.row].image
+            cell.loadImage(from: list[indexPath.row].image)
             cell.brand.text = list[indexPath.row].brand
             cell.name.text = list[indexPath.row].name
             cell.price.text = list[indexPath.row].price + "원"
@@ -137,7 +137,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChallengeCollectionViewCell.identifier, for: indexPath) as! ChallengeCollectionViewCell
             let list = ChallengeModel.list()
             
-            cell.image.image = list[indexPath.row].image
+            cell.loadImage(from: list[indexPath.row].image)
             cell.id.text = "@" + list[indexPath.row].id
             
             return cell
