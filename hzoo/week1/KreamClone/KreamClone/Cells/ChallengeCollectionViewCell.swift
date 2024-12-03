@@ -41,6 +41,12 @@ class ChallengeCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    public func loadImage(from url: String) {
+        if let imageURL = URL(string: url) {
+            image.kf.setImage(with: imageURL)
+        }
+    }
+    
     private func setUpView() {
         addSubview(image)
         image.addSubview(id)

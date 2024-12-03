@@ -7,100 +7,84 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F053A1D2CB3AB3D004D7A10 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1F053A1C2CB3AB3D004D7A10 /* SnapKit */; };
-		1F053A652CB3EA3F004D7A10 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 1F053A642CB3EA3F004D7A10 /* Then */; };
-		1F6B30882CFB037F008F58EF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1F6B30872CFB037F008F58EF /* Kingfisher */; };
-		1F8EC6D32CEA324C00245336 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8EC6D22CEA324C00245336 /* KakaoSDK */; };
-		1F8EC6D52CEA324C00245336 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8EC6D42CEA324C00245336 /* KakaoSDKAuth */; };
-		1F8EC6D72CEA324C00245336 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8EC6D62CEA324C00245336 /* KakaoSDKCommon */; };
-		1F8EC6D92CEA3E1E00245336 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1F8EC6D82CEA3E1E00245336 /* Secrets.xcconfig */; };
-		1F8ECA342CF381E500245336 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8ECA332CF381E500245336 /* CombineMoya */; };
-		1F8ECA362CF381E500245336 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8ECA352CF381E500245336 /* Moya */; };
-		1F8ECA382CF381E500245336 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8ECA372CF381E500245336 /* ReactiveMoya */; };
-		1F8ECA3A2CF381E500245336 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8ECA392CF381E500245336 /* RxMoya */; };
+		1F6B30132CFAEDA2008F58EF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1F6B30122CFAEDA2008F58EF /* SnapKit */; };
+		1F6B30162CFAEDAB008F58EF /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 1F6B30152CFAEDAB008F58EF /* Then */; };
+		1F6B30192CFAEDEB008F58EF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1F6B30182CFAEDEB008F58EF /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1FC522D82CAD3F5100EC0635 /* PBXContainerItemProxy */ = {
+		1F6B2F482CFAEC23008F58EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1FC522B92CAD3F4F00EC0635 /* Project object */;
+			containerPortal = 1F6B2F292CFAEC21008F58EF /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1FC522C02CAD3F4F00EC0635;
-			remoteInfo = KreamClone;
+			remoteGlobalIDString = 1F6B2F302CFAEC21008F58EF;
+			remoteInfo = shinChanPractice;
 		};
-		1FC522E22CAD3F5100EC0635 /* PBXContainerItemProxy */ = {
+		1F6B2F522CFAEC23008F58EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1FC522B92CAD3F4F00EC0635 /* Project object */;
+			containerPortal = 1F6B2F292CFAEC21008F58EF /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1FC522C02CAD3F4F00EC0635;
-			remoteInfo = KreamClone;
+			remoteGlobalIDString = 1F6B2F302CFAEC21008F58EF;
+			remoteInfo = shinChanPractice;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1F8EC6D82CEA3E1E00245336 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
-		1FC522C12CAD3F4F00EC0635 /* KreamClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KreamClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FC522D72CAD3F5100EC0635 /* KreamCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KreamCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FC522E12CAD3F5100EC0635 /* KreamCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KreamCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F6B2F312CFAEC21008F58EF /* shinChanPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shinChanPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F6B2F472CFAEC23008F58EF /* shinChanPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = shinChanPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F6B2F512CFAEC23008F58EF /* shinChanPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = shinChanPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		1FC522E92CAD3F5100EC0635 /* Exceptions for "KreamClone" folder in "KreamClone" target */ = {
+		1F6B2F592CFAEC23008F58EF /* Exceptions for "shinChanPractice" folder in "shinChanPractice" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 1FC522C02CAD3F4F00EC0635 /* KreamClone */;
+			target = 1F6B2F302CFAEC21008F58EF /* shinChanPractice */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		1FC522C32CAD3F4F00EC0635 /* KreamClone */ = {
+		1F6B2F332CFAEC21008F58EF /* shinChanPractice */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				1FC522E92CAD3F5100EC0635 /* Exceptions for "KreamClone" folder in "KreamClone" target */,
+				1F6B2F592CFAEC23008F58EF /* Exceptions for "shinChanPractice" folder in "shinChanPractice" target */,
 			);
-			path = KreamClone;
+			path = shinChanPractice;
 			sourceTree = "<group>";
 		};
-		1FC522DA2CAD3F5100EC0635 /* KreamCloneTests */ = {
+		1F6B2F4A2CFAEC23008F58EF /* shinChanPracticeTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = KreamCloneTests;
+			path = shinChanPracticeTests;
 			sourceTree = "<group>";
 		};
-		1FC522E42CAD3F5100EC0635 /* KreamCloneUITests */ = {
+		1F6B2F542CFAEC23008F58EF /* shinChanPracticeUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = KreamCloneUITests;
+			path = shinChanPracticeUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1FC522BE2CAD3F4F00EC0635 /* Frameworks */ = {
+		1F6B2F2E2CFAEC21008F58EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F053A1D2CB3AB3D004D7A10 /* SnapKit in Frameworks */,
-				1F053A652CB3EA3F004D7A10 /* Then in Frameworks */,
-				1F8ECA342CF381E500245336 /* CombineMoya in Frameworks */,
-				1F8EC6D32CEA324C00245336 /* KakaoSDK in Frameworks */,
-				1F6B30882CFB037F008F58EF /* Kingfisher in Frameworks */,
-				1F8EC6D72CEA324C00245336 /* KakaoSDKCommon in Frameworks */,
-				1F8ECA382CF381E500245336 /* ReactiveMoya in Frameworks */,
-				1F8ECA3A2CF381E500245336 /* RxMoya in Frameworks */,
-				1F8ECA362CF381E500245336 /* Moya in Frameworks */,
-				1F8EC6D52CEA324C00245336 /* KakaoSDKAuth in Frameworks */,
+				1F6B30192CFAEDEB008F58EF /* Kingfisher in Frameworks */,
+				1F6B30132CFAEDA2008F58EF /* SnapKit in Frameworks */,
+				1F6B30162CFAEDAB008F58EF /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1FC522D42CAD3F5100EC0635 /* Frameworks */ = {
+		1F6B2F442CFAEC23008F58EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1FC522DE2CAD3F5100EC0635 /* Frameworks */ = {
+		1F6B2F4E2CFAEC23008F58EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -110,23 +94,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1FC522B82CAD3F4F00EC0635 = {
+		1F6B2F282CFAEC21008F58EF = {
 			isa = PBXGroup;
 			children = (
-				1F8EC6D82CEA3E1E00245336 /* Secrets.xcconfig */,
-				1FC522C32CAD3F4F00EC0635 /* KreamClone */,
-				1FC522DA2CAD3F5100EC0635 /* KreamCloneTests */,
-				1FC522E42CAD3F5100EC0635 /* KreamCloneUITests */,
-				1FC522C22CAD3F4F00EC0635 /* Products */,
+				1F6B2F332CFAEC21008F58EF /* shinChanPractice */,
+				1F6B2F4A2CFAEC23008F58EF /* shinChanPracticeTests */,
+				1F6B2F542CFAEC23008F58EF /* shinChanPracticeUITests */,
+				1F6B2F322CFAEC21008F58EF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		1FC522C22CAD3F4F00EC0635 /* Products */ = {
+		1F6B2F322CFAEC21008F58EF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1FC522C12CAD3F4F00EC0635 /* KreamClone.app */,
-				1FC522D72CAD3F5100EC0635 /* KreamCloneTests.xctest */,
-				1FC522E12CAD3F5100EC0635 /* KreamCloneUITests.xctest */,
+				1F6B2F312CFAEC21008F58EF /* shinChanPractice.app */,
+				1F6B2F472CFAEC23008F58EF /* shinChanPracticeTests.xctest */,
+				1F6B2F512CFAEC23008F58EF /* shinChanPracticeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,152 +117,142 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1FC522C02CAD3F4F00EC0635 /* KreamClone */ = {
+		1F6B2F302CFAEC21008F58EF /* shinChanPractice */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1FC522EA2CAD3F5100EC0635 /* Build configuration list for PBXNativeTarget "KreamClone" */;
+			buildConfigurationList = 1F6B2F5A2CFAEC23008F58EF /* Build configuration list for PBXNativeTarget "shinChanPractice" */;
 			buildPhases = (
-				1FC522BD2CAD3F4F00EC0635 /* Sources */,
-				1FC522BE2CAD3F4F00EC0635 /* Frameworks */,
-				1FC522BF2CAD3F4F00EC0635 /* Resources */,
+				1F6B2F2D2CFAEC21008F58EF /* Sources */,
+				1F6B2F2E2CFAEC21008F58EF /* Frameworks */,
+				1F6B2F2F2CFAEC21008F58EF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				1FC522C32CAD3F4F00EC0635 /* KreamClone */,
+				1F6B2F332CFAEC21008F58EF /* shinChanPractice */,
 			);
-			name = KreamClone;
+			name = shinChanPractice;
 			packageProductDependencies = (
-				1F053A1C2CB3AB3D004D7A10 /* SnapKit */,
-				1F053A642CB3EA3F004D7A10 /* Then */,
-				1F8EC6D22CEA324C00245336 /* KakaoSDK */,
-				1F8EC6D42CEA324C00245336 /* KakaoSDKAuth */,
-				1F8EC6D62CEA324C00245336 /* KakaoSDKCommon */,
-				1F8ECA332CF381E500245336 /* CombineMoya */,
-				1F8ECA352CF381E500245336 /* Moya */,
-				1F8ECA372CF381E500245336 /* ReactiveMoya */,
-				1F8ECA392CF381E500245336 /* RxMoya */,
-				1F6B30872CFB037F008F58EF /* Kingfisher */,
+				1F6B30122CFAEDA2008F58EF /* SnapKit */,
+				1F6B30152CFAEDAB008F58EF /* Then */,
+				1F6B30182CFAEDEB008F58EF /* Kingfisher */,
 			);
-			productName = KreamClone;
-			productReference = 1FC522C12CAD3F4F00EC0635 /* KreamClone.app */;
+			productName = shinChanPractice;
+			productReference = 1F6B2F312CFAEC21008F58EF /* shinChanPractice.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1FC522D62CAD3F5100EC0635 /* KreamCloneTests */ = {
+		1F6B2F462CFAEC23008F58EF /* shinChanPracticeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1FC522EF2CAD3F5100EC0635 /* Build configuration list for PBXNativeTarget "KreamCloneTests" */;
+			buildConfigurationList = 1F6B2F5F2CFAEC23008F58EF /* Build configuration list for PBXNativeTarget "shinChanPracticeTests" */;
 			buildPhases = (
-				1FC522D32CAD3F5100EC0635 /* Sources */,
-				1FC522D42CAD3F5100EC0635 /* Frameworks */,
-				1FC522D52CAD3F5100EC0635 /* Resources */,
+				1F6B2F432CFAEC23008F58EF /* Sources */,
+				1F6B2F442CFAEC23008F58EF /* Frameworks */,
+				1F6B2F452CFAEC23008F58EF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1FC522D92CAD3F5100EC0635 /* PBXTargetDependency */,
+				1F6B2F492CFAEC23008F58EF /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				1FC522DA2CAD3F5100EC0635 /* KreamCloneTests */,
+				1F6B2F4A2CFAEC23008F58EF /* shinChanPracticeTests */,
 			);
-			name = KreamCloneTests;
+			name = shinChanPracticeTests;
 			packageProductDependencies = (
 			);
-			productName = KreamCloneTests;
-			productReference = 1FC522D72CAD3F5100EC0635 /* KreamCloneTests.xctest */;
+			productName = shinChanPracticeTests;
+			productReference = 1F6B2F472CFAEC23008F58EF /* shinChanPracticeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1FC522E02CAD3F5100EC0635 /* KreamCloneUITests */ = {
+		1F6B2F502CFAEC23008F58EF /* shinChanPracticeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1FC522F22CAD3F5100EC0635 /* Build configuration list for PBXNativeTarget "KreamCloneUITests" */;
+			buildConfigurationList = 1F6B2F622CFAEC23008F58EF /* Build configuration list for PBXNativeTarget "shinChanPracticeUITests" */;
 			buildPhases = (
-				1FC522DD2CAD3F5100EC0635 /* Sources */,
-				1FC522DE2CAD3F5100EC0635 /* Frameworks */,
-				1FC522DF2CAD3F5100EC0635 /* Resources */,
+				1F6B2F4D2CFAEC23008F58EF /* Sources */,
+				1F6B2F4E2CFAEC23008F58EF /* Frameworks */,
+				1F6B2F4F2CFAEC23008F58EF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1FC522E32CAD3F5100EC0635 /* PBXTargetDependency */,
+				1F6B2F532CFAEC23008F58EF /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				1FC522E42CAD3F5100EC0635 /* KreamCloneUITests */,
+				1F6B2F542CFAEC23008F58EF /* shinChanPracticeUITests */,
 			);
-			name = KreamCloneUITests;
+			name = shinChanPracticeUITests;
 			packageProductDependencies = (
 			);
-			productName = KreamCloneUITests;
-			productReference = 1FC522E12CAD3F5100EC0635 /* KreamCloneUITests.xctest */;
+			productName = shinChanPracticeUITests;
+			productReference = 1F6B2F512CFAEC23008F58EF /* shinChanPracticeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1FC522B92CAD3F4F00EC0635 /* Project object */ = {
+		1F6B2F292CFAEC21008F58EF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1600;
-				LastUpgradeCheck = 1600;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
 				TargetAttributes = {
-					1FC522C02CAD3F4F00EC0635 = {
-						CreatedOnToolsVersion = 16.0;
+					1F6B2F302CFAEC21008F58EF = {
+						CreatedOnToolsVersion = 16.1;
 					};
-					1FC522D62CAD3F5100EC0635 = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = 1FC522C02CAD3F4F00EC0635;
+					1F6B2F462CFAEC23008F58EF = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 1F6B2F302CFAEC21008F58EF;
 					};
-					1FC522E02CAD3F5100EC0635 = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = 1FC522C02CAD3F4F00EC0635;
+					1F6B2F502CFAEC23008F58EF = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 1F6B2F302CFAEC21008F58EF;
 					};
 				};
 			};
-			buildConfigurationList = 1FC522BC2CAD3F4F00EC0635 /* Build configuration list for PBXProject "KreamClone" */;
+			buildConfigurationList = 1F6B2F2C2CFAEC21008F58EF /* Build configuration list for PBXProject "shinChanPractice" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 1FC522B82CAD3F4F00EC0635;
+			mainGroup = 1F6B2F282CFAEC21008F58EF;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				1F053A1B2CB3AB3D004D7A10 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				1F053A632CB3EA3F004D7A10 /* XCRemoteSwiftPackageReference "Then" */,
-				1F8EC6D12CEA324C00245336 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
-				1F8ECA322CF381E500245336 /* XCRemoteSwiftPackageReference "Moya" */,
-				1F6B30862CFB037F008F58EF /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				1F6B30112CFAEDA2008F58EF /* XCRemoteSwiftPackageReference "SnapKit" */,
+				1F6B30142CFAEDAB008F58EF /* XCRemoteSwiftPackageReference "Then" */,
+				1F6B30172CFAEDEB008F58EF /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 1FC522C22CAD3F4F00EC0635 /* Products */;
+			productRefGroup = 1F6B2F322CFAEC21008F58EF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1FC522C02CAD3F4F00EC0635 /* KreamClone */,
-				1FC522D62CAD3F5100EC0635 /* KreamCloneTests */,
-				1FC522E02CAD3F5100EC0635 /* KreamCloneUITests */,
+				1F6B2F302CFAEC21008F58EF /* shinChanPractice */,
+				1F6B2F462CFAEC23008F58EF /* shinChanPracticeTests */,
+				1F6B2F502CFAEC23008F58EF /* shinChanPracticeUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1FC522BF2CAD3F4F00EC0635 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1F8EC6D92CEA3E1E00245336 /* Secrets.xcconfig in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1FC522D52CAD3F5100EC0635 /* Resources */ = {
+		1F6B2F2F2CFAEC21008F58EF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1FC522DF2CAD3F5100EC0635 /* Resources */ = {
+		1F6B2F452CFAEC23008F58EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F6B2F4F2CFAEC23008F58EF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -289,21 +262,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1FC522BD2CAD3F4F00EC0635 /* Sources */ = {
+		1F6B2F2D2CFAEC21008F58EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1FC522D32CAD3F5100EC0635 /* Sources */ = {
+		1F6B2F432CFAEC23008F58EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1FC522DD2CAD3F5100EC0635 /* Sources */ = {
+		1F6B2F4D2CFAEC23008F58EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -313,22 +286,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1FC522D92CAD3F5100EC0635 /* PBXTargetDependency */ = {
+		1F6B2F492CFAEC23008F58EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1FC522C02CAD3F4F00EC0635 /* KreamClone */;
-			targetProxy = 1FC522D82CAD3F5100EC0635 /* PBXContainerItemProxy */;
+			target = 1F6B2F302CFAEC21008F58EF /* shinChanPractice */;
+			targetProxy = 1F6B2F482CFAEC23008F58EF /* PBXContainerItemProxy */;
 		};
-		1FC522E32CAD3F5100EC0635 /* PBXTargetDependency */ = {
+		1F6B2F532CFAEC23008F58EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1FC522C02CAD3F4F00EC0635 /* KreamClone */;
-			targetProxy = 1FC522E22CAD3F5100EC0635 /* PBXContainerItemProxy */;
+			target = 1F6B2F302CFAEC21008F58EF /* shinChanPractice */;
+			targetProxy = 1F6B2F522CFAEC23008F58EF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1FC522EB2CAD3F5100EC0635 /* Debug */ = {
+		1F6B2F5B2CFAEC23008F58EF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F8EC6D82CEA3E1E00245336 /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -336,18 +308,19 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UKY6HK6U6Y;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = KreamClone/Info.plist;
+				INFOPLIST_FILE = shinChanPractice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.KreamClone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.shinChanPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -355,7 +328,7 @@
 			};
 			name = Debug;
 		};
-		1FC522EC2CAD3F5100EC0635 /* Release */ = {
+		1F6B2F5C2CFAEC23008F58EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -364,18 +337,19 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UKY6HK6U6Y;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = KreamClone/Info.plist;
+				INFOPLIST_FILE = shinChanPractice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.KreamClone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.shinChanPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -383,7 +357,7 @@
 			};
 			name = Release;
 		};
-		1FC522ED2CAD3F5100EC0635 /* Debug */ = {
+		1F6B2F5D2CFAEC23008F58EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -435,7 +409,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -446,7 +420,7 @@
 			};
 			name = Debug;
 		};
-		1FC522EE2CAD3F5100EC0635 /* Release */ = {
+		1F6B2F5E2CFAEC23008F58EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -492,7 +466,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -502,27 +476,26 @@
 			};
 			name = Release;
 		};
-		1FC522F02CAD3F5100EC0635 /* Debug */ = {
+		1F6B2F602CFAEC23008F58EF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F8EC6D82CEA3E1E00245336 /* Secrets.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UKY6HK6U6Y;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.KreamCloneTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.shinChanPracticeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KreamClone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KreamClone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/shinChanPractice.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/shinChanPractice";
 			};
 			name = Debug;
 		};
-		1FC522F12CAD3F5100EC0635 /* Release */ = {
+		1F6B2F612CFAEC23008F58EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -530,18 +503,18 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UKY6HK6U6Y;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.KreamCloneTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.shinChanPracticeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KreamClone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KreamClone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/shinChanPractice.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/shinChanPractice";
 			};
 			name = Release;
 		};
-		1FC522F32CAD3F5100EC0635 /* Debug */ = {
+		1F6B2F632CFAEC23008F58EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -549,16 +522,16 @@
 				DEVELOPMENT_TEAM = UKY6HK6U6Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.KreamCloneUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.shinChanPracticeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = KreamClone;
+				TEST_TARGET_NAME = shinChanPractice;
 			};
 			name = Debug;
 		};
-		1FC522F42CAD3F5100EC0635 /* Release */ = {
+		1F6B2F642CFAEC23008F58EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -566,50 +539,50 @@
 				DEVELOPMENT_TEAM = UKY6HK6U6Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.KreamCloneUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonju.shinChanPracticeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = KreamClone;
+				TEST_TARGET_NAME = shinChanPractice;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1FC522BC2CAD3F4F00EC0635 /* Build configuration list for PBXProject "KreamClone" */ = {
+		1F6B2F2C2CFAEC21008F58EF /* Build configuration list for PBXProject "shinChanPractice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1FC522ED2CAD3F5100EC0635 /* Debug */,
-				1FC522EE2CAD3F5100EC0635 /* Release */,
+				1F6B2F5D2CFAEC23008F58EF /* Debug */,
+				1F6B2F5E2CFAEC23008F58EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1FC522EA2CAD3F5100EC0635 /* Build configuration list for PBXNativeTarget "KreamClone" */ = {
+		1F6B2F5A2CFAEC23008F58EF /* Build configuration list for PBXNativeTarget "shinChanPractice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1FC522EB2CAD3F5100EC0635 /* Debug */,
-				1FC522EC2CAD3F5100EC0635 /* Release */,
+				1F6B2F5B2CFAEC23008F58EF /* Debug */,
+				1F6B2F5C2CFAEC23008F58EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1FC522EF2CAD3F5100EC0635 /* Build configuration list for PBXNativeTarget "KreamCloneTests" */ = {
+		1F6B2F5F2CFAEC23008F58EF /* Build configuration list for PBXNativeTarget "shinChanPracticeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1FC522F02CAD3F5100EC0635 /* Debug */,
-				1FC522F12CAD3F5100EC0635 /* Release */,
+				1F6B2F602CFAEC23008F58EF /* Debug */,
+				1F6B2F612CFAEC23008F58EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1FC522F22CAD3F5100EC0635 /* Build configuration list for PBXNativeTarget "KreamCloneUITests" */ = {
+		1F6B2F622CFAEC23008F58EF /* Build configuration list for PBXNativeTarget "shinChanPracticeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1FC522F32CAD3F5100EC0635 /* Debug */,
-				1FC522F42CAD3F5100EC0635 /* Release */,
+				1F6B2F632CFAEC23008F58EF /* Debug */,
+				1F6B2F642CFAEC23008F58EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -617,7 +590,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1F053A1B2CB3AB3D004D7A10 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		1F6B30112CFAEDA2008F58EF /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -625,7 +598,7 @@
 				minimumVersion = 5.7.1;
 			};
 		};
-		1F053A632CB3EA3F004D7A10 /* XCRemoteSwiftPackageReference "Then" */ = {
+		1F6B30142CFAEDAB008F58EF /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then";
 			requirement = {
@@ -633,7 +606,7 @@
 				minimumVersion = 3.0.0;
 			};
 		};
-		1F6B30862CFB037F008F58EF /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		1F6B30172CFAEDEB008F58EF /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
 			requirement = {
@@ -641,76 +614,25 @@
 				minimumVersion = 8.1.1;
 			};
 		};
-		1F8EC6D12CEA324C00245336 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.23.0;
-			};
-		};
-		1F8ECA322CF381E500245336 /* XCRemoteSwiftPackageReference "Moya" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Moya/Moya";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 15.0.3;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1F053A1C2CB3AB3D004D7A10 /* SnapKit */ = {
+		1F6B30122CFAEDA2008F58EF /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1F053A1B2CB3AB3D004D7A10 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 1F6B30112CFAEDA2008F58EF /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		1F053A642CB3EA3F004D7A10 /* Then */ = {
+		1F6B30152CFAEDAB008F58EF /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1F053A632CB3EA3F004D7A10 /* XCRemoteSwiftPackageReference "Then" */;
+			package = 1F6B30142CFAEDAB008F58EF /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
 		};
-		1F6B30872CFB037F008F58EF /* Kingfisher */ = {
+		1F6B30182CFAEDEB008F58EF /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1F6B30862CFB037F008F58EF /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 1F6B30172CFAEDEB008F58EF /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
-		};
-		1F8EC6D22CEA324C00245336 /* KakaoSDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1F8EC6D12CEA324C00245336 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
-			productName = KakaoSDK;
-		};
-		1F8EC6D42CEA324C00245336 /* KakaoSDKAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1F8EC6D12CEA324C00245336 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
-			productName = KakaoSDKAuth;
-		};
-		1F8EC6D62CEA324C00245336 /* KakaoSDKCommon */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1F8EC6D12CEA324C00245336 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
-			productName = KakaoSDKCommon;
-		};
-		1F8ECA332CF381E500245336 /* CombineMoya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1F8ECA322CF381E500245336 /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = CombineMoya;
-		};
-		1F8ECA352CF381E500245336 /* Moya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1F8ECA322CF381E500245336 /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = Moya;
-		};
-		1F8ECA372CF381E500245336 /* ReactiveMoya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1F8ECA322CF381E500245336 /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = ReactiveMoya;
-		};
-		1F8ECA392CF381E500245336 /* RxMoya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1F8ECA322CF381E500245336 /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = RxMoya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 1FC522B92CAD3F4F00EC0635 /* Project object */;
+	rootObject = 1F6B2F292CFAEC21008F58EF /* Project object */;
 }

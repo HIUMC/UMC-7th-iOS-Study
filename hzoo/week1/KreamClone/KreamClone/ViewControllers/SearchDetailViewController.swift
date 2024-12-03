@@ -20,7 +20,7 @@ class SearchDetailViewController: UIViewController, UITextFieldDelegate {
     public lazy var searchDeatilView: SearchDetailView = {
         let v = SearchDetailView()
         v.backBtn.addTarget(self, action: #selector(cancelBtnTapped), for: .touchUpInside)
-        v.cancelBtn.addTarget(self, action: #selector(cancelBtnTapped), for: .touchUpInside)
+        v.cancelBtn.addTarget(self, action: #selector(goToHome), for: .touchUpInside)
         
         v.searchResultTableView.dataSource = self
         v.searchResultTableView.delegate = self
@@ -40,6 +40,11 @@ class SearchDetailViewController: UIViewController, UITextFieldDelegate {
     
     @objc
     private func cancelBtnTapped() {
+        self.dismiss(animated: true)
+    }
+    
+    @objc
+    private func goToHome() {
         self.dismiss(animated: true)
     }
     

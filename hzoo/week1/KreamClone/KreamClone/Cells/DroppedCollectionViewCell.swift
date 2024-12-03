@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DroppedCollectionViewCell: UICollectionViewCell {
     
@@ -91,6 +92,12 @@ class DroppedCollectionViewCell: UICollectionViewCell {
         
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    public func loadImage(from url: String) {
+        if let imageURL = URL(string: url) {
+            image.kf.setImage(with: imageURL)
+        }
     }
     
     private func setUpView() {
